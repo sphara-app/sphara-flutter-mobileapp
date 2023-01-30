@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
@@ -33,7 +34,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ? Builder(
               builder: (context) => Container(
                 color: Colors.transparent,
-                child: Image.asset(
+                child: SvgPicture.asset(
                   'assets/images/bg.svg',
                   fit: BoxFit.cover,
                 ),
@@ -48,7 +49,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               ? Builder(
                   builder: (context) => Container(
                     color: Colors.transparent,
-                    child: Image.asset(
+                    child: SvgPicture.asset(
                       'assets/images/bg.svg',
                       fit: BoxFit.cover,
                     ),

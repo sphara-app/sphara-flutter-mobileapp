@@ -6,6 +6,40 @@ A new Flutter project.
 
 FlutterFlow projects are built to run on the Flutter _stable_ release.
 
+## Things todo
+
+After merging code form Flutter Flow these 👇 changes are mandatory.
+
+> File path: lib/flutter_flow/nav/nav.dart
+
+change are at errorBuilder and initialize route
+
+```dart
+Builder(
+        builder: (context) => Container(
+        color: Colors.transparent,
+        child: Image.asset(
+            'assets/images/bg.svg',
+            fit: BoxFit.cover,
+        ),
+        ),
+    )
+```
+
+to
+
+```dart
+Builder(
+        builder: (context) => Container(
+        color: Colors.transparent,
+        child: SvgPicture.asset(
+            'assets/images/bg.svg',
+            fit: BoxFit.cover,
+        ),
+        ),
+    )
+```
+
 ### IMPORTANT:
 
 For projects with Firestore integration, you must first run the following commands to ensure the project compiles:
