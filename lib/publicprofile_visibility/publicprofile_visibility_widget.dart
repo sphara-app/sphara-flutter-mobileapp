@@ -63,13 +63,13 @@ class _PublicprofileVisibilityWidgetState
                         padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                         child: FlutterFlowIconButton(
                           borderColor: Colors.transparent,
-                          borderRadius: 20,
+                          borderRadius: 30,
                           borderWidth: 1,
-                          buttonSize: 40,
+                          buttonSize: 60,
                           icon: Icon(
                             FFIcons.kleftArrow,
                             color: FlutterFlowTheme.of(context).primaryColor,
-                            size: 24,
+                            size: 30,
                           ),
                           onPressed: () async {
                             context.pushNamed('profileEdit');
@@ -85,15 +85,15 @@ class _PublicprofileVisibilityWidgetState
                           child: Text(
                             'SAVE',
                             style: FlutterFlowTheme.of(context)
-                                .bodyText1
+                                .subtitle2
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyText1Family,
+                                      .subtitle2Family,
                                   color:
                                       FlutterFlowTheme.of(context).primaryColor,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyText1Family),
+                                          .subtitle2Family),
                                 ),
                           ),
                         ),
@@ -111,14 +111,8 @@ class _PublicprofileVisibilityWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                   child: Text(
-                    'your post will be visible on the feed ,on your profile and in search results',
-                    style: FlutterFlowTheme.of(context).bodyText2.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).bodyText2Family,
-                          fontSize: 14,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyText2Family),
-                        ),
+                    'your post will be visible on the feed ,on your profile and in search results.',
+                    style: FlutterFlowTheme.of(context).bodyText2,
                   ),
                 ),
                 ListView(
@@ -284,14 +278,8 @@ class _PublicprofileVisibilityWidgetState
                 Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                   child: Text(
-                    'you can add certain channels,people or groups as exceptions that will override the settings above',
-                    style: FlutterFlowTheme.of(context).bodyText2.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).bodyText2Family,
-                          fontSize: 14,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyText2Family),
-                        ),
+                    'you can add certain channels,people or groups as exceptions that will override the settings above.',
+                    style: FlutterFlowTheme.of(context).bodyText2,
                   ),
                 ),
                 Padding(

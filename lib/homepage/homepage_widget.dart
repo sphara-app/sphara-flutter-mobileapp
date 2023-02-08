@@ -453,7 +453,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
               ),
               Container(
                 width: double.infinity,
-                height: MediaQuery.of(context).size.height * 0.68,
+                height: 550,
                 decoration: BoxDecoration(
                   color: Color(0xFF464646),
                   boxShadow: [

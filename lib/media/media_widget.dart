@@ -13,10 +13,11 @@ class MediaWidget extends StatefulWidget {
 }
 
 class _MediaWidgetState extends State<MediaWidget> {
-  bool? switchListTileValue;
+  bool? switchListTileValue1;
   bool? switchValue1;
   bool? switchValue2;
   bool? switchValue3;
+  bool? switchListTileValue2;
   bool? switchValue4;
   bool? switchValue5;
   bool? switchValue6;
@@ -64,273 +65,288 @@ class _MediaWidgetState extends State<MediaWidget> {
       ),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(_unfocusNode),
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                child: Container(
-                  width: double.infinity,
-                  height: 85,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF3F4040),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+              child: Container(
+                width: double.infinity,
+                height: 85,
+                decoration: BoxDecoration(
+                  color: Color(0xFF3F4040),
+                ),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
+                  child: SwitchListTile(
+                    value: switchListTileValue1 ??= false,
+                    onChanged: (newValue) async {
+                      setState(() => switchListTileValue1 = newValue!);
+                    },
+                    title: Text(
+                      'Media Visibility',
+                      style: FlutterFlowTheme.of(context).subtitle2,
+                    ),
+                    subtitle: Text(
+                      'It will show Downloaded media in phone\'s gallery  ',
+                      style: FlutterFlowTheme.of(context).bodyText2,
+                    ),
+                    tileColor: FlutterFlowTheme.of(context).primaryColor,
+                    activeColor: FlutterFlowTheme.of(context).primaryColor,
+                    activeTrackColor:
+                        FlutterFlowTheme.of(context).tertiaryColor,
+                    dense: false,
+                    controlAffinity: ListTileControlAffinity.trailing,
                   ),
-                  child: Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
-                    child: SwitchListTile(
-                      value: switchListTileValue ??= false,
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
+              child: Text(
+                'Automatic Photo Download',
+                style: FlutterFlowTheme.of(context).subtitle2,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+              child: Container(
+                width: double.infinity,
+                height: 170,
+                decoration: BoxDecoration(
+                  color: Color(0xFF3F4040),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Private Chats',
+                            style: FlutterFlowTheme.of(context).bodyText1,
+                          ),
+                          Switch(
+                            value: switchValue1 ??= false,
+                            onChanged: (newValue) async {
+                              setState(() => switchValue1 = newValue!);
+                            },
+                            activeColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            activeTrackColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(
+                      thickness: 1,
+                      color: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Groups',
+                            style: FlutterFlowTheme.of(context).bodyText1,
+                          ),
+                          Switch(
+                            value: switchValue2 ??= false,
+                            onChanged: (newValue) async {
+                              setState(() => switchValue2 = newValue!);
+                            },
+                            activeColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            activeTrackColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(
+                      thickness: 1,
+                      color: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Channels',
+                            style: FlutterFlowTheme.of(context).bodyText1,
+                          ),
+                          Switch(
+                            value: switchValue3 ??= false,
+                            onChanged: (newValue) async {
+                              setState(() => switchValue3 = newValue!);
+                            },
+                            activeColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            activeTrackColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
+              child: Text(
+                'Automatic Audio Download',
+                style: FlutterFlowTheme.of(context).subtitle2,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+              child: Container(
+                width: double.infinity,
+                height: 230,
+                decoration: BoxDecoration(
+                  color: Color(0xFF3F4040),
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Private Chats',
+                            style: FlutterFlowTheme.of(context).bodyText1,
+                          ),
+                          Switch(
+                            value: switchValue4 ??= false,
+                            onChanged: (newValue) async {
+                              setState(() => switchValue4 = newValue!);
+                            },
+                            activeColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            activeTrackColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(
+                      thickness: 1,
+                      color: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Groups',
+                            style: FlutterFlowTheme.of(context).bodyText1,
+                          ),
+                          Switch(
+                            value: switchValue5 ??= false,
+                            onChanged: (newValue) async {
+                              setState(() => switchValue5 = newValue!);
+                            },
+                            activeColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            activeTrackColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(
+                      thickness: 1,
+                      color: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Channels',
+                            style: FlutterFlowTheme.of(context).bodyText1,
+                          ),
+                          Switch(
+                            value: switchValue6 ??= false,
+                            onChanged: (newValue) async {
+                              setState(() => switchValue6 = newValue!);
+                            },
+                            activeColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            activeTrackColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(
+                      thickness: 1,
+                      color: FlutterFlowTheme.of(context).tertiaryColor,
+                    ),
+                    Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Autoplay Audio',
+                            style: FlutterFlowTheme.of(context).bodyText1,
+                          ),
+                          Switch(
+                            value: switchValue7 ??= false,
+                            onChanged: (newValue) async {
+                              setState(() => switchValue7 = newValue!);
+                            },
+                            activeColor:
+                                FlutterFlowTheme.of(context).primaryColor,
+                            activeTrackColor:
+                                FlutterFlowTheme.of(context).tertiaryColor,
+                          ),
+                        ],
+                      ),
+                    ),
+                    SwitchListTile(
+                      value: switchListTileValue2 ??= true,
                       onChanged: (newValue) async {
-                        setState(() => switchListTileValue = newValue!);
+                        setState(() => switchListTileValue2 = newValue!);
                       },
                       title: Text(
-                        'Media Visibility',
-                        style: FlutterFlowTheme.of(context).subtitle2,
+                        'Title',
+                        style: FlutterFlowTheme.of(context).title3,
                       ),
                       subtitle: Text(
-                        'It will show Downloaded media in phone\'s gallery  ',
-                        style: FlutterFlowTheme.of(context).bodyText2,
+                        'Subtitle',
+                        style: FlutterFlowTheme.of(context).subtitle2,
                       ),
-                      tileColor: FlutterFlowTheme.of(context).primaryColor,
-                      activeColor: FlutterFlowTheme.of(context).primaryColor,
-                      activeTrackColor:
-                          FlutterFlowTheme.of(context).tertiaryColor,
+                      tileColor: Color(0xFFF5F5F5),
                       dense: false,
                       controlAffinity: ListTileControlAffinity.trailing,
                     ),
-                  ),
+                  ],
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
-                child: Text(
-                  'Automatic Photo Download',
-                  style: FlutterFlowTheme.of(context).subtitle2,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                child: Container(
-                  width: double.infinity,
-                  height: 185,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF3F4040),
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Private Chats',
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                            Switch(
-                              value: switchValue1 ??= false,
-                              onChanged: (newValue) async {
-                                setState(() => switchValue1 = newValue!);
-                              },
-                              activeColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              activeTrackColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Groups',
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                            Switch(
-                              value: switchValue2 ??= false,
-                              onChanged: (newValue) async {
-                                setState(() => switchValue2 = newValue!);
-                              },
-                              activeColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              activeTrackColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Channels',
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                            Switch(
-                              value: switchValue3 ??= false,
-                              onChanged: (newValue) async {
-                                setState(() => switchValue3 = newValue!);
-                              },
-                              activeColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              activeTrackColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
-                child: Text(
-                  'Automatic Audio Download',
-                  style: FlutterFlowTheme.of(context).subtitle2,
-                ),
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
-                child: Container(
-                  width: double.infinity,
-                  height: 250,
-                  decoration: BoxDecoration(
-                    color: Color(0xFF3F4040),
-                  ),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Private Chats',
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                            Switch(
-                              value: switchValue4 ??= false,
-                              onChanged: (newValue) async {
-                                setState(() => switchValue4 = newValue!);
-                              },
-                              activeColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              activeTrackColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Groups',
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                            Switch(
-                              value: switchValue5 ??= false,
-                              onChanged: (newValue) async {
-                                setState(() => switchValue5 = newValue!);
-                              },
-                              activeColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              activeTrackColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Channels',
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                            Switch(
-                              value: switchValue6 ??= false,
-                              onChanged: (newValue) async {
-                                setState(() => switchValue6 = newValue!);
-                              },
-                              activeColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              activeTrackColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Divider(
-                        thickness: 1,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
-                      ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Autoplay Audio',
-                              style: FlutterFlowTheme.of(context).bodyText1,
-                            ),
-                            Switch(
-                              value: switchValue7 ??= false,
-                              onChanged: (newValue) async {
-                                setState(() => switchValue7 = newValue!);
-                              },
-                              activeColor:
-                                  FlutterFlowTheme.of(context).primaryColor,
-                              activeTrackColor:
-                                  FlutterFlowTheme.of(context).tertiaryColor,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

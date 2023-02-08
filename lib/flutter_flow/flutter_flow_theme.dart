@@ -124,7 +124,7 @@ class MobileTypography extends Typography {
   TextStyle get title1 => GoogleFonts.getFont(
         'Roboto',
         color: Colors.white,
-        fontWeight: FontWeight.w500,
+        fontWeight: FontWeight.normal,
         fontSize: 22,
       );
   String get title2Family => 'Roboto';

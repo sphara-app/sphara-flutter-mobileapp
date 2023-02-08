@@ -78,7 +78,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Text(
-                        'Sphara needs your help to ensure funds and\nresources continue to be available to the brave \nmen and women who protect and save our\ncommunities every day. Any amount you can\ndonate is appreciated and will have our\n complete gratitude',
+                        'Sphara needs your help to ensure funds and\nresources continue to be available to the brave \nmen and women who protect and save our\ncommunities every day. Any amount you can\ndonate is appreciated and will have our\n complete gratitude.',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily:

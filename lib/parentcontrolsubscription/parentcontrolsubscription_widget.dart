@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -46,29 +47,29 @@ class _ParentcontrolsubscriptionWidgetState
               alignment: AlignmentDirectional(0, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: Icon(
-                            FFIcons.kleftArrow,
-                            color: Color(0xFFF99546),
-                            size: 24,
-                          ),
-                        ),
-                      ],
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
+                      ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                       child: SelectionArea(
                           child: Text(
                         'Subscribe Parental Control',
@@ -81,13 +82,7 @@ class _ParentcontrolsubscriptionWidgetState
                     child: SelectionArea(
                         child: Text(
                       'To Enable the Parental Control feature choose one of the following plan',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyText2Family,
-                            fontSize: 14,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText2Family),
-                          ),
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     )),
                   ),
                   Padding(

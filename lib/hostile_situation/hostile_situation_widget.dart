@@ -97,7 +97,7 @@ class _HostileSituationWidgetState extends State<HostileSituationWidget> {
                     child: Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                       child: Text(
-                        'HostileSituation Incident Report',
+                        'Hostile-Situation Incident Report',
                         style: FlutterFlowTheme.of(context).subtitle1,
                       ),
                     ),
@@ -105,16 +105,10 @@ class _HostileSituationWidgetState extends State<HostileSituationWidget> {
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                       child: Text(
-                        'please fill the following information as it will provide better insight on the incident',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              fontSize: 14,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
-                            ),
+                        'please fill the following information as it will provide better insight on the incident.',
+                        style: FlutterFlowTheme.of(context).bodyText2,
                       ),
                     ),
                   ),
@@ -124,13 +118,13 @@ class _HostileSituationWidgetState extends State<HostileSituationWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
                       child: Text(
                         'Place',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              color: Colors.white,
-                              fontSize: 14,
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
+                                  FlutterFlowTheme.of(context).bodyText1Family),
                             ),
                       ),
                     ),
@@ -238,16 +232,16 @@ class _HostileSituationWidgetState extends State<HostileSituationWidget> {
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                       child: Text(
                         'By Whom?',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              color: Colors.white,
-                              fontSize: 14,
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
+                                  FlutterFlowTheme.of(context).bodyText1Family),
                             ),
                       ),
                     ),
@@ -366,16 +360,7 @@ class _HostileSituationWidgetState extends State<HostileSituationWidget> {
                             width: 335,
                             height: 50,
                             color: FlutterFlowTheme.of(context).primaryColor,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .subtitle2
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .subtitle2Family,
-                                  color: Colors.white,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .subtitle2Family),
-                                ),
+                            textStyle: FlutterFlowTheme.of(context).title3,
                             borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1,

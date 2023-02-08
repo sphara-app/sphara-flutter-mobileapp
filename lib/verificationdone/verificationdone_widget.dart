@@ -115,7 +115,7 @@ class _VerificationdoneWidgetState extends State<VerificationdoneWidget>
                     Align(
                       alignment: AlignmentDirectional(0, 0),
                       child: Text(
-                        'Your phone number has been verified\nsuccessfully',
+                        'Your phone number has been verified\nsuccessfully.',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily:

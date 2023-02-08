@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -51,24 +52,24 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: Icon(
-                            FFIcons.kleftArrow,
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            size: 24,
-                          ),
-                        ),
-                      ],
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
+                      ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: SelectionArea(
                         child: Text(
                       'Restricted Settings',
@@ -82,16 +83,16 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                     )),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: SelectionArea(
                         child: Text(
                       'Restricted Mode',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
+                      style: FlutterFlowTheme.of(context).bodyText1.override(
                             fontFamily:
-                                FlutterFlowTheme.of(context).bodyText2Family,
-                            color: FlutterFlowTheme.of(context).primaryText,
+                                FlutterFlowTheme.of(context).bodyText1Family,
+                            color: FlutterFlowTheme.of(context).secondaryColor,
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText2Family),
+                                FlutterFlowTheme.of(context).bodyText1Family),
                           ),
                     )),
                   ),
@@ -503,7 +504,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                           text: 'ACTIVATE',
                           options: FFButtonOptions(
                             width: 335,
-                            height: 54,
+                            height: 50,
                             color: FlutterFlowTheme.of(context).primaryColor,
                             textStyle: FlutterFlowTheme.of(context)
                                 .title3

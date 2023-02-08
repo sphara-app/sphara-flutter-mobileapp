@@ -1,4 +1,5 @@
 import '../components/code_saved_widget.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -58,38 +59,24 @@ class _CustomVoiceActivationWidgetState
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              context.pushNamed(
-                                'AppSettings',
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                  ),
-                                },
-                              );
-                            },
-                            child: Icon(
-                              FFIcons.kleftArrow,
-                              color: Color(0xFFF99546),
-                              size: 24,
-                            ),
-                          ),
-                        ),
-                      ],
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
+                      ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: SelectionArea(
                         child: Text(
                       'Voice Activation',
@@ -100,14 +87,8 @@ class _CustomVoiceActivationWidgetState
                     padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                     child: SelectionArea(
                         child: Text(
-                      'Enter Your Cutsom Code ',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyText2Family,
-                            fontSize: 14,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText2Family),
-                          ),
+                      'Enter Your Cutsom Code that wil be used for voice activation.',
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     )),
                   ),
                   Padding(

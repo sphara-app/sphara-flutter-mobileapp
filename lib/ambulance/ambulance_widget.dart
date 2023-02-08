@@ -47,9 +47,10 @@ class _AmbulanceWidgetState extends State<AmbulanceWidget> {
               ),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
                     child: Icon(
                       FFIcons.kscreen16,
                       color: Colors.white,
@@ -60,53 +61,59 @@ class _AmbulanceWidgetState extends State<AmbulanceWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                        child: Text(
-                          'Ambulance dispatch is  confirmed\nHelp is on the way',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.of(context)
-                              .subtitle1
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .subtitle1Family,
-                                letterSpacing: 1,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .subtitle1Family),
-                              ),
+                      Expanded(
+                        child: Padding(
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                          child: Text(
+                            'Ambulance dispatch is  confirmed\nHelp is on the way',
+                            textAlign: TextAlign.center,
+                            style: FlutterFlowTheme.of(context)
+                                .subtitle1
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .subtitle1Family,
+                                  letterSpacing: 1,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .subtitle1Family),
+                                ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Expanded(
+                        child: Padding(
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                          child: Text(
+                            'Sent to 1302, Delight square , Suchitra circle..\nSent time:02:08 pm',
+                            textAlign: TextAlign.center,
+                            style: FlutterFlowTheme.of(context)
+                                .bodyText2
+                                .override(
+                                  fontFamily: FlutterFlowTheme.of(context)
+                                      .bodyText2Family,
+                                  color: Colors.white,
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .bodyText2Family),
+                                  lineHeight: 1.5,
+                                ),
+                          ),
                         ),
                       ),
                     ],
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Sent to 1302, Delight square , Suchitra circle..\nSent time:02:08 pm',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText2
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
-                                lineHeight: 1.5,
-                              ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
                     child: Container(
                       width: 60,
                       height: 60,

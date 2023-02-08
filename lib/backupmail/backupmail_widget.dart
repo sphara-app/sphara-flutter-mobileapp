@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -50,30 +51,39 @@ class _BackupmailWidgetState extends State<BackupmailWidget> {
               height: double.infinity,
               fit: BoxFit.cover,
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(2, 40, 0, 0),
-                    child: Icon(
-                      FFIcons.kleftArrow,
-                      color: Color(0xFFF99546),
-                      size: 24,
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
+                      ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: SelectionArea(
                         child: Text(
                       'Enter backup email to reset passcode',
-                      style: FlutterFlowTheme.of(context).bodyText1,
+                      style: FlutterFlowTheme.of(context).subtitle2,
                     )),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
                     child: TextFormField(
                       controller: textController1,
                       autofocus: true,
@@ -127,7 +137,7 @@ class _BackupmailWidgetState extends State<BackupmailWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: TextFormField(
                       controller: textController2,
                       autofocus: true,

@@ -123,7 +123,7 @@ class _Personalinfo2WidgetState extends State<Personalinfo2Widget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                               child: Text(
-                                'Please fill up all fields',
+                                'Please fill up all fields.',
                                 style: FlutterFlowTheme.of(context)
                                     .bodyText1
                                     .override(

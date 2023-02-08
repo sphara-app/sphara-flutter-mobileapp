@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -43,31 +44,33 @@ class _GesturetriggersettingsWidgetState
               height: double.infinity,
               fit: BoxFit.cover,
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Align(
-                    alignment: AlignmentDirectional(-1, 0),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                      child: InkWell(
-                        onTap: () async {
-                          context.pop();
-                        },
-                        child: Icon(
-                          FFIcons.kleftArrow,
-                          color: Color(0xFFF99546),
-                          size: 24,
-                        ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
                       ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                       child: Text(
                         'Gesture Trigger Settings',
                         style: FlutterFlowTheme.of(context).subtitle1,
@@ -77,22 +80,15 @@ class _GesturetriggersettingsWidgetState
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                       child: Text(
                         'SPHARA app will allows you to shake your phone in order to trigger emergency services,even if your screen is off, you can still shake it, and it\'ll work! ',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              color: Color(0xFFB0B0B0),
-                              fontSize: 14,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
-                            ),
+                        style: FlutterFlowTheme.of(context).bodyText2,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
                     child: InkWell(
                       onTap: () async {
                         context.pushNamed(
@@ -130,7 +126,7 @@ class _GesturetriggersettingsWidgetState
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
                     child: InkWell(
                       onTap: () async {
                         context.pushNamed(

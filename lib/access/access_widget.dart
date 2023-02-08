@@ -230,7 +230,7 @@ class _AccessWidgetState extends State<AccessWidget> {
                     padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
                     child: Container(
                       width: double.infinity,
-                      height: 120,
+                      height: 125,
                       decoration: BoxDecoration(
                         color: Color(0xFF3F4040),
                       ),
@@ -274,12 +274,27 @@ class _AccessWidgetState extends State<AccessWidget> {
                                     Text(
                                       'Windows',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyText1,
+                                          .bodyText1
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText1Family,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryColor,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyText1Family),
+                                          ),
                                     ),
-                                    Text(
-                                      'Hyderabad,India - 28 days ago',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText2,
+                                    Padding(
+                                      padding: EdgeInsetsDirectional.fromSTEB(
+                                          0, 5, 0, 0),
+                                      child: Text(
+                                        'Hyderabad,India - 28 days ago',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyText2,
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -290,21 +305,26 @@ class _AccessWidgetState extends State<AccessWidget> {
                             thickness: 0.2,
                             color: Color(0xFF707070),
                           ),
-                          Text(
-                            'Log out from all devices',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyText1
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyText1Family,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w300,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyText1Family),
-                                ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                            child: Text(
+                              'Log out from all devices',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyText1
+                                  .override(
+                                    fontFamily: FlutterFlowTheme.of(context)
+                                        .bodyText1Family,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.w300,
+                                    useGoogleFonts: GoogleFonts.asMap()
+                                        .containsKey(
+                                            FlutterFlowTheme.of(context)
+                                                .bodyText1Family),
+                                  ),
+                            ),
                           ),
                         ],
                       ),

@@ -139,7 +139,7 @@ class _AddnewWidgetState extends State<AddnewWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          'Your emergency contacts will receive your message\nwhen you trigger the panic button',
+                          'Your emergency contacts will receive your message\nwhen you trigger the panic button.',
                           style: FlutterFlowTheme.of(context)
                               .bodyText2
                               .override(

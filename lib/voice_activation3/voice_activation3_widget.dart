@@ -60,14 +60,8 @@ class _VoiceActivation3WidgetState extends State<VoiceActivation3Widget> {
                     padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                     child: SelectionArea(
                         child: Text(
-                      'Select the Code that will be used for voice alarm \nactivation',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyText2Family,
-                            fontSize: 14,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText2Family),
-                          ),
+                      'Select the Code that will be used for voice alarm activation.',
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     )),
                   ),
                   Padding(
@@ -163,89 +157,98 @@ class _VoiceActivation3WidgetState extends State<VoiceActivation3Widget> {
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        FFButtonWidget(
-                          onPressed: () async {
-                            await showModalBottomSheet(
-                              isScrollControlled: true,
-                              backgroundColor: Colors.transparent,
-                              enableDrag: false,
-                              context: context,
-                              builder: (context) {
-                                return Padding(
-                                  padding: MediaQuery.of(context).viewInsets,
-                                  child: VoiceAlarmCancelWidget(),
-                                );
+                  Expanded(
+                    child: Align(
+                      alignment: AlignmentDirectional(0, 1),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 100),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            FFButtonWidget(
+                              onPressed: () async {
+                                await showModalBottomSheet(
+                                  isScrollControlled: true,
+                                  backgroundColor: Colors.transparent,
+                                  enableDrag: false,
+                                  context: context,
+                                  builder: (context) {
+                                    return Padding(
+                                      padding:
+                                          MediaQuery.of(context).viewInsets,
+                                      child: VoiceAlarmCancelWidget(),
+                                    );
+                                  },
+                                ).then((value) => setState(() {}));
                               },
-                            ).then((value) => setState(() {}));
-                          },
-                          text: 'CANCEL',
-                          options: FFButtonOptions(
-                            width: 110,
-                            height: 30,
-                            color: Color(0x00F99546),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .subtitle2
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .subtitle2Family,
-                                  color: FlutterFlowTheme.of(context)
-                                      .tertiaryColor,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .subtitle2Family),
+                              text: 'CANCEL',
+                              options: FFButtonOptions(
+                                width: 110,
+                                height: 30,
+                                color: Color(0x00F99546),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .subtitle2Family,
+                                      color: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .subtitle2Family),
+                                    ),
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1,
                                 ),
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 1,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                        ),
-                        FFButtonWidget(
-                          onPressed: () async {
-                            await showModalBottomSheet(
-                              isScrollControlled: true,
-                              backgroundColor: Colors.transparent,
-                              enableDrag: false,
-                              context: context,
-                              builder: (context) {
-                                return Padding(
-                                  padding: MediaQuery.of(context).viewInsets,
-                                  child: VoiceAlarmActivatedWidget(),
-                                );
+                            FFButtonWidget(
+                              onPressed: () async {
+                                await showModalBottomSheet(
+                                  isScrollControlled: true,
+                                  backgroundColor: Colors.transparent,
+                                  enableDrag: false,
+                                  context: context,
+                                  builder: (context) {
+                                    return Padding(
+                                      padding:
+                                          MediaQuery.of(context).viewInsets,
+                                      child: VoiceAlarmActivatedWidget(),
+                                    );
+                                  },
+                                ).then((value) => setState(() {}));
                               },
-                            ).then((value) => setState(() {}));
-                          },
-                          text: 'ACTIVATE',
-                          options: FFButtonOptions(
-                            width: 100,
-                            height: 30,
-                            color: Color(0x00F99546),
-                            textStyle: FlutterFlowTheme.of(context)
-                                .subtitle2
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .subtitle2Family,
-                                  color:
-                                      FlutterFlowTheme.of(context).primaryColor,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .subtitle2Family),
+                              text: 'ACTIVATE',
+                              options: FFButtonOptions(
+                                width: 100,
+                                height: 30,
+                                color: Color(0x00F99546),
+                                textStyle: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .subtitle2Family,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .subtitle2Family),
+                                    ),
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1,
                                 ),
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                              width: 1,
+                                borderRadius: BorderRadius.circular(8),
+                              ),
                             ),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
                   ),
                 ],

@@ -404,7 +404,8 @@ class _IDuploadedWidgetState extends State<IDuploadedWidget> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Your ID has been saved\nsuccessfully in your profile on \nyour phone only',
+                                  'Your ID has been saved\nsuccessfully in your profile on \nyour phone only.',
+                                  textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText1
                                       .override(

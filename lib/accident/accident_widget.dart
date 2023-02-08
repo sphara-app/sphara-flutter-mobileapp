@@ -97,16 +97,10 @@ class _AccidentWidgetState extends State<AccidentWidget> {
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                       child: Text(
-                        'please fill the following information as it will provide better insight on the incident',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              fontSize: 14,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
-                            ),
+                        'please fill the following information as it will provide better insight on the incident.',
+                        style: FlutterFlowTheme.of(context).bodyText2,
                       ),
                     ),
                   ),
@@ -116,13 +110,13 @@ class _AccidentWidgetState extends State<AccidentWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
                       child: Text(
                         'Any injured?',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              color: Colors.white,
-                              fontSize: 14,
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
+                                  FlutterFlowTheme.of(context).bodyText1Family),
                             ),
                       ),
                     ),
@@ -171,13 +165,13 @@ class _AccidentWidgetState extends State<AccidentWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
                       child: Text(
                         'Ambulance Help?',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              color: Colors.white,
-                              fontSize: 14,
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
+                                  FlutterFlowTheme.of(context).bodyText1Family),
                             ),
                       ),
                     ),
@@ -226,13 +220,13 @@ class _AccidentWidgetState extends State<AccidentWidget> {
                       padding: EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
                       child: Text(
                         'How many people are Injured?',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              color: Colors.white,
-                              fontSize: 14,
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
+                                  FlutterFlowTheme.of(context).bodyText1Family),
                             ),
                       ),
                     ),
@@ -298,16 +292,16 @@ class _AccidentWidgetState extends State<AccidentWidget> {
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                       child: Text(
                         'Send Alert to your family?',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
+                        style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              color: Colors.white,
-                              fontSize: 14,
+                                  FlutterFlowTheme.of(context).bodyText1Family,
+                              color:
+                                  FlutterFlowTheme.of(context).secondaryColor,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
+                                  FlutterFlowTheme.of(context).bodyText1Family),
                             ),
                       ),
                     ),

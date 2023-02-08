@@ -210,7 +210,7 @@ class _NavBarPageState extends State<NavBarPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(
-                  Icons.home_outlined,
+                  FFIcons.ksocialMedia,
                   color: currentIndex == 3
                       ? FlutterFlowTheme.of(context).primaryColor
                       : FlutterFlowTheme.of(context).tertiaryColor,

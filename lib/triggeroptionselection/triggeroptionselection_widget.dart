@@ -1,4 +1,5 @@
 import '../flutter_flow/flutter_flow_drop_down.dart';
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_radio_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -58,18 +59,27 @@ class _TriggeroptionselectionWidgetState
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: Icon(
-                            FFIcons.kleftArrow,
-                            color: Color(0xFFF99546),
-                            size: 24,
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                          child: FlutterFlowIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 30,
+                            borderWidth: 1,
+                            buttonSize: 60,
+                            icon: Icon(
+                              Icons.chevron_left_sharp,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              size: 30,
+                            ),
+                            onPressed: () async {
+                              context.pop();
+                            },
                           ),
                         ),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: SelectionArea(
                         child: Text(
                       'Trigger using button',
@@ -81,13 +91,7 @@ class _TriggeroptionselectionWidgetState
                     child: SelectionArea(
                         child: Text(
                       'Automatically call for help by selecting the mobile button option as well as the triggering method',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyText2Family,
-                            fontSize: 14,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText2Family),
-                          ),
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     )),
                   ),
                   Padding(
@@ -164,7 +168,7 @@ class _TriggeroptionselectionWidgetState
                             useGoogleFonts: GoogleFonts.asMap().containsKey(
                                 FlutterFlowTheme.of(context).bodyText1Family),
                           ),
-                      textPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                      textPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 60, 0),
                       buttonPosition: RadioButtonPosition.right,
                       direction: Axis.vertical,
                       radioButtonColor:

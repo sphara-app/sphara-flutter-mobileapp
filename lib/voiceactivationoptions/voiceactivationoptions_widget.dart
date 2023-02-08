@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -47,23 +48,27 @@ class _VoiceactivationoptionsWidgetState
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              context.pushNamed('AppSettings');
-                            },
-                            child: Icon(
-                              FFIcons.kleftArrow,
-                              color: Color(0xFFF99546),
-                              size: 24,
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                          child: FlutterFlowIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 30,
+                            borderWidth: 1,
+                            buttonSize: 60,
+                            icon: Icon(
+                              Icons.chevron_left_sharp,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              size: 30,
                             ),
+                            onPressed: () async {
+                              context.pop();
+                            },
                           ),
                         ),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: SelectionArea(
                         child: Text(
                       'Voice Activation',
@@ -74,14 +79,8 @@ class _VoiceactivationoptionsWidgetState
                     padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                     child: SelectionArea(
                         child: Text(
-                      'Select the Code that will be used for voice alarm \nactivation',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyText2Family,
-                            fontSize: 14,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText2Family),
-                          ),
+                      'Select the Code that will be used for voice alarm activation.',
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     )),
                   ),
                   Padding(

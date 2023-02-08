@@ -50,7 +50,7 @@ class _DonatedWidgetState extends State<DonatedWidget> {
                     child: Icon(
                       FFIcons.kcheckmarkOutline,
                       color: Color(0xFFF99546),
-                      size: 60,
+                      size: 50,
                     ),
                   ),
                 ),
@@ -90,17 +90,9 @@ class _DonatedWidgetState extends State<DonatedWidget> {
                     text: 'DONE',
                     options: FFButtonOptions(
                       width: 335,
-                      height: 60,
+                      height: 50,
                       color: Color(0xFFF99546),
-                      textStyle: FlutterFlowTheme.of(context)
-                          .subtitle2
-                          .override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).subtitle2Family,
-                            color: Colors.white,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).subtitle2Family),
-                          ),
+                      textStyle: FlutterFlowTheme.of(context).title3,
                       borderRadius: BorderRadius.circular(40),
                     ),
                   ),

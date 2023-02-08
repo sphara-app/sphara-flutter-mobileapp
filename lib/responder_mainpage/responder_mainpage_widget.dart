@@ -785,30 +785,36 @@ class _ResponderMainpageWidgetState extends State<ResponderMainpageWidget> {
           children: [
             Stack(
               children: [
-                SvgPicture.asset(
-                  'assets/images/Bitmap.svg',
-                  width: double.infinity,
-                  height: 820,
-                  fit: BoxFit.cover,
-                ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(0, 672, 0, 0),
-                  child: Container(
+                  padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 30),
+                  child: SvgPicture.asset(
+                    'assets/images/Bitmap.svg',
                     width: double.infinity,
-                    height: 80,
-                    decoration: BoxDecoration(
-                      color: FlutterFlowTheme.of(context).primaryColor,
-                      borderRadius: BorderRadius.only(
-                        bottomLeft: Radius.circular(0),
-                        bottomRight: Radius.circular(0),
-                        topLeft: Radius.circular(40),
-                        topRight: Radius.circular(40),
+                    height: 820,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Align(
+                  alignment: AlignmentDirectional(0, 1),
+                  child: Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 640, 0, 20),
+                    child: Container(
+                      width: double.infinity,
+                      height: 60,
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(0),
+                          bottomRight: Radius.circular(0),
+                          topLeft: Radius.circular(40),
+                          topRight: Radius.circular(40),
+                        ),
                       ),
-                    ),
-                    alignment: AlignmentDirectional(0, -0.050000000000000044),
-                    child: Text(
-                      'There are currently no emergencies close to you',
-                      style: FlutterFlowTheme.of(context).subtitle2,
+                      alignment: AlignmentDirectional(0, -0.050000000000000044),
+                      child: Text(
+                        'There are currently no emergencies close to you',
+                        style: FlutterFlowTheme.of(context).subtitle2,
+                      ),
                     ),
                   ),
                 ),

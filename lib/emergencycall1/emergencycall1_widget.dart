@@ -113,6 +113,11 @@ class _Emergencycall1WidgetState extends State<Emergencycall1Widget> {
                               },
                             ) ??
                             false;
+                        if (confirmDialogResponse) {
+                          Navigator.pop(context);
+                        } else {
+                          Navigator.pop(context);
+                        }
                       },
                       text: 'CANCEL',
                       options: FFButtonOptions(

@@ -90,25 +90,22 @@ class _PostWidgetState extends State<PostWidget> {
         ),
         title: Text(
           'Create new',
-          style: FlutterFlowTheme.of(context).title2.override(
-                fontFamily: 'Roboto',
-                color: FlutterFlowTheme.of(context).primaryColor,
-                fontSize: 22,
-                useGoogleFonts: GoogleFonts.asMap()
-                    .containsKey(FlutterFlowTheme.of(context).title2Family),
-              ),
+          style: FlutterFlowTheme.of(context).title1,
         ),
         actions: [
-          Padding(
-            padding: EdgeInsetsDirectional.fromSTEB(0, 20, 20, 0),
-            child: Text(
-              'SHARE',
-              style: FlutterFlowTheme.of(context).subtitle1.override(
-                    fontFamily: FlutterFlowTheme.of(context).subtitle1Family,
-                    color: FlutterFlowTheme.of(context).primaryColor,
-                    useGoogleFonts: GoogleFonts.asMap().containsKey(
-                        FlutterFlowTheme.of(context).subtitle1Family),
-                  ),
+          Align(
+            alignment: AlignmentDirectional(0, 0),
+            child: Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+              child: Text(
+                'SHARE',
+                style: FlutterFlowTheme.of(context).subtitle2.override(
+                      fontFamily: FlutterFlowTheme.of(context).subtitle2Family,
+                      color: FlutterFlowTheme.of(context).primaryColor,
+                      useGoogleFonts: GoogleFonts.asMap().containsKey(
+                          FlutterFlowTheme.of(context).subtitle2Family),
+                    ),
+              ),
             ),
           ),
         ],

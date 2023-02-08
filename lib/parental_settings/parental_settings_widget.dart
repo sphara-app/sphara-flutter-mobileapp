@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -49,24 +50,24 @@ class _ParentalSettingsWidgetState extends State<ParentalSettingsWidget> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: Icon(
-                            FFIcons.kleftArrow,
-                            color: FlutterFlowTheme.of(context).primaryColor,
-                            size: 24,
-                          ),
-                        ),
-                      ],
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
+                      ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                     child: SelectionArea(
                         child: Text(
                       'Configuration Settings',
@@ -80,7 +81,7 @@ class _ParentalSettingsWidgetState extends State<ParentalSettingsWidget> {
                     )),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: SelectionArea(
                         child: Text(
                       'Restricted Mode',
@@ -526,7 +527,7 @@ class _ParentalSettingsWidgetState extends State<ParentalSettingsWidget> {
                           text: 'ACTIVATE',
                           options: FFButtonOptions(
                             width: 335,
-                            height: 54,
+                            height: 50,
                             color: FlutterFlowTheme.of(context).primaryColor,
                             textStyle: FlutterFlowTheme.of(context)
                                 .title3

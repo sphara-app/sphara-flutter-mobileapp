@@ -473,7 +473,7 @@ class _Unlocklivetracking2WidgetState extends State<Unlocklivetracking2Widget> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 20),
                       child: Text(
-                        'To avail SPHARA real time tracking\nfeature, please view our subscription\nplan',
+                        'To avail SPHARA real time tracking\nfeature, please view our subscription\nplan.',
                         textAlign: TextAlign.center,
                         style: FlutterFlowTheme.of(context).subtitle1.override(
                               fontFamily:
@@ -743,6 +743,7 @@ class _Unlocklivetracking2WidgetState extends State<Unlocklivetracking2Widget> {
                                     .bodyText1Family,
                                 color:
                                     FlutterFlowTheme.of(context).primaryColor,
+                                fontSize: 16,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
                                         .bodyText1Family),

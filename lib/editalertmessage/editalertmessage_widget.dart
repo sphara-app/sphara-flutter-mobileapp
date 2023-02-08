@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -53,7 +54,8 @@ class _EditalertmessageWidgetState extends State<EditalertmessageWidget> {
               height: double.infinity,
               fit: BoxFit.cover,
             ),
-            SingleChildScrollView(
+            Align(
+              alignment: AlignmentDirectional(0, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -64,25 +66,20 @@ class _EditalertmessageWidgetState extends State<EditalertmessageWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              context.pushNamed(
-                                'Alertmessage',
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                  ),
-                                },
-                              );
-                            },
-                            child: Icon(
-                              FFIcons.kleftArrow,
-                              color: Color(0xFFF99546),
-                              size: 24,
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                          child: FlutterFlowIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 30,
+                            borderWidth: 1,
+                            buttonSize: 60,
+                            icon: Icon(
+                              Icons.chevron_left_sharp,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              size: 30,
                             ),
+                            onPressed: () async {
+                              context.pop();
+                            },
                           ),
                         ),
                       ],
@@ -99,112 +96,70 @@ class _EditalertmessageWidgetState extends State<EditalertmessageWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                     child: Text(
-                      'This default message will send the contact number as well as location to your friend\'s Facebook account, WhatsApp account, and mobile contacts in case of emergency\n',
-                      style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyText1Family,
-                            fontSize: 14,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText1Family),
-                          ),
+                      'This default message will send the contact number as well as location to your friend\'s Facebook account, WhatsApp account, and mobile contacts in case of emergency.',
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
-                    child: Container(
-                      width: 360,
-                      child: Stack(
-                        children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 20, 20, 0),
-                            child: Container(
-                              width: 335,
-                              height: 100,
-                              decoration: BoxDecoration(
-                                color: Color(0x00FFFFFF),
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(
-                                  color: Color(0x4EC6C2C2),
-                                  width: 0,
-                                ),
-                              ),
-                              child: Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(6, 0, 0, 0),
-                                child: Container(
-                                  width: 80,
-                                  child: TextFormField(
-                                    controller: textController,
-                                    autofocus: true,
-                                    obscureText: false,
-                                    decoration: InputDecoration(
-                                      hintStyle: FlutterFlowTheme.of(context)
-                                          .bodyText2,
-                                      enabledBorder: InputBorder.none,
-                                      focusedBorder: InputBorder.none,
-                                      errorBorder: InputBorder.none,
-                                      focusedErrorBorder: InputBorder.none,
-                                    ),
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText1Family,
-                                          fontSize: 16,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText1Family),
-                                        ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                    child: TextFormField(
+                      controller: textController,
+                      obscureText: false,
+                      decoration: InputDecoration(
+                        labelText: 'Alert Message',
+                        hintText: 'Enter you custom alert message',
+                        hintStyle: FlutterFlowTheme.of(context).bodyText2,
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
+                            width: 1,
                           ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 10, 0, 0),
-                            child: Container(
-                              width: 120,
-                              height: 22,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF454545),
-                              ),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        4, 0, 0, 0),
-                                    child: Text(
-                                      'Default Message',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText1
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText1Family,
-                                            color: Color(0xFF909090),
-                                            fontSize: 14,
-                                            letterSpacing: 0.3,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText1Family),
-                                          ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4.0),
+                            topRight: Radius.circular(4.0),
                           ),
-                        ],
+                        ),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: FlutterFlowTheme.of(context).tertiaryColor,
+                            width: 1,
+                          ),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4.0),
+                            topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                        errorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 1,
+                          ),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4.0),
+                            topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                        focusedErrorBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0x00000000),
+                            width: 1,
+                          ),
+                          borderRadius: const BorderRadius.only(
+                            topLeft: Radius.circular(4.0),
+                            topRight: Radius.circular(4.0),
+                          ),
+                        ),
+                        filled: true,
+                        fillColor:
+                            FlutterFlowTheme.of(context).primaryBackground,
+                        contentPadding:
+                            EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                       ),
+                      style: FlutterFlowTheme.of(context).bodyText1,
+                      maxLines: 4,
+                      minLines: 1,
                     ),
                   ),
                   Align(
@@ -447,7 +402,7 @@ class _EditalertmessageWidgetState extends State<EditalertmessageWidget> {
                       text: 'SAVE',
                       options: FFButtonOptions(
                         width: 335,
-                        height: 54,
+                        height: 50,
                         color: Color(0xFFF99546),
                         textStyle: FlutterFlowTheme.of(context).title3,
                         borderSide: BorderSide(

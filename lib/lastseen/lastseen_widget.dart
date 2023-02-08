@@ -57,13 +57,13 @@ class _LastseenWidgetState extends State<LastseenWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                         child: FlutterFlowIconButton(
                           borderColor: Colors.transparent,
-                          borderRadius: 20,
+                          borderRadius: 30,
                           borderWidth: 1,
-                          buttonSize: 40,
+                          buttonSize: 60,
                           icon: Icon(
                             FFIcons.kleftArrow,
                             color: FlutterFlowTheme.of(context).primaryColor,
-                            size: 24,
+                            size: 30,
                           ),
                           onPressed: () async {
                             context.pop();
@@ -79,15 +79,15 @@ class _LastseenWidgetState extends State<LastseenWidget> {
                           child: Text(
                             'SAVE',
                             style: FlutterFlowTheme.of(context)
-                                .bodyText1
+                                .subtitle2
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyText1Family,
+                                      .subtitle2Family,
                                   color:
                                       FlutterFlowTheme.of(context).primaryColor,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyText1Family),
+                                          .subtitle2Family),
                                 ),
                           ),
                         ),
@@ -106,13 +106,7 @@ class _LastseenWidgetState extends State<LastseenWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                   child: Text(
                     'you won\'t see Last Seen and Online Status of the people with whom you don\'t share yours',
-                    style: FlutterFlowTheme.of(context).bodyText2.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).bodyText2Family,
-                          fontSize: 14,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyText2Family),
-                        ),
+                    style: FlutterFlowTheme.of(context).bodyText2,
                   ),
                 ),
                 Padding(
@@ -147,11 +141,12 @@ class _LastseenWidgetState extends State<LastseenWidget> {
                             .override(
                               fontFamily:
                                   FlutterFlowTheme.of(context).bodyText1Family,
-                              color:
-                                  FlutterFlowTheme.of(context).secondaryColor,
+                              color: FlutterFlowTheme.of(context).primaryColor,
                               useGoogleFonts: GoogleFonts.asMap().containsKey(
                                   FlutterFlowTheme.of(context).bodyText1Family),
                             ),
+                        textPadding:
+                            EdgeInsetsDirectional.fromSTEB(0, 0, 40, 0),
                         buttonPosition: RadioButtonPosition.right,
                         direction: Axis.vertical,
                         radioButtonColor:
@@ -176,13 +171,7 @@ class _LastseenWidgetState extends State<LastseenWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                   child: Text(
                     'you can add users or entire groups as exceptions that will override the settings above',
-                    style: FlutterFlowTheme.of(context).bodyText2.override(
-                          fontFamily:
-                              FlutterFlowTheme.of(context).bodyText2Family,
-                          fontSize: 14,
-                          useGoogleFonts: GoogleFonts.asMap().containsKey(
-                              FlutterFlowTheme.of(context).bodyText2Family),
-                        ),
+                    style: FlutterFlowTheme.of(context).bodyText2,
                   ),
                 ),
                 Padding(

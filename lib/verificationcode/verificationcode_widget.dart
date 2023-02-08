@@ -119,7 +119,7 @@ class _VerificationcodeWidgetState extends State<VerificationcodeWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'We have sent you an SMS with a code to\nthe number that you provided',
+                            'We have sent you an SMS with a code to\nthe number that you provided.',
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .bodyText1
@@ -184,7 +184,7 @@ class _VerificationcodeWidgetState extends State<VerificationcodeWidget> {
                           filled: true,
                           fillColor: Color(0xFF505050),
                           contentPadding:
-                              EdgeInsetsDirectional.fromSTEB(20, 25, 0, 25),
+                              EdgeInsetsDirectional.fromSTEB(20, 20, 0, 20),
                         ),
                         style: FlutterFlowTheme.of(context).bodyText1.override(
                               fontFamily: 'Roboto',

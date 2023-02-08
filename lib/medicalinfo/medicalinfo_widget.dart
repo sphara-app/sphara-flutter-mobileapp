@@ -155,7 +155,7 @@ class _MedicalinfoWidgetState extends State<MedicalinfoWidget> {
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(20, 6, 0, 0),
                           child: Text(
-                            'List any condition which emergency responder \nneeds to know',
+                            'List any condition which emergency responder \nneeds to know.',
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
                                 .bodyText1

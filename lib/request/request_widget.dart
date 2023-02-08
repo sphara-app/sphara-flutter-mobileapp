@@ -80,7 +80,7 @@ class _RequestWidgetState extends State<RequestWidget> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Incident has been reported at Nextgalleria mall,\n Madhapur, Hitech City by Ritika Chauhan',
+                            'Incident has been reported at Nextgalleria mall\n Madhapur, Hitech City by Ritika Chauhan',
                             textAlign: TextAlign.center,
                             style: FlutterFlowTheme.of(context)
                                 .bodyText1
@@ -189,8 +189,24 @@ class _RequestWidgetState extends State<RequestWidget> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                               child: FFButtonWidget(
-                                onPressed: () {
-                                  print('Button pressed ...');
+                                onPressed: () async {
+                                  await showDialog(
+                                    context: context,
+                                    builder: (alertDialogContext) {
+                                      return AlertDialog(
+                                        title: Text('DISPATCH'),
+                                        content: Text(
+                                            'Fire unit has been dispatched. If they need  your help they will contact you. Please click  acknowledge button to allow them. '),
+                                        actions: [
+                                          TextButton(
+                                            onPressed: () => Navigator.pop(
+                                                alertDialogContext),
+                                            child: Text('ACKNOWLEDGE'),
+                                          ),
+                                        ],
+                                      );
+                                    },
+                                  );
                                 },
                                 text: 'ACCEPT',
                                 options: FFButtonOptions(

@@ -108,19 +108,10 @@ class _RobberyWidgetState extends State<RobberyWidget> {
                     Align(
                       alignment: AlignmentDirectional(-1, 0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                         child: Text(
-                          'please fill the following information as it will provide better insight on the incident',
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText2
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                fontSize: 14,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
-                              ),
+                          'please fill the following information as it will provide better insight on the incident.',
+                          style: FlutterFlowTheme.of(context).bodyText2,
                         ),
                       ),
                     ),
@@ -131,15 +122,15 @@ class _RobberyWidgetState extends State<RobberyWidget> {
                         child: Text(
                           'Incident Place',
                           style: FlutterFlowTheme.of(context)
-                              .bodyText2
+                              .bodyText1
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                color: Colors.white,
-                                fontSize: 14,
+                                    .bodyText1Family,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
+                                        .bodyText1Family),
                               ),
                         ),
                       ),
@@ -203,15 +194,15 @@ class _RobberyWidgetState extends State<RobberyWidget> {
                         child: Text(
                           'Address',
                           style: FlutterFlowTheme.of(context)
-                              .bodyText2
+                              .bodyText1
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                color: Colors.white,
-                                fontSize: 14,
+                                    .bodyText1Family,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
+                                        .bodyText1Family),
                               ),
                         ),
                       ),
@@ -274,15 +265,15 @@ class _RobberyWidgetState extends State<RobberyWidget> {
                         child: Text(
                           'Any injured?',
                           style: FlutterFlowTheme.of(context)
-                              .bodyText2
+                              .bodyText1
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                color: Colors.white,
-                                fontSize: 14,
+                                    .bodyText1Family,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
+                                        .bodyText1Family),
                               ),
                         ),
                       ),
@@ -334,15 +325,15 @@ class _RobberyWidgetState extends State<RobberyWidget> {
                         child: Text(
                           'Things Robbed',
                           style: FlutterFlowTheme.of(context)
-                              .bodyText2
+                              .bodyText1
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                color: Colors.white,
-                                fontSize: 14,
+                                    .bodyText1Family,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
+                                        .bodyText1Family),
                               ),
                         ),
                       ),
@@ -412,15 +403,15 @@ class _RobberyWidgetState extends State<RobberyWidget> {
                         child: Text(
                           'Value',
                           style: FlutterFlowTheme.of(context)
-                              .bodyText2
+                              .bodyText1
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                color: Colors.white,
-                                fontSize: 14,
+                                    .bodyText1Family,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
+                                        .bodyText1Family),
                               ),
                         ),
                       ),
@@ -484,25 +475,25 @@ class _RobberyWidgetState extends State<RobberyWidget> {
                     Align(
                       alignment: AlignmentDirectional(-1, 0),
                       child: Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(20, 30, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                         child: Text(
                           'Security & Evidence',
                           style: FlutterFlowTheme.of(context)
-                              .bodyText2
+                              .bodyText1
                               .override(
                                 fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                color: Colors.white,
-                                fontSize: 14,
+                                    .bodyText1Family,
+                                color:
+                                    FlutterFlowTheme.of(context).secondaryColor,
                                 useGoogleFonts: GoogleFonts.asMap().containsKey(
                                     FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
+                                        .bodyText1Family),
                               ),
                         ),
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
                       child: FlutterFlowCheckboxGroup(
                         options: ['CCTV footage', 'Eye Witness'],
                         onChanged: (val) =>

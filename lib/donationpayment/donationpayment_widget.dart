@@ -7,14 +7,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class DonationapaymentWidget extends StatefulWidget {
-  const DonationapaymentWidget({Key? key}) : super(key: key);
+class DonationpaymentWidget extends StatefulWidget {
+  const DonationpaymentWidget({Key? key}) : super(key: key);
 
   @override
-  _DonationapaymentWidgetState createState() => _DonationapaymentWidgetState();
+  _DonationpaymentWidgetState createState() => _DonationpaymentWidgetState();
 }
 
-class _DonationapaymentWidgetState extends State<DonationapaymentWidget> {
+class _DonationpaymentWidgetState extends State<DonationpaymentWidget> {
   final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 

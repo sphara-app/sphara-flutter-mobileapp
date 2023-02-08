@@ -98,7 +98,7 @@ class _IncomingCasesWidgetState extends State<IncomingCasesWidget> {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
                     child: Text(
                       'Accept the incoming case by\n select button',
                       textAlign: TextAlign.center,

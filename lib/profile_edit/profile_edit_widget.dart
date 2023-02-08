@@ -75,7 +75,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(2, 40, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(10, 40, 20, 0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -83,12 +83,13 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                         children: [
                           FlutterFlowIconButton(
                             borderColor: Colors.transparent,
+                            borderRadius: 30,
                             borderWidth: 1,
-                            buttonSize: 40,
+                            buttonSize: 60,
                             icon: Icon(
                               FFIcons.kleftArrow,
                               color: FlutterFlowTheme.of(context).primaryColor,
-                              size: 24,
+                              size: 30,
                             ),
                             onPressed: () async {
                               context.pushNamed('post');
@@ -100,16 +101,16 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                             child: Text(
                               'Edit Profile',
                               style: FlutterFlowTheme.of(context)
-                                  .bodyText1
+                                  .subtitle2
                                   .override(
                                     fontFamily: FlutterFlowTheme.of(context)
-                                        .bodyText1Family,
+                                        .subtitle2Family,
                                     color: FlutterFlowTheme.of(context)
                                         .primaryColor,
                                     useGoogleFonts: GoogleFonts.asMap()
                                         .containsKey(
                                             FlutterFlowTheme.of(context)
-                                                .bodyText1Family),
+                                                .subtitle2Family),
                                   ),
                             ),
                           ),
@@ -685,9 +686,10 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                             ),
                             Padding(
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 14, 0),
                               child: Column(
                                 mainAxisSize: MainAxisSize.max,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Padding(
@@ -969,7 +971,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(8, 5, 8, 0),
                                 child: Text(
-                                  'Click to set profile visibility according to your preference .By default, the above information will be visible to everyone',
+                                  'Click to set profile visibility according to your preference .By default, the above information will be visible to everyone.',
                                   style: FlutterFlowTheme.of(context).bodyText1,
                                 ),
                               ),

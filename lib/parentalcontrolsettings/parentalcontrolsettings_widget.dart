@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -46,43 +47,29 @@ class _ParentalcontrolsettingsWidgetState
               alignment: AlignmentDirectional(0, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              context.pushNamed(
-                                'AppSettings',
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                  ),
-                                },
-                              );
-                            },
-                            child: Icon(
-                              FFIcons.kleftArrow,
-                              color: Color(0xFFF99546),
-                              size: 24,
-                            ),
-                          ),
-                        ),
-                      ],
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
+                      ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                       child: SelectionArea(
                           child: Text(
                         'Parental Control Settings',
@@ -94,18 +81,12 @@ class _ParentalcontrolsettingsWidgetState
                     padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                     child: SelectionArea(
                         child: Text(
-                      'The parent control feature will allow SPHARA to apply\ndefault settings on your children account which is\nfor their age such as',
-                      style: FlutterFlowTheme.of(context).bodyText2.override(
-                            fontFamily:
-                                FlutterFlowTheme.of(context).bodyText2Family,
-                            fontSize: 14,
-                            useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                FlutterFlowTheme.of(context).bodyText2Family),
-                          ),
+                      'The parent control feature will allow SPHARA to apply default settings on your children account which isfor their age such as',
+                      style: FlutterFlowTheme.of(context).bodyText2,
                     )),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.start,
@@ -127,18 +108,15 @@ class _ParentalcontrolsettingsWidgetState
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
                     child: Row(
                       mainAxisSize: MainAxisSize.max,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: Icon(
-                            Icons.remove_circle_outline,
-                            color: Color(0xFFB0B0B0),
-                            size: 20,
-                          ),
+                        Icon(
+                          Icons.remove_circle_outline,
+                          color: Color(0xFFB0B0B0),
+                          size: 20,
                         ),
                         Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
@@ -163,18 +141,9 @@ class _ParentalcontrolsettingsWidgetState
                           text: 'TURN ON',
                           options: FFButtonOptions(
                             width: 335,
-                            height: 54,
+                            height: 50,
                             color: FlutterFlowTheme.of(context).alternate,
-                            textStyle: FlutterFlowTheme.of(context)
-                                .subtitle2
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .subtitle2Family,
-                                  color: Colors.white,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .subtitle2Family),
-                                ),
+                            textStyle: FlutterFlowTheme.of(context).title3,
                             borderSide: BorderSide(
                               color: Colors.transparent,
                               width: 1,

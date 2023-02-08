@@ -59,7 +59,7 @@ class _VoiceActivation2WidgetState extends State<VoiceActivation2Widget> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 104, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 120, 0, 0),
                       child: SelectionArea(
                           child: Text(
                         'Voice Activation',
@@ -70,14 +70,8 @@ class _VoiceActivation2WidgetState extends State<VoiceActivation2Widget> {
                       padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                       child: SelectionArea(
                           child: Text(
-                        'Select the Code that will be used for voice alarm \nactivation',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              fontSize: 14,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
-                            ),
+                        'Select the Code that will be used for voice alarm activation.',
+                        style: FlutterFlowTheme.of(context).bodyText2,
                       )),
                     ),
                     Padding(

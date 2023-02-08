@@ -327,23 +327,8 @@ class _UploadingidentificationWidgetState
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 100),
                           child: FFButtonWidget(
-                            onPressed: () async {
-                              await showDialog(
-                                context: context,
-                                builder: (alertDialogContext) {
-                                  return AlertDialog(
-                                    content: Text(
-                                        'Your ID has been saved successfully in your profile on your phone only'),
-                                    actions: [
-                                      TextButton(
-                                        onPressed: () =>
-                                            Navigator.pop(alertDialogContext),
-                                        child: Text('CONTINUE'),
-                                      ),
-                                    ],
-                                  );
-                                },
-                              );
+                            onPressed: () {
+                              print('Button pressed ...');
                             },
                             text: 'UPLOAD',
                             options: FFButtonOptions(

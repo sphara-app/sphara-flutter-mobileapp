@@ -77,7 +77,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
                   child: Text(
                     'Display',
-                    style: FlutterFlowTheme.of(context).subtitle1,
+                    style: FlutterFlowTheme.of(context).subtitle2,
                   ),
                 ),
                 Padding(
@@ -124,7 +124,7 @@ class _ChatsWidgetState extends State<ChatsWidget> {
                   padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                   child: Text(
                     'Chat Settings',
-                    style: FlutterFlowTheme.of(context).subtitle1,
+                    style: FlutterFlowTheme.of(context).subtitle2,
                   ),
                 ),
                 Padding(

@@ -52,32 +52,27 @@ class _AlertDelayWidgetState extends State<AlertDelayWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                          child: InkWell(
-                            onTap: () async {
-                              context.pushNamed(
-                                'AppSettings',
-                                extra: <String, dynamic>{
-                                  kTransitionInfoKey: TransitionInfo(
-                                    hasTransition: true,
-                                    transitionType: PageTransitionType.fade,
-                                    duration: Duration(milliseconds: 0),
-                                  ),
-                                },
-                              );
-                            },
-                            child: Icon(
-                              FFIcons.kleftArrow,
-                              color: Color(0xFFF99546),
-                              size: 24,
+                          padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                          child: FlutterFlowIconButton(
+                            borderColor: Colors.transparent,
+                            borderRadius: 30,
+                            borderWidth: 1,
+                            buttonSize: 60,
+                            icon: Icon(
+                              Icons.chevron_left_sharp,
+                              color: FlutterFlowTheme.of(context).primaryColor,
+                              size: 30,
                             ),
+                            onPressed: () async {
+                              context.pop();
+                            },
                           ),
                         ),
                       ],
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: InkWell(
                       onTap: () async {
                         context.pushNamed(
@@ -91,103 +86,32 @@ class _AlertDelayWidgetState extends State<AlertDelayWidget> {
                           },
                         );
                       },
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                            child: Icon(
-                              Icons.alarm,
-                              color: Color(0xFFB0B0B0),
-                              size: 28,
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
-                            child: Container(
-                              width: 220,
-                              height: 70,
-                              decoration: BoxDecoration(
-                                color: Color(0x00FFFFFF),
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(-1, 0),
-                                    child: Text(
-                                      'Alarm Delay',
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .subtitle2Family,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryColor,
-                                            fontSize: 16,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .subtitle2Family),
-                                          ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 2, 0, 0),
-                                    child: Text(
-                                      'Set the number of seconds from\nwhen the SOS button is pushed \nuntil the alarm triggered',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w300,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
-                                          ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional(0, 0),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                              child: FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 20,
-                                borderWidth: 1,
-                                buttonSize: 50,
-                                icon: Icon(
-                                  FFIcons.krightArrow,
-                                  color: Color(0xFFB0B0B0),
-                                  size: 30,
-                                ),
-                                onPressed: () async {
-                                  context.pushNamed('Alarmdelay');
-                                },
-                              ),
-                            ),
-                          ),
-                        ],
+                      child: ListTile(
+                        leading: Icon(
+                          Icons.alarm,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          size: 30,
+                        ),
+                        title: Text(
+                          'Alarm Delay',
+                          style: FlutterFlowTheme.of(context).subtitle2,
+                        ),
+                        subtitle: Text(
+                          'Set the number of seconds from whenthe\nSOS button is pushed until the alarm triggered.',
+                          style: FlutterFlowTheme.of(context).bodyText2,
+                        ),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          size: 20,
+                        ),
+                        tileColor: FlutterFlowTheme.of(context).secondaryColor,
+                        dense: true,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: InkWell(
                       onTap: () async {
                         context.pushNamed(
@@ -201,245 +125,57 @@ class _AlertDelayWidgetState extends State<AlertDelayWidget> {
                           },
                         );
                       },
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                            child: Icon(
-                              FFIcons.knounDelay29813461,
-                              color: Color(0xFFB0B0B0),
-                              size: 36,
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                            child: Container(
-                              width: 220,
-                              height: 75,
-                              decoration: BoxDecoration(
-                                color: Color(0x00FFFFFF),
-                              ),
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(-1, 0),
-                                    child: Text(
-                                      'Dial Delay',
-                                      style: FlutterFlowTheme.of(context)
-                                          .subtitle2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .subtitle2Family,
-                                            color: FlutterFlowTheme.of(context)
-                                                .secondaryColor,
-                                            fontSize: 16,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .subtitle2Family),
-                                          ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        0, 2, 0, 0),
-                                    child: Text(
-                                      'This setting will enable  number of \nseconds delay need to connect with \nyour local emergency number',
-                                      style: FlutterFlowTheme.of(context)
-                                          .bodyText2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
-                                            fontSize: 14,
-                                            fontWeight: FontWeight.w300,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
-                                          ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional(0, 0),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                              child: FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 20,
-                                borderWidth: 1,
-                                buttonSize: 50,
-                                icon: Icon(
-                                  FFIcons.krightArrow,
-                                  color: Color(0xFFB0B0B0),
-                                  size: 30,
-                                ),
-                                onPressed: () async {
-                                  context.pushNamed(
-                                    'Dialdelay',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType: PageTransitionType.fade,
-                                        duration: Duration(milliseconds: 0),
-                                      ),
-                                    },
-                                  );
-                                },
-                              ),
-                            ),
-                          ),
-                        ],
+                      child: ListTile(
+                        leading: Icon(
+                          FFIcons.knounDelay29813461,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          size: 34,
+                        ),
+                        title: Text(
+                          'Dial Delay',
+                          style: FlutterFlowTheme.of(context).subtitle2,
+                        ),
+                        subtitle: Text(
+                          'This setting will enable  number of seconds delay need to connect with your local emergency number.',
+                          style: FlutterFlowTheme.of(context).bodyText2,
+                        ),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          size: 20,
+                        ),
+                        tileColor: FlutterFlowTheme.of(context).secondaryColor,
+                        dense: true,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: InkWell(
                       onTap: () async {
-                        context.pushNamed(
-                          'SetTimer',
-                          extra: <String, dynamic>{
-                            kTransitionInfoKey: TransitionInfo(
-                              hasTransition: true,
-                              transitionType: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 0),
-                            ),
-                          },
-                        );
+                        context.pushNamed('SetTimer');
                       },
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                            child: Icon(
-                              FFIcons.kalarmDelay,
-                              color: Color(0xFFB0B0B0),
-                              size: 28,
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
-                            child: Container(
-                              width: 220,
-                              height: 72,
-                              decoration: BoxDecoration(
-                                color: Color(0x00FFFFFF),
-                              ),
-                              child: InkWell(
-                                onTap: () async {
-                                  context.pushNamed(
-                                    'SetTimer',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType: PageTransitionType.fade,
-                                        duration: Duration(milliseconds: 0),
-                                      ),
-                                    },
-                                  );
-                                },
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.max,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Align(
-                                      alignment: AlignmentDirectional(-1, 0),
-                                      child: Text(
-                                        'Timer Delay',
-                                        style: FlutterFlowTheme.of(context)
-                                            .subtitle2
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .subtitle2Family,
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryColor,
-                                              fontSize: 16,
-                                              useGoogleFonts:
-                                                  GoogleFonts.asMap()
-                                                      .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .subtitle2Family),
-                                            ),
-                                      ),
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          0, 2, 0, 0),
-                                      child: Text(
-                                        'Set the timer to confirm your safe-arrival',
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText2
-                                            .override(
-                                              fontFamily:
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText2Family,
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w300,
-                                              useGoogleFonts:
-                                                  GoogleFonts.asMap()
-                                                      .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyText2Family),
-                                            ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                          Align(
-                            alignment: AlignmentDirectional(0, 0),
-                            child: Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(15, 0, 0, 0),
-                              child: FlutterFlowIconButton(
-                                borderColor: Colors.transparent,
-                                borderRadius: 20,
-                                borderWidth: 1,
-                                buttonSize: 50,
-                                icon: Icon(
-                                  FFIcons.krightArrow,
-                                  color: Color(0xFFB0B0B0),
-                                  size: 30,
-                                ),
-                                onPressed: () async {
-                                  context.pushNamed(
-                                    'SetTimer',
-                                    extra: <String, dynamic>{
-                                      kTransitionInfoKey: TransitionInfo(
-                                        hasTransition: true,
-                                        transitionType: PageTransitionType.fade,
-                                        duration: Duration(milliseconds: 0),
-                                      ),
-                                    },
-                                  );
-                                },
-                              ),
-                            ),
-                          ),
-                        ],
+                      child: ListTile(
+                        leading: Icon(
+                          FFIcons.kalarmDelay,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          size: 30,
+                        ),
+                        title: Text(
+                          'Timer Delay',
+                          style: FlutterFlowTheme.of(context).subtitle2,
+                        ),
+                        subtitle: Text(
+                          'Set the timer to confirm your safe-arrival.',
+                          style: FlutterFlowTheme.of(context).bodyText2,
+                        ),
+                        trailing: Icon(
+                          Icons.arrow_forward_ios,
+                          color: FlutterFlowTheme.of(context).tertiaryColor,
+                          size: 20,
+                        ),
+                        tileColor: FlutterFlowTheme.of(context).secondaryColor,
+                        dense: true,
                       ),
                     ),
                   ),

@@ -55,13 +55,13 @@ class _ChatsettingsWidgetState extends State<ChatsettingsWidget> {
                         padding: EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
                         child: FlutterFlowIconButton(
                           borderColor: Colors.transparent,
-                          borderRadius: 20,
+                          borderRadius: 30,
                           borderWidth: 1,
-                          buttonSize: 40,
+                          buttonSize: 60,
                           icon: Icon(
                             FFIcons.kleftArrow,
                             color: FlutterFlowTheme.of(context).primaryColor,
-                            size: 24,
+                            size: 30,
                           ),
                           onPressed: () async {
                             context.pop();

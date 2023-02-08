@@ -1,4 +1,5 @@
 import '../components/addingnewcontact1_widget.dart';
+import '../flutter_flow/flutter_flow_choice_chips.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -16,6 +17,7 @@ class AddingnewWidget extends StatefulWidget {
 }
 
 class _AddingnewWidgetState extends State<AddingnewWidget> {
+  String? choiceChipsValue;
   TextEditingController? textController1;
   TextEditingController? textController2;
   final _unfocusNode = FocusNode();
@@ -322,105 +324,53 @@ class _AddingnewWidgetState extends State<AddingnewWidget> {
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
-                                child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
-                                  },
-                                  text: 'Emergency Contacts',
-                                  options: FFButtonOptions(
-                                    width: 160,
-                                    height: 30,
-                                    color: Color(0x00F99546),
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyText2
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText2Family,
-                                          color: FlutterFlowTheme.of(context)
+                              Expanded(
+                                child: Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 20, 0),
+                                  child: FlutterFlowChoiceChips(
+                                    options: [
+                                      ChipData('Emergency Contacts'),
+                                      ChipData('Friends'),
+                                      ChipData('Family')
+                                    ],
+                                    onChanged: (val) => setState(
+                                        () => choiceChipsValue = val?.first),
+                                    selectedChipStyle: ChipStyle(
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
                                               .primaryColor,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText2Family),
-                                        ),
-                                    borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context)
-                                          .primaryColor,
-                                      width: 1,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText1Family,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryColor,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyText1Family),
+                                          ),
+                                      iconColor: Colors.white,
+                                      iconSize: 18,
+                                      elevation: 0,
                                     ),
-                                    borderRadius: BorderRadius.circular(40),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                                child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
-                                  },
-                                  text: 'Friends',
-                                  options: FFButtonOptions(
-                                    width: 70,
-                                    height: 30,
-                                    color: Color(0x00F99546),
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyText2
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText2Family,
-                                          color: FlutterFlowTheme.of(context)
-                                              .tertiaryColor,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText2Family),
-                                        ),
-                                    borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context)
-                                          .tertiaryColor,
-                                      width: 1,
+                                    unselectedChipStyle: ChipStyle(
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .alternate,
+                                      textStyle: FlutterFlowTheme.of(context)
+                                          .bodyText1,
+                                      iconColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      iconSize: 18,
+                                      elevation: 0,
                                     ),
-                                    borderRadius: BorderRadius.circular(40),
-                                  ),
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
-                                child: FFButtonWidget(
-                                  onPressed: () {
-                                    print('Button pressed ...');
-                                  },
-                                  text: 'Family',
-                                  options: FFButtonOptions(
-                                    width: 65,
-                                    height: 30,
-                                    color: Color(0x00F99546),
-                                    textStyle: FlutterFlowTheme.of(context)
-                                        .bodyText2
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText2Family,
-                                          color: FlutterFlowTheme.of(context)
-                                              .tertiaryColor,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText2Family),
-                                        ),
-                                    borderSide: BorderSide(
-                                      color: FlutterFlowTheme.of(context)
-                                          .tertiaryColor,
-                                      width: 1,
-                                    ),
-                                    borderRadius: BorderRadius.circular(40),
+                                    chipSpacing: 20,
+                                    multiselect: false,
+                                    alignment: WrapAlignment.start,
                                   ),
                                 ),
                               ),

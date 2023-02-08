@@ -229,7 +229,7 @@ class _SetTimerWidgetState extends State<SetTimerWidget> {
                               alignment: AlignmentDirectional(0, 0),
                               child: SelectionArea(
                                   child: Text(
-                                'Cancel',
+                                'Cancels',
                                 style: FlutterFlowTheme.of(context).bodyText1,
                               )),
                             ),

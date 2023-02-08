@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -54,40 +55,41 @@ class _PasscodeWidgetState extends State<PasscodeWidget> {
               height: double.infinity,
               fit: BoxFit.cover,
             ),
-            Padding(
-              padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+            Align(
+              alignment: AlignmentDirectional(0, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Align(
-                    alignment: AlignmentDirectional(-1, 0),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(2, 40, 0, 0),
-                      child: Icon(
-                        FFIcons.kleftArrow,
-                        color: Color(0xFFF99546),
-                        size: 24,
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
                       ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
                       child: Text(
                         'Enter an 8-digit passcode which you will be asked for when you are trying to log in to a new device or restore your profile. Please keep this passcode safely for your future reference',
-                        style: FlutterFlowTheme.of(context).subtitle1.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).subtitle1Family,
-                              color: Color(0xFFB0B0B0),
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).subtitle1Family),
-                            ),
+                        style: FlutterFlowTheme.of(context).subtitle2,
                       ),
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: TextFormField(
                       controller: textController1,
                       obscureText: !passwordVisibility1,
@@ -168,7 +170,7 @@ class _PasscodeWidgetState extends State<PasscodeWidget> {
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
                     child: TextFormField(
                       controller: textController2,
                       obscureText: !passwordVisibility2,

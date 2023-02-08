@@ -70,7 +70,7 @@ class _ChannelWidgetState extends State<ChannelWidget> {
                       ],
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 10),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 10),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -351,15 +351,20 @@ class _ChannelWidgetState extends State<ChannelWidget> {
                               mainAxisSize: MainAxisSize.max,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20, 0, 0, 0),
-                                  child: Icon(
-                                    Icons.search,
+                                FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 30,
+                                  borderWidth: 1,
+                                  buttonSize: 40,
+                                  icon: Icon(
+                                    Icons.search_sharp,
                                     color: FlutterFlowTheme.of(context)
-                                        .tertiaryColor,
-                                    size: 20,
+                                        .primaryText,
+                                    size: 24,
                                   ),
+                                  onPressed: () {
+                                    print('IconButton pressed ...');
+                                  },
                                 ),
                                 Expanded(
                                   child: Padding(
@@ -444,7 +449,7 @@ class _ChannelWidgetState extends State<ChannelWidget> {
                             borderColor: Colors.transparent,
                             borderRadius: 18,
                             borderWidth: 1,
-                            buttonSize: 37,
+                            buttonSize: 40,
                             icon: Icon(
                               Icons.apps,
                               color: FlutterFlowTheme.of(context).primaryText,

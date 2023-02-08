@@ -124,53 +124,50 @@ class _LoginWidgetState extends State<LoginWidget> {
                           ],
                         ),
                       ),
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
-                        child: Stack(
-                          children: [
-                            Align(
+                      Align(
+                        alignment: AlignmentDirectional(0, 0),
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                          child: Container(
+                            width: 335,
+                            height: 54,
+                            decoration: BoxDecoration(
+                              color: Color(0x87555555),
+                              borderRadius: BorderRadius.circular(40),
+                            ),
+                            child: Align(
                               alignment: AlignmentDirectional(0, 0),
-                              child: Container(
-                                width: 335,
-                                height: 54,
-                                decoration: BoxDecoration(
-                                  color: Color(0x87555555),
-                                  borderRadius: BorderRadius.circular(40),
-                                ),
-                                child: Align(
-                                  alignment: AlignmentDirectional(0, 0),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.max,
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsetsDirectional.fromSTEB(
-                                            10, 10, 0, 10),
-                                        child: InkWell(
-                                          onTap: () async {
-                                            // dropdownCC
-                                            await actions.showCountryCode(
-                                              context,
-                                            );
-                                          },
-                                          child: Container(
-                                            width: 80,
-                                            height: 100,
-                                            decoration: BoxDecoration(
-                                              color:
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        10, 10, 0, 10),
+                                    child: InkWell(
+                                      onTap: () async {
+                                        // dropdownCC
+                                        await actions.showCountryCode(
+                                          context,
+                                        );
+                                      },
+                                      child: Container(
+                                        width: 80,
+                                        height: 100,
+                                        decoration: BoxDecoration(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryBackground,
+                                          borderRadius:
+                                              BorderRadius.circular(30),
+                                        ),
+                                        child: Row(
+                                          mainAxisSize: MainAxisSize.max,
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.center,
+                                          children: [
+                                            Text(
+                                              '+${FFAppState().countryCode}',
+                                              style:
                                                   FlutterFlowTheme.of(context)
-                                                      .primaryBackground,
-                                              borderRadius:
-                                                  BorderRadius.circular(30),
-                                            ),
-                                            child: Row(
-                                              mainAxisSize: MainAxisSize.max,
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                Text(
-                                                  '+${FFAppState().countryCode}',
-                                                  style: FlutterFlowTheme.of(
-                                                          context)
                                                       .bodyText1
                                                       .override(
                                                         fontFamily:
@@ -188,157 +185,130 @@ class _LoginWidgetState extends State<LoginWidget> {
                                                                         context)
                                                                     .bodyText1Family),
                                                       ),
-                                                ),
-                                                Icon(
-                                                  Icons.arrow_drop_down,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
+                                            ),
+                                            Icon(
+                                              Icons.arrow_drop_down,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
                                                       .secondaryColor,
-                                                  size: 24,
-                                                ),
-                                              ],
+                                              size: 24,
                                             ),
-                                          ),
-                                        ),
-                                      ),
-                                      Expanded(
-                                        child: TextFormField(
-                                          controller: textController,
-                                          onChanged: (_) =>
-                                              EasyDebounce.debounce(
-                                            'textController',
-                                            Duration(milliseconds: 100),
-                                            () async {
-                                              // OnTextChange
-                                              if (formKey.currentState ==
-                                                      null ||
-                                                  !formKey.currentState!
-                                                      .validate()) {
-                                                return;
-                                              }
-                                            },
-                                          ),
-                                          onFieldSubmitted: (_) async {
-                                            // OnTextChange
-                                            if (formKey.currentState == null ||
-                                                !formKey.currentState!
-                                                    .validate()) {
-                                              return;
-                                            }
-                                          },
-                                          autofocus: true,
-                                          obscureText: false,
-                                          decoration: InputDecoration(
-                                            hintText: 'Phone Number',
-                                            hintStyle:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2
-                                                    .override(
-                                                      fontFamily:
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .bodyText2Family,
-                                                      color: Color(0xFF707070),
-                                                      fontSize: 14,
-                                                      useGoogleFonts: GoogleFonts
-                                                              .asMap()
-                                                          .containsKey(
-                                                              FlutterFlowTheme.of(
-                                                                      context)
-                                                                  .bodyText2Family),
-                                                    ),
-                                            enabledBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            errorBorder: UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            focusedErrorBorder:
-                                                UnderlineInputBorder(
-                                              borderSide: BorderSide(
-                                                color: Color(0x00000000),
-                                                width: 1,
-                                              ),
-                                              borderRadius:
-                                                  const BorderRadius.only(
-                                                topLeft: Radius.circular(4.0),
-                                                topRight: Radius.circular(4.0),
-                                              ),
-                                            ),
-                                            contentPadding:
-                                                EdgeInsetsDirectional.fromSTEB(
-                                                    10, 0, 0, 0),
-                                          ),
-                                          style: FlutterFlowTheme.of(context)
-                                              .bodyText1
-                                              .override(
-                                                fontFamily: 'Roboto',
-                                                color:
-                                                    FlutterFlowTheme.of(context)
-                                                        .tertiaryColor,
-                                                fontSize: 16,
-                                                fontWeight: FontWeight.normal,
-                                                useGoogleFonts: GoogleFonts
-                                                        .asMap()
-                                                    .containsKey(
-                                                        FlutterFlowTheme.of(
-                                                                context)
-                                                            .bodyText1Family),
-                                              ),
-                                          keyboardType: TextInputType.number,
-                                          validator: (val) {
-                                            if (val == null || val.isEmpty) {
-                                              return 'Please enter the correct  phone number';
-                                            }
-
-                                            if (val.length < 10) {
-                                              return 'Requires at least 10 characters.';
-                                            }
-                                            if (val.length > 12) {
-                                              return 'Maximum 12 characters allowed, currently ${val.length}.';
-                                            }
-
-                                            return null;
-                                          },
-                                          inputFormatters: [
-                                            FilteringTextInputFormatter.allow(
-                                                RegExp('[0-9]'))
                                           ],
                                         ),
                                       ),
-                                    ],
+                                    ),
                                   ),
-                                ),
+                                  Expanded(
+                                    child: TextFormField(
+                                      controller: textController,
+                                      onChanged: (_) => EasyDebounce.debounce(
+                                        'textController',
+                                        Duration(milliseconds: 100),
+                                        () async {
+                                          setState(() {});
+                                          if (formKey.currentState == null ||
+                                              !formKey.currentState!
+                                                  .validate()) {
+                                            return;
+                                          }
+                                        },
+                                      ),
+                                      autofocus: true,
+                                      obscureText: false,
+                                      decoration: InputDecoration(
+                                        hintText: 'Phone Number',
+                                        hintStyle: FlutterFlowTheme.of(context)
+                                            .bodyText2
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText2Family,
+                                              color: Color(0xFF707070),
+                                              fontSize: 14,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText2Family),
+                                            ),
+                                        enabledBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0x00000000),
+                                            width: 1,
+                                          ),
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(0),
+                                            bottomRight: Radius.circular(30),
+                                            topLeft: Radius.circular(0),
+                                            topRight: Radius.circular(30),
+                                          ),
+                                        ),
+                                        focusedBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0x00000000),
+                                            width: 1,
+                                          ),
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(0),
+                                            bottomRight: Radius.circular(30),
+                                            topLeft: Radius.circular(0),
+                                            topRight: Radius.circular(30),
+                                          ),
+                                        ),
+                                        errorBorder: UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0x00000000),
+                                            width: 1,
+                                          ),
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(0),
+                                            bottomRight: Radius.circular(30),
+                                            topLeft: Radius.circular(0),
+                                            topRight: Radius.circular(30),
+                                          ),
+                                        ),
+                                        focusedErrorBorder:
+                                            UnderlineInputBorder(
+                                          borderSide: BorderSide(
+                                            color: Color(0x00000000),
+                                            width: 1,
+                                          ),
+                                          borderRadius: BorderRadius.only(
+                                            bottomLeft: Radius.circular(0),
+                                            bottomRight: Radius.circular(30),
+                                            topLeft: Radius.circular(0),
+                                            topRight: Radius.circular(30),
+                                          ),
+                                        ),
+                                        contentPadding:
+                                            EdgeInsetsDirectional.fromSTEB(
+                                                10, 0, 0, 0),
+                                      ),
+                                      style: FlutterFlowTheme.of(context)
+                                          .bodyText1
+                                          .override(
+                                            fontFamily: 'Roboto',
+                                            color: FlutterFlowTheme.of(context)
+                                                .tertiaryColor,
+                                            fontSize: 16,
+                                            fontWeight: FontWeight.normal,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyText1Family),
+                                          ),
+                                      keyboardType: TextInputType.number,
+                                      inputFormatters: [
+                                        FilteringTextInputFormatter.allow(
+                                            RegExp('[0-9]'))
+                                      ],
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                          ],
+                          ),
                         ),
                       ),
                       Padding(
@@ -403,21 +373,46 @@ class _LoginWidgetState extends State<LoginWidget> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(0, 0, 0, 100),
                             child: FFButtonWidget(
-                              onPressed: textController!.text == null ||
-                                      textController!.text == ''
+                              onPressed: textController!.text.length > 10 ||
+                                      textController!.text.length < 10
                                   ? null
                                   : () async {
-                                      context.pushNamed(
-                                        'Homepage',
-                                        extra: <String, dynamic>{
-                                          kTransitionInfoKey: TransitionInfo(
-                                            hasTransition: true,
-                                            transitionType:
-                                                PageTransitionType.fade,
-                                            duration: Duration(milliseconds: 0),
+                                      if (formKey.currentState == null ||
+                                          !formKey.currentState!.validate()) {
+                                        return;
+                                      }
+
+                                      if (textController!.text.length == 10) {
+                                        context.pushNamed(
+                                          'Homepage',
+                                          extra: <String, dynamic>{
+                                            kTransitionInfoKey: TransitionInfo(
+                                              hasTransition: true,
+                                              transitionType:
+                                                  PageTransitionType.fade,
+                                              duration:
+                                                  Duration(milliseconds: 0),
+                                            ),
+                                          },
+                                        );
+                                      } else {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            content: Text(
+                                              'Please enter correct phone number',
+                                              style: TextStyle(
+                                                color:
+                                                    FlutterFlowTheme.of(context)
+                                                        .primaryText,
+                                              ),
+                                            ),
+                                            duration:
+                                                Duration(milliseconds: 4000),
+                                            backgroundColor: Color(0x00000000),
                                           ),
-                                        },
-                                      );
+                                        );
+                                      }
                                     },
                               text: 'CONTINUE',
                               options: FFButtonOptions(

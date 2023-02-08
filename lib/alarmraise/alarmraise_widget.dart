@@ -300,7 +300,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(20, 6, 20, 0),
                           child: Text(
-                            'Your location and alert message are send  to nearby \nfirst responders as well as emergency contacts. Soon \nimmediate one will contact you',
+                            'Your location and alert message are send  to nearby \nfirst responders as well as emergency contacts. Soon \nimmediate one will contact you.',
                             textAlign: TextAlign.start,
                             style: FlutterFlowTheme.of(context)
                                 .bodyText2

@@ -377,7 +377,7 @@ class _UnlocklivetrackingWidgetState extends State<UnlocklivetrackingWidget> {
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 20),
                         child: Text(
-                          'To avail SPHARA real time tracking\nfeature, please view our subscription\nplan',
+                          'To avail SPHARA real time tracking\nfeature, please view our subscription\nplan.',
                           textAlign: TextAlign.center,
                           style: FlutterFlowTheme.of(context)
                               .subtitle1

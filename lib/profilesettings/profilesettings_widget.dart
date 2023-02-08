@@ -99,7 +99,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     10, 10, 10, 0),
                                 child: Text(
-                                  'A public profile shows all the information you have entered that is viewable to only fellow members. To restrict visibility click Setting',
+                                  'A public profile shows all the information you have entered that is viewable to only fellow membe.rs. To restrict visibility click Setting',
                                   textAlign: TextAlign.center,
                                   style: FlutterFlowTheme.of(context)
                                       .bodyText2
@@ -141,7 +141,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                           Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
-                                                    12, 0, 0, 0),
+                                                    20, 0, 0, 0),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.max,
                                               children: [
@@ -666,7 +666,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                       .subtitle2Family,
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .tertiaryColor,
+                                                      .secondaryColor,
                                               useGoogleFonts:
                                                   GoogleFonts.asMap()
                                                       .containsKey(
@@ -1180,7 +1180,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                 FlutterFlowTheme.of(context)
                                                     .subtitle2Family,
                                             color: FlutterFlowTheme.of(context)
-                                                .tertiaryColor,
+                                                .secondaryColor,
                                             useGoogleFonts: GoogleFonts.asMap()
                                                 .containsKey(
                                                     FlutterFlowTheme.of(context)
@@ -1444,7 +1444,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                       .subtitle2Family,
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .tertiaryColor,
+                                                      .secondaryColor,
                                               useGoogleFonts:
                                                   GoogleFonts.asMap()
                                                       .containsKey(
@@ -1801,7 +1801,7 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                                       .subtitle2Family,
                                               color:
                                                   FlutterFlowTheme.of(context)
-                                                      .tertiaryColor,
+                                                      .secondaryColor,
                                               useGoogleFonts:
                                                   GoogleFonts.asMap()
                                                       .containsKey(
@@ -2400,7 +2400,21 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       child: Text(
                                         'Emergency Contacts',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText1,
+                                            .bodyText1
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1Family,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryColor,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                            ),
                                       ),
                                     ),
                                   ],
@@ -2724,7 +2738,21 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       child: Text(
                                         'Friends',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText1,
+                                            .bodyText1
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1Family,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryColor,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                            ),
                                       ),
                                     ),
                                   ],
@@ -3048,7 +3076,21 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       child: Text(
                                         'Family',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText1,
+                                            .bodyText1
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1Family,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryColor,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                            ),
                                       ),
                                     ),
                                   ],
@@ -3372,7 +3414,21 @@ class _ProfilesettingsWidgetState extends State<ProfilesettingsWidget> {
                                       child: Text(
                                         'Personal Details',
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText1,
+                                            .bodyText1
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText1Family,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryColor,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .bodyText1Family),
+                                            ),
                                       ),
                                     ),
                                   ],

@@ -234,7 +234,18 @@ class _SuggestionsWidgetState extends State<SuggestionsWidget> {
                                     child: Text(
                                       'Connections Suggested',
                                       style: FlutterFlowTheme.of(context)
-                                          .bodyText1,
+                                          .bodyText1
+                                          .override(
+                                            fontFamily:
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText1Family,
+                                            color: FlutterFlowTheme.of(context)
+                                                .secondaryColor,
+                                            useGoogleFonts: GoogleFonts.asMap()
+                                                .containsKey(
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyText1Family),
+                                          ),
                                     ),
                                   ),
                                   Padding(

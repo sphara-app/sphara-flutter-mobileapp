@@ -77,19 +77,10 @@ class _AlertmessageWidgetState extends State<AlertmessageWidget> {
                             ),
                             InkWell(
                               onTap: () async {
-                                context.pushNamed(
-                                  'EmergencyContacts',
-                                  extra: <String, dynamic>{
-                                    kTransitionInfoKey: TransitionInfo(
-                                      hasTransition: true,
-                                      transitionType:
-                                          PageTransitionType.rightToLeft,
-                                    ),
-                                  },
-                                );
+                                context.pushNamed('editalertmessage');
                               },
                               child: Text(
-                                'ADD NEW',
+                                'EDIT',
                                 style: FlutterFlowTheme.of(context)
                                     .subtitle1
                                     .override(
@@ -119,19 +110,10 @@ class _AlertmessageWidgetState extends State<AlertmessageWidget> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 10, 20, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 5, 20, 0),
                         child: Text(
-                          'This default message will send the contact number as well as location to your friend\'s Facebook account, WhatsApp account, and mobile contacts in case of emergency\n',
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText1
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText1Family,
-                                fontSize: 14,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyText1Family),
-                              ),
+                          'This default message will send the contact number as well as location to your friend\'s Facebook account, WhatsApp account, and mobile contacts in case of emergency.\n',
+                          style: FlutterFlowTheme.of(context).bodyText2,
                         ),
                       ),
                       Padding(
@@ -223,6 +205,8 @@ class _AlertmessageWidgetState extends State<AlertmessageWidget> {
                                 .override(
                                   fontFamily: FlutterFlowTheme.of(context)
                                       .bodyText2Family,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryColor,
                                   fontSize: 14,
                                   useGoogleFonts: GoogleFonts.asMap()
                                       .containsKey(FlutterFlowTheme.of(context)
@@ -247,16 +231,7 @@ class _AlertmessageWidgetState extends State<AlertmessageWidget> {
                           padding: EdgeInsetsDirectional.fromSTEB(0, 8, 0, 0),
                           child: Text(
                             'You can choose who can receive alert messages',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyText2
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyText2Family,
-                                  fontSize: 14,
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyText2Family),
-                                ),
+                            style: FlutterFlowTheme.of(context).bodyText2,
                           ),
                         ),
                       ),
@@ -291,7 +266,8 @@ class _AlertmessageWidgetState extends State<AlertmessageWidget> {
                                     ),
                               ),
                               tileColor: Color(0xFFF5F5F5),
-                              activeColor: Color(0xFF2B2B2B),
+                              activeColor:
+                                  FlutterFlowTheme.of(context).secondaryColor,
                               checkColor: Color(0xFFF99546),
                               dense: false,
                               controlAffinity: ListTileControlAffinity.trailing,

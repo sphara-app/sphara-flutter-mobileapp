@@ -5,14 +5,15 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class FirehelpWidget extends StatefulWidget {
-  const FirehelpWidget({Key? key}) : super(key: key);
+class FirehelpConfirmedWidget extends StatefulWidget {
+  const FirehelpConfirmedWidget({Key? key}) : super(key: key);
 
   @override
-  _FirehelpWidgetState createState() => _FirehelpWidgetState();
+  _FirehelpConfirmedWidgetState createState() =>
+      _FirehelpConfirmedWidgetState();
 }
 
-class _FirehelpWidgetState extends State<FirehelpWidget> {
+class _FirehelpConfirmedWidgetState extends State<FirehelpConfirmedWidget> {
   final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -49,60 +50,42 @@ class _FirehelpWidgetState extends State<FirehelpWidget> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 60, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
                     child: Icon(
                       FFIcons.kscreen15,
                       color: Colors.white,
                       size: 80,
                     ),
                   ),
-                  Row(
-                    mainAxisSize: MainAxisSize.max,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                        child: Text(
-                          'Fire dispatch is confirmed\nHelp is on the way',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.of(context)
-                              .subtitle1
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .subtitle1Family,
-                                letterSpacing: 1,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .subtitle1Family),
-                              ),
-                        ),
-                      ),
-                    ],
-                  ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Sent to 1302, Delight square , Suchitra circle..\nSent time:02:08 pm',
-                          textAlign: TextAlign.center,
-                          style: FlutterFlowTheme.of(context)
-                              .bodyText2
-                              .override(
-                                fontFamily: FlutterFlowTheme.of(context)
-                                    .bodyText2Family,
-                                color: Colors.white,
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                                useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                    FlutterFlowTheme.of(context)
-                                        .bodyText2Family),
-                                lineHeight: 1.5,
-                              ),
-                        ),
-                      ],
+                    child: Text(
+                      'Fire dispatch is confirmed\nHelp is on the way',
+                      textAlign: TextAlign.center,
+                      style: FlutterFlowTheme.of(context).subtitle1.override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).subtitle1Family,
+                            letterSpacing: 1,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).subtitle1Family),
+                          ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 10, 0, 0),
+                    child: Text(
+                      'Sent to 1302, Delight square , Suchitra circle..\nSent time:02:08 pm',
+                      textAlign: TextAlign.center,
+                      style: FlutterFlowTheme.of(context).bodyText2.override(
+                            fontFamily:
+                                FlutterFlowTheme.of(context).bodyText2Family,
+                            color: Colors.white,
+                            fontSize: 14,
+                            fontWeight: FontWeight.normal,
+                            useGoogleFonts: GoogleFonts.asMap().containsKey(
+                                FlutterFlowTheme.of(context).bodyText2Family),
+                            lineHeight: 1.5,
+                          ),
                     ),
                   ),
                   Padding(

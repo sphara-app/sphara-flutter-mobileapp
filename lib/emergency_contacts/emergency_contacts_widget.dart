@@ -1,4 +1,5 @@
 import '../components/addingnewcontact_widget.dart';
+import '../flutter_flow/flutter_flow_choice_chips.dart';
 import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
@@ -17,6 +18,7 @@ class EmergencyContactsWidget extends StatefulWidget {
 }
 
 class _EmergencyContactsWidgetState extends State<EmergencyContactsWidget> {
+  String? choiceChipsValue;
   bool? checkboxListTileValue10;
   bool? checkboxListTileValue1;
   bool? checkboxListTileValue2;
@@ -53,190 +55,214 @@ class _EmergencyContactsWidgetState extends State<EmergencyContactsWidget> {
           ),
           child: Stack(
             children: [
-              Stack(
-                children: [
-                  SvgPicture.asset(
-                    'assets/images/bg.svg',
-                    width: double.infinity,
-                    height: double.infinity,
-                    fit: BoxFit.cover,
-                  ),
-                  Align(
-                    alignment: AlignmentDirectional(0, 0),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Align(
-                                  alignment: AlignmentDirectional(-1, 0),
-                                  child: Padding(
-                                    padding: EdgeInsetsDirectional.fromSTEB(
-                                        10, 0, 0, 0),
-                                    child: FlutterFlowIconButton(
-                                      borderColor: Colors.transparent,
-                                      borderRadius: 30,
-                                      borderWidth: 1,
-                                      buttonSize: 60,
-                                      icon: Icon(
-                                        Icons.chevron_left_sharp,
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        size: 30,
-                                      ),
-                                      onPressed: () {
-                                        print('IconButton pressed ...');
-                                      },
-                                    ),
+              SvgPicture.asset(
+                'assets/images/bg.svg',
+                width: double.infinity,
+                height: double.infinity,
+                fit: BoxFit.cover,
+              ),
+              Align(
+                alignment: AlignmentDirectional(0, 0),
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Align(
+                              alignment: AlignmentDirectional(-1, 0),
+                              child: Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                                child: FlutterFlowIconButton(
+                                  borderColor: Colors.transparent,
+                                  borderRadius: 30,
+                                  borderWidth: 1,
+                                  buttonSize: 60,
+                                  icon: Icon(
+                                    Icons.chevron_left_sharp,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    size: 30,
                                   ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      0, 0, 20, 0),
-                                  child: Text(
-                                    'SAVE',
-                                    style: FlutterFlowTheme.of(context)
-                                        .subtitle2
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .subtitle2Family,
-                                          color: FlutterFlowTheme.of(context)
-                                              .primaryColor,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .subtitle2Family),
-                                        ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20, 0, 0, 0),
-                                  child: Text(
-                                    'Set Up Emergency Contacts',
-                                    style: FlutterFlowTheme.of(context)
-                                        .subtitle1
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .subtitle1Family,
-                                          color: FlutterFlowTheme.of(context)
-                                              .secondaryColor,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .subtitle1Family),
-                                        ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20, 0, 0, 0),
-                                  child: Text(
-                                    'Your emergency contacts will receive the alert when\nyou trigger the emergency alert. you are limit to add\nonly 5 emergency contact members.',
-                                    style: FlutterFlowTheme.of(context)
-                                        .bodyText1
-                                        .override(
-                                          fontFamily:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyText1Family,
-                                          color: FlutterFlowTheme.of(context)
-                                              .tertiaryColor,
-                                          fontSize: 14,
-                                          letterSpacing: 0.3,
-                                          useGoogleFonts: GoogleFonts.asMap()
-                                              .containsKey(
-                                                  FlutterFlowTheme.of(context)
-                                                      .bodyText1Family),
-                                        ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
-                            child: FFButtonWidget(
-                              onPressed: () async {
-                                await showModalBottomSheet(
-                                  isScrollControlled: true,
-                                  backgroundColor: Colors.transparent,
-                                  context: context,
-                                  builder: (context) {
-                                    return Padding(
-                                      padding:
-                                          MediaQuery.of(context).viewInsets,
-                                      child: Container(
-                                        height: 500,
-                                        child: AddingnewcontactWidget(),
-                                      ),
-                                    );
+                                  onPressed: () {
+                                    print('IconButton pressed ...');
                                   },
-                                ).then((value) => setState(() {}));
-                              },
-                              text: 'MANUALLY ADD CONTACT',
-                              options: FFButtonOptions(
-                                width: 335,
-                                height: 50,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .title3
+                                ),
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(0, 0, 20, 0),
+                              child: Text(
+                                'SAVE',
+                                style: FlutterFlowTheme.of(context)
+                                    .subtitle2
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
-                                          .title3Family,
+                                          .subtitle2Family,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .subtitle2Family),
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                              child: Text(
+                                'Set Up Emergency Contacts',
+                                style: FlutterFlowTheme.of(context)
+                                    .subtitle1
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .subtitle1Family,
                                       color: FlutterFlowTheme.of(context)
                                           .secondaryColor,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
-                                                  .title3Family),
+                                                  .subtitle1Family),
                                     ),
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
-                                ),
-                                borderRadius: BorderRadius.circular(40),
                               ),
                             ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                              child: Text(
+                                'Your emergency contacts will receive the alert when you \ntrigger the emergency alert. you are limit to add\nonly 5 emergency contact members.',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText2
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyText2Family,
+                                      letterSpacing: 0.3,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText2Family),
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: FFButtonWidget(
+                          onPressed: () async {
+                            await showModalBottomSheet(
+                              isScrollControlled: true,
+                              backgroundColor: Colors.transparent,
+                              context: context,
+                              builder: (context) {
+                                return Padding(
+                                  padding: MediaQuery.of(context).viewInsets,
+                                  child: Container(
+                                    height: 500,
+                                    child: AddingnewcontactWidget(),
+                                  ),
+                                );
+                              },
+                            ).then((value) => setState(() {}));
+                          },
+                          text: 'MANUALLY ADD CONTACT',
+                          options: FFButtonOptions(
+                            width: 335,
+                            height: 50,
+                            color: FlutterFlowTheme.of(context).primaryColor,
+                            textStyle: FlutterFlowTheme.of(context)
+                                .title3
+                                .override(
+                                  fontFamily:
+                                      FlutterFlowTheme.of(context).title3Family,
+                                  color: FlutterFlowTheme.of(context)
+                                      .secondaryColor,
+                                  useGoogleFonts: GoogleFonts.asMap()
+                                      .containsKey(FlutterFlowTheme.of(context)
+                                          .title3Family),
+                                ),
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                              width: 1,
+                            ),
+                            borderRadius: BorderRadius.circular(40),
                           ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      20, 0, 0, 0),
-                                  child: Text(
-                                    'Select Contacts as',
-                                    style: FlutterFlowTheme.of(context)
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 25, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                              child: Text(
+                                'Select Contacts as',
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      fontFamily: FlutterFlowTheme.of(context)
+                                          .bodyText1Family,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      useGoogleFonts: GoogleFonts.asMap()
+                                          .containsKey(
+                                              FlutterFlowTheme.of(context)
+                                                  .bodyText1Family),
+                                    ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Expanded(
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    20, 0, 20, 0),
+                                child: FlutterFlowChoiceChips(
+                                  options: [
+                                    ChipData('Emergency Contacts'),
+                                    ChipData('Friends'),
+                                    ChipData('Family')
+                                  ],
+                                  onChanged: (val) => setState(
+                                      () => choiceChipsValue = val?.first),
+                                  selectedChipStyle: ChipStyle(
+                                    backgroundColor:
+                                        FlutterFlowTheme.of(context)
+                                            .primaryColor,
+                                    textStyle: FlutterFlowTheme.of(context)
                                         .bodyText1
                                         .override(
                                           fontFamily:
@@ -249,6 +275,100 @@ class _EmergencyContactsWidgetState extends State<EmergencyContactsWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyText1Family),
                                         ),
+                                    iconColor: Colors.white,
+                                    iconSize: 18,
+                                    elevation: 0,
+                                  ),
+                                  unselectedChipStyle: ChipStyle(
+                                    backgroundColor:
+                                        FlutterFlowTheme.of(context).alternate,
+                                    textStyle:
+                                        FlutterFlowTheme.of(context).bodyText1,
+                                    iconColor: FlutterFlowTheme.of(context)
+                                        .secondaryColor,
+                                    iconSize: 18,
+                                    elevation: 0,
+                                  ),
+                                  chipSpacing: 20,
+                                  multiselect: false,
+                                  alignment: WrapAlignment.start,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      ListView(
+                        padding: EdgeInsets.zero,
+                        shrinkWrap: true,
+                        scrollDirection: Axis.vertical,
+                        children: [
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/download_(1).jfif',
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue1 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue1 = newValue!);
+                                      },
+                                      title: Text(
+                                        'Kathy Payne',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2
+                                            .override(
+                                              fontFamily:
+                                                  FlutterFlowTheme.of(context)
+                                                      .subtitle2Family,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryColor,
+                                              useGoogleFonts:
+                                                  GoogleFonts.asMap()
+                                                      .containsKey(
+                                                          FlutterFlowTheme.of(
+                                                                  context)
+                                                              .subtitle2Family),
+                                            ),
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
+                                      ),
+                                    ),
                                   ),
                                 ),
                               ],
@@ -256,774 +376,523 @@ class _EmergencyContactsWidgetState extends State<EmergencyContactsWidget> {
                           ),
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
-                              mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20, 0, 0, 0),
-                                  child: FFButtonWidget(
-                                    onPressed: () {
-                                      print('Button pressed ...');
-                                    },
-                                    text: 'Emergency Contacts',
-                                    options: FFButtonOptions(
-                                      width: 160,
-                                      height: 30,
-                                      color: Color(0x00F99546),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .bodyText2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
-                                            color: FlutterFlowTheme.of(context)
-                                                .primaryColor,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
-                                          ),
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .primaryColor,
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(40),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/photo-1438761681033-6461ffad8d80.jfif',
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 0, 0, 0),
-                                  child: FFButtonWidget(
-                                    onPressed: () {
-                                      print('Button pressed ...');
-                                    },
-                                    text: 'Friends',
-                                    options: FFButtonOptions(
-                                      width: 70,
-                                      height: 30,
-                                      color: Color(0x00F99546),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .bodyText2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
-                                            color: FlutterFlowTheme.of(context)
-                                                .tertiaryColor,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
-                                          ),
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .tertiaryColor,
-                                        width: 1,
-                                      ),
-                                      borderRadius: BorderRadius.circular(40),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
                                     ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: EdgeInsetsDirectional.fromSTEB(
-                                      10, 0, 0, 0),
-                                  child: FFButtonWidget(
-                                    onPressed: () {
-                                      print('Button pressed ...');
-                                    },
-                                    text: 'Family',
-                                    options: FFButtonOptions(
-                                      width: 65,
-                                      height: 30,
-                                      color: Color(0x00F99546),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .bodyText2
-                                          .override(
-                                            fontFamily:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyText2Family,
-                                            color: FlutterFlowTheme.of(context)
-                                                .tertiaryColor,
-                                            useGoogleFonts: GoogleFonts.asMap()
-                                                .containsKey(
-                                                    FlutterFlowTheme.of(context)
-                                                        .bodyText2Family),
-                                          ),
-                                      borderSide: BorderSide(
-                                        color: FlutterFlowTheme.of(context)
-                                            .tertiaryColor,
-                                        width: 1,
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue2 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue2 = newValue!);
+                                      },
+                                      title: Text(
+                                        'Frances Hawkins',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
                                       ),
-                                      borderRadius: BorderRadius.circular(40),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
+                                      ),
                                     ),
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          ListView(
-                            padding: EdgeInsets.zero,
-                            shrinkWrap: true,
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/download_(1).jfif',
-                                        ),
-                                      ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue1 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue1 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'Kathy Payne',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2
-                                                .override(
-                                                  fontFamily:
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .subtitle2Family,
-                                                  color: FlutterFlowTheme.of(
-                                                          context)
-                                                      .secondaryColor,
-                                                  useGoogleFonts: GoogleFonts
-                                                          .asMap()
-                                                      .containsKey(
-                                                          FlutterFlowTheme.of(
-                                                                  context)
-                                                              .subtitle2Family),
-                                                ),
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
+                                    child: Image.asset(
+                                      'assets/images/images.jfif',
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/photo-1438761681033-6461ffad8d80.jfif',
-                                          fit: BoxFit.cover,
-                                        ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue3 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue3 = newValue!);
+                                      },
+                                      title: Text(
+                                        'dsjbjsjd',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue2 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue2 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'Frances Hawkins',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/images.jfif',
-                                        ),
-                                      ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue3 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue3 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'dsjbjsjd',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
+                                    child: Image.asset(
+                                      'assets/images/images_(1).jfif',
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/images_(1).jfif',
-                                        ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue4 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue4 = newValue!);
+                                      },
+                                      title: Text(
+                                        'Kathy Payne',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue4 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue4 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'Kathy Payne',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/download.jfif',
-                                        ),
-                                      ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue5 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue5 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'Kathy Payne',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
+                                    child: Image.asset(
+                                      'assets/images/download.jfif',
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/images_(5).jfif',
-                                        ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue5 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue5 = newValue!);
+                                      },
+                                      title: Text(
+                                        'Kathy Payne',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue6 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue6 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'sdfsdgh',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/download_(1).jfif',
-                                        ),
-                                      ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue7 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue7 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'Kathy Payne',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
+                                    child: Image.asset(
+                                      'assets/images/images_(5).jfif',
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/images_(4).jfif',
-                                        ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue6 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue6 = newValue!);
+                                      },
+                                      title: Text(
+                                        'sdfsdgh',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue8 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue8 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'Kathy Payne',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/download_(2).jfif',
-                                        ),
-                                      ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue9 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue9 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'etrdt',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
+                                    child: Image.asset(
+                                      'assets/images/download_(1).jfif',
                                     ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    0, 20, 10, 0),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.max,
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 0, 0, 0),
-                                      child: Container(
-                                        width: 45,
-                                        height: 45,
-                                        clipBehavior: Clip.antiAlias,
-                                        decoration: BoxDecoration(
-                                          shape: BoxShape.circle,
-                                        ),
-                                        child: Image.asset(
-                                          'assets/images/download.png',
-                                        ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue7 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue7 = newValue!);
+                                      },
+                                      title: Text(
+                                        'Kathy Payne',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
                                       ),
                                     ),
-                                    Expanded(
-                                      child: Theme(
-                                        data: ThemeData(
-                                          unselectedWidgetColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                        ),
-                                        child: CheckboxListTile(
-                                          value: checkboxListTileValue10 ??=
-                                              false,
-                                          onChanged: (newValue) async {
-                                            setState(() =>
-                                                checkboxListTileValue10 =
-                                                    newValue!);
-                                          },
-                                          title: Text(
-                                            'Kathy Payne',
-                                            style: FlutterFlowTheme.of(context)
-                                                .subtitle2,
-                                          ),
-                                          tileColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .tertiaryColor,
-                                          activeColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .primaryColor,
-                                          checkColor:
-                                              FlutterFlowTheme.of(context)
-                                                  .secondaryColor,
-                                          dense: false,
-                                          controlAffinity:
-                                              ListTileControlAffinity.trailing,
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(0),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/images_(4).jfif',
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue8 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue8 = newValue!);
+                                      },
+                                      title: Text(
+                                        'Kathy Payne',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/download_(2).jfif',
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue9 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() =>
+                                            checkboxListTileValue9 = newValue!);
+                                      },
+                                      title: Text(
+                                        'etrdt',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(0, 20, 10, 0),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      20, 0, 0, 0),
+                                  child: Container(
+                                    width: 45,
+                                    height: 45,
+                                    clipBehavior: Clip.antiAlias,
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                    ),
+                                    child: Image.asset(
+                                      'assets/images/download.png',
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Theme(
+                                    data: ThemeData(
+                                      unselectedWidgetColor:
+                                          FlutterFlowTheme.of(context)
+                                              .tertiaryColor,
+                                    ),
+                                    child: CheckboxListTile(
+                                      value: checkboxListTileValue10 ??= false,
+                                      onChanged: (newValue) async {
+                                        setState(() => checkboxListTileValue10 =
+                                            newValue!);
+                                      },
+                                      title: Text(
+                                        'Kathy Payne',
+                                        style: FlutterFlowTheme.of(context)
+                                            .subtitle2,
+                                      ),
+                                      tileColor: FlutterFlowTheme.of(context)
+                                          .tertiaryColor,
+                                      activeColor: FlutterFlowTheme.of(context)
+                                          .primaryColor,
+                                      checkColor: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                      dense: false,
+                                      controlAffinity:
+                                          ListTileControlAffinity.trailing,
+                                      shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(0),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
-                    ),
+                    ],
                   ),
-                ],
+                ),
               ),
             ],
           ),

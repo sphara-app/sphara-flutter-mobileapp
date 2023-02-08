@@ -344,9 +344,10 @@ class _StorageAnalyticsScreenWidgetState
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                       child: Row(
                         mainAxisSize: MainAxisSize.max,
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Column(
                             mainAxisSize: MainAxisSize.max,
@@ -367,42 +368,52 @@ class _StorageAnalyticsScreenWidgetState
                                                   .bodyText1Family),
                                     ),
                               ),
-                              Text(
-                                'Review & Delete unnecessary files to \nfree up space',
-                                style: FlutterFlowTheme.of(context).bodyText2,
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                                child: Text(
+                                  'Review & Delete unnecessary files to \nfree up space',
+                                  style: FlutterFlowTheme.of(context).bodyText2,
+                                ),
                               ),
                             ],
                           ),
-                          Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(25, 5, 0, 0),
-                            child: FFButtonWidget(
-                              onPressed: () {
-                                print('Button pressed ...');
-                              },
-                              text: 'Clean',
-                              options: FFButtonOptions(
-                                width: 80,
-                                height: 24,
-                                color:
-                                    FlutterFlowTheme.of(context).primaryColor,
-                                textStyle: FlutterFlowTheme.of(context)
-                                    .bodyText2
-                                    .override(
-                                      fontFamily: FlutterFlowTheme.of(context)
-                                          .bodyText2Family,
-                                      color: FlutterFlowTheme.of(context)
-                                          .secondaryColor,
-                                      useGoogleFonts: GoogleFonts.asMap()
-                                          .containsKey(
+                          Expanded(
+                            child: Align(
+                              alignment: AlignmentDirectional(0.9, 0),
+                              child: Padding(
+                                padding: EdgeInsetsDirectional.fromSTEB(
+                                    40, 0, 20, 0),
+                                child: FFButtonWidget(
+                                  onPressed: () {
+                                    print('Button pressed ...');
+                                  },
+                                  text: 'Clean',
+                                  options: FFButtonOptions(
+                                    width: 80,
+                                    height: 24,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryColor,
+                                    textStyle: FlutterFlowTheme.of(context)
+                                        .bodyText2
+                                        .override(
+                                          fontFamily:
                                               FlutterFlowTheme.of(context)
-                                                  .bodyText2Family),
+                                                  .bodyText2Family,
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryColor,
+                                          useGoogleFonts: GoogleFonts.asMap()
+                                              .containsKey(
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyText2Family),
+                                        ),
+                                    borderSide: BorderSide(
+                                      color: Colors.transparent,
+                                      width: 1,
                                     ),
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                  width: 1,
+                                    borderRadius: BorderRadius.circular(14),
+                                  ),
                                 ),
-                                borderRadius: BorderRadius.circular(14),
                               ),
                             ),
                           ),
@@ -630,7 +641,7 @@ class _StorageAnalyticsScreenWidgetState
                       padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                       child: Container(
                         width: double.infinity,
-                        height: 100,
+                        height: 120,
                         decoration: BoxDecoration(
                           color: Color(0xFF3F4040),
                         ),
@@ -641,7 +652,7 @@ class _StorageAnalyticsScreenWidgetState
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Container(
                                   width: 80,

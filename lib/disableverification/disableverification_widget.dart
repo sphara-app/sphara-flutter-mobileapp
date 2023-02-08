@@ -1,3 +1,4 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
@@ -14,7 +15,7 @@ class DisableverificationWidget extends StatefulWidget {
 }
 
 class _DisableverificationWidgetState extends State<DisableverificationWidget> {
-  bool? switchValue;
+  bool? switchListTileValue;
   final _unfocusNode = FocusNode();
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
@@ -45,22 +46,29 @@ class _DisableverificationWidgetState extends State<DisableverificationWidget> {
               alignment: AlignmentDirectional(0, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Align(
-                    alignment: AlignmentDirectional(-1, 0),
-                    child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
-                      child: Icon(
-                        FFIcons.kleftArrow,
-                        color: Color(0xFFF99546),
-                        size: 24,
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
                       ),
+                      onPressed: () async {
+                        context.pop();
+                      },
                     ),
                   ),
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 20, 0, 0),
                       child: Text(
                         'Security',
                         style: FlutterFlowTheme.of(context).subtitle1,
@@ -70,102 +78,115 @@ class _DisableverificationWidgetState extends State<DisableverificationWidget> {
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 5, 0, 0),
                       child: Text(
-                        'When 2-step is turned ON, you  will prompted for your passcode when you are trying to re-login or restore your profile  ',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              color: Color(0xFFB0B0B0),
-                              fontSize: 14,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
-                            ),
+                        'When 2-step is turned ON, you  will prompted for your passcode when you are trying to re-login or restore your profile.',
+                        style: FlutterFlowTheme.of(context).bodyText2,
                       ),
                     ),
                   ),
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SelectionArea(
-                            child: Text(
-                          '2-Step Verificaton',
-                          style: FlutterFlowTheme.of(context).bodyText1,
-                        )),
-                        Switch(
-                          value: switchValue ??= true,
-                          onChanged: (newValue) async {
-                            setState(() => switchValue = newValue!);
-                          },
-                          activeColor: Color(0xFFF99546),
-                          activeTrackColor: Color(0xFF8B8B8B),
-                          inactiveTrackColor: Color(0xFF8B8B8B),
-                          inactiveThumbColor: Colors.white,
-                        ),
-                      ],
+                    child: SwitchListTile(
+                      value: switchListTileValue ??= true,
+                      onChanged: (newValue) async {
+                        setState(() => switchListTileValue = newValue!);
+                        if (newValue!) {
+                          context.pushNamed(
+                            'securityverification',
+                            extra: <String, dynamic>{
+                              kTransitionInfoKey: TransitionInfo(
+                                hasTransition: true,
+                                transitionType: PageTransitionType.fade,
+                                duration: Duration(milliseconds: 0),
+                              ),
+                            },
+                          );
+                        }
+                      },
+                      title: Text(
+                        '2-Step Verification',
+                        style: FlutterFlowTheme.of(context).title3,
+                      ),
+                      tileColor: Color(0xFFF5F5F5),
+                      activeColor: FlutterFlowTheme.of(context).primaryColor,
+                      activeTrackColor:
+                          FlutterFlowTheme.of(context).tertiaryColor,
+                      dense: false,
+                      controlAffinity: ListTileControlAffinity.trailing,
                     ),
                   ),
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
-                    child: Row(
+                    padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
+                    child: Column(
                       mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SelectionArea(
-                            child: Text(
-                          'Edit Passcode',
-                          style: FlutterFlowTheme.of(context).bodyText1,
-                        )),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                          child: SelectionArea(
-                              child: Text(
-                            'EDIT',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyText1
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyText1Family,
-                                  color: Color(0xFFF99546),
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyText1Family),
-                                ),
-                          )),
+                          padding: EdgeInsetsDirectional.fromSTEB(20, 0, 20, 0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SelectionArea(
+                                  child: Text(
+                                'Edit Passcode',
+                                style: FlutterFlowTheme.of(context).bodyText1,
+                              )),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                                child: SelectionArea(
+                                    child: Text(
+                                  'EDIT',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodyText1Family,
+                                        color: Color(0xFFF99546),
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText1Family),
+                                      ),
+                                )),
+                              ),
+                            ],
+                          ),
                         ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SelectionArea(
-                            child: Text(
-                          'Update Email',
-                          style: FlutterFlowTheme.of(context).bodyText1,
-                        )),
                         Padding(
-                          padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
-                          child: SelectionArea(
-                              child: Text(
-                            'UPDATE',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyText1
-                                .override(
-                                  fontFamily: FlutterFlowTheme.of(context)
-                                      .bodyText1Family,
-                                  color: Color(0xFFF99546),
-                                  useGoogleFonts: GoogleFonts.asMap()
-                                      .containsKey(FlutterFlowTheme.of(context)
-                                          .bodyText1Family),
-                                ),
-                          )),
+                          padding:
+                              EdgeInsetsDirectional.fromSTEB(20, 40, 20, 0),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SelectionArea(
+                                  child: Text(
+                                'Update Email',
+                                style: FlutterFlowTheme.of(context).bodyText1,
+                              )),
+                              Padding(
+                                padding:
+                                    EdgeInsetsDirectional.fromSTEB(0, 0, 10, 0),
+                                child: SelectionArea(
+                                    child: Text(
+                                  'UPDATE',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyText1
+                                      .override(
+                                        fontFamily: FlutterFlowTheme.of(context)
+                                            .bodyText1Family,
+                                        color: Color(0xFFF99546),
+                                        useGoogleFonts: GoogleFonts.asMap()
+                                            .containsKey(
+                                                FlutterFlowTheme.of(context)
+                                                    .bodyText1Family),
+                                      ),
+                                )),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),

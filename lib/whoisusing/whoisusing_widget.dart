@@ -1,5 +1,7 @@
+import '../flutter_flow/flutter_flow_icon_button.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
+import '../flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -40,38 +42,50 @@ class _WhoisusingWidgetState extends State<WhoisusingWidget> {
               fit: BoxFit.cover,
             ),
             Align(
-              alignment: AlignmentDirectional(-0.05, 0),
+              alignment: AlignmentDirectional(0, 0),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(10, 40, 0, 0),
+                    child: FlutterFlowIconButton(
+                      borderColor: Colors.transparent,
+                      borderRadius: 30,
+                      borderWidth: 1,
+                      buttonSize: 60,
+                      icon: Icon(
+                        Icons.chevron_left_sharp,
+                        color: FlutterFlowTheme.of(context).primaryColor,
+                        size: 30,
+                      ),
+                      onPressed: () async {
+                        context.pop();
+                      },
+                    ),
+                  ),
                   Align(
-                    alignment: AlignmentDirectional(-1, 0),
+                    alignment: AlignmentDirectional(0, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 40, 0, 0),
-                      child: Icon(
-                        FFIcons.kleftArrow,
-                        color: Color(0xFFF99546),
-                        size: 24,
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
+                      child: Image.asset(
+                        'assets/images/Mask_Group_239.png',
+                        width: 200,
+                        height: 150,
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
-                    child: Image.asset(
-                      'assets/images/Mask_Group_239.png',
-                      width: 200,
-                      height: 150,
-                      fit: BoxFit.cover,
+                  Align(
+                    alignment: AlignmentDirectional(0, 0),
+                    child: Padding(
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
+                      child: SelectionArea(
+                          child: Text(
+                        'Who is using this account?',
+                        style: FlutterFlowTheme.of(context).bodyText1,
+                      )),
                     ),
-                  ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 40, 0, 0),
-                    child: SelectionArea(
-                        child: Text(
-                      'Who is using this account?',
-                      style: FlutterFlowTheme.of(context).bodyText1,
-                    )),
                   ),
                   Expanded(
                     child: Align(
@@ -82,40 +96,60 @@ class _WhoisusingWidgetState extends State<WhoisusingWidget> {
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(50, 0, 0, 0),
-                              child: Text(
-                                'PARENT',
-                                style: FlutterFlowTheme.of(context)
+                            FFButtonWidget(
+                              onPressed: () {
+                                print('Button pressed ...');
+                              },
+                              text: 'PARENT',
+                              options: FFButtonOptions(
+                                width: 130,
+                                height: 40,
+                                color: Color(0x00F99546),
+                                textStyle: FlutterFlowTheme.of(context)
                                     .subtitle2
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .subtitle2Family,
-                                      color: Color(0xFFF99546),
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
                                                   .subtitle2Family),
                                     ),
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
                               ),
                             ),
-                            Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(0, 0, 50, 0),
-                              child: Text(
-                                'CHILDREN',
-                                style: FlutterFlowTheme.of(context)
+                            FFButtonWidget(
+                              onPressed: () {
+                                print('Button pressed ...');
+                              },
+                              text: 'CHILDREN',
+                              options: FFButtonOptions(
+                                width: 130,
+                                height: 40,
+                                color: Color(0x00F99546),
+                                textStyle: FlutterFlowTheme.of(context)
                                     .subtitle2
                                     .override(
                                       fontFamily: FlutterFlowTheme.of(context)
                                           .subtitle2Family,
-                                      color: Color(0xFFF99546),
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryColor,
                                       useGoogleFonts: GoogleFonts.asMap()
                                           .containsKey(
                                               FlutterFlowTheme.of(context)
                                                   .subtitle2Family),
                                     ),
+                                borderSide: BorderSide(
+                                  color: Colors.transparent,
+                                  width: 1,
+                                ),
+                                borderRadius: BorderRadius.circular(8),
                               ),
                             ),
                           ],

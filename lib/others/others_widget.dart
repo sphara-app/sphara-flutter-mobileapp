@@ -101,16 +101,10 @@ class _OthersWidgetState extends State<OthersWidget> {
                   Align(
                     alignment: AlignmentDirectional(-1, 0),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(20, 10, 20, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(20, 5, 20, 0),
                       child: Text(
-                        'Please fill the following information as it will provide better insight on the incident',
-                        style: FlutterFlowTheme.of(context).bodyText2.override(
-                              fontFamily:
-                                  FlutterFlowTheme.of(context).bodyText2Family,
-                              fontSize: 14,
-                              useGoogleFonts: GoogleFonts.asMap().containsKey(
-                                  FlutterFlowTheme.of(context).bodyText2Family),
-                            ),
+                        'Please fill the following information as it will provide better insight on the incident.',
+                        style: FlutterFlowTheme.of(context).bodyText2,
                       ),
                     ),
                   ),

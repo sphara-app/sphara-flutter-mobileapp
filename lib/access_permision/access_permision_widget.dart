@@ -177,7 +177,7 @@ class _AccessPermisionWidgetState extends State<AccessPermisionWidget> {
                                           ),
                                     ),
                                     subtitle: Text(
-                                      'for finding emergency service around you',
+                                      'for finding emergency service around you.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
@@ -277,7 +277,7 @@ class _AccessPermisionWidgetState extends State<AccessPermisionWidget> {
                                           ),
                                     ),
                                     subtitle: Text(
-                                      'Allow account security verification',
+                                      'Allow account security verification.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
@@ -390,7 +390,7 @@ class _AccessPermisionWidgetState extends State<AccessPermisionWidget> {
                                           ),
                                     ),
                                     subtitle: Text(
-                                      'Allow sending messages to friends and family',
+                                      'Allow sending messages to friends and family.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
@@ -475,7 +475,7 @@ class _AccessPermisionWidgetState extends State<AccessPermisionWidget> {
                                           ),
                                     ),
                                     subtitle: Text(
-                                      'Allow sphara app to send and view messages',
+                                      'Allow sphara app to send and view messages.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
@@ -561,7 +561,7 @@ class _AccessPermisionWidgetState extends State<AccessPermisionWidget> {
                                           ),
                                     ),
                                     subtitle: Text(
-                                      'Allow store data offline',
+                                      'Allow store data offline.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
@@ -635,7 +635,7 @@ class _AccessPermisionWidgetState extends State<AccessPermisionWidget> {
                                           FlutterFlowTheme.of(context).title3,
                                     ),
                                     subtitle: Text(
-                                      'Allow capture images',
+                                      'Allow capture images.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
@@ -722,7 +722,7 @@ class _AccessPermisionWidgetState extends State<AccessPermisionWidget> {
                                           ),
                                     ),
                                     subtitle: Text(
-                                      'Allow record voice from app',
+                                      'Allow record voice from app.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(
@@ -809,7 +809,7 @@ class _AccessPermisionWidgetState extends State<AccessPermisionWidget> {
                                           ),
                                     ),
                                     subtitle: Text(
-                                      'Allow sphara app run in the background',
+                                      'Allow sphara app run in the background.',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyText2
                                           .override(

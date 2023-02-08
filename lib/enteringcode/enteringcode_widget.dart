@@ -545,7 +545,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                                       ),
                                   enabledBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: Colors.black,
                                       width: 1,
                                     ),
                                     borderRadius: const BorderRadius.only(
@@ -555,7 +555,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                                   ),
                                   focusedBorder: UnderlineInputBorder(
                                     borderSide: BorderSide(
-                                      color: Color(0x00000000),
+                                      color: Colors.black,
                                       width: 1,
                                     ),
                                     borderRadius: const BorderRadius.only(
@@ -600,12 +600,6 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                                     ),
                                 keyboardType: TextInputType.emailAddress,
                               ),
-                            ),
-                            Divider(
-                              thickness: 1,
-                              indent: 50,
-                              endIndent: 50,
-                              color: Colors.black,
                             ),
                             Padding(
                               padding:

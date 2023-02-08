@@ -4,6 +4,7 @@ class FFIcons {
   FFIcons._();
 
   static const String _icomoonFamily = 'Icomoon';
+  static const String _myFlutterAppFamily = 'MyFlutterApp';
 
   // icomoon
   static const IconData knounDelay29813461 =
@@ -272,4 +273,12 @@ class FFIcons {
   static const IconData kinr = IconData(0xea03, fontFamily: _icomoonFamily);
   static const IconData kcheckmarkOutline =
       IconData(0xea31, fontFamily: _icomoonFamily);
+
+  // MyFlutterApp
+  static const IconData kmaskGroup224 =
+      IconData(0xe800, fontFamily: _myFlutterAppFamily);
+  static const IconData kmaskGroup225 =
+      IconData(0xe801, fontFamily: _myFlutterAppFamily);
+  static const IconData kmaskGroup226 =
+      IconData(0xe802, fontFamily: _myFlutterAppFamily);
 }
