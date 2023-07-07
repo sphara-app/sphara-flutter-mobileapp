@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import '../flutter_flow_theme.dart';
+import '/backend/backend.dart';
+
+import '../../auth/base_auth_user_provider.dart';
 
 import '../../index.dart';
 import '../../main.dart';
@@ -17,7 +20,51 @@ export 'serialization_util.dart';
 const kTransitionInfoKey = '__transition_info__';
 
 class AppStateNotifier extends ChangeNotifier {
+  AppStateNotifier._();
+
+  static AppStateNotifier? _instance;
+  static AppStateNotifier get instance => _instance ??= AppStateNotifier._();
+
+  BaseAuthUser? initialUser;
+  BaseAuthUser? user;
   bool showSplashImage = true;
+  String? _redirectLocation;
+
+  /// Determines whether the app will refresh and build again when a sign
+  /// in or sign out happens. This is useful when the app is launched or
+  /// on an unexpected logout. However, this must be turned off when we
+  /// intend to sign in/out and then navigate or perform any actions after.
+  /// Otherwise, this will trigger a refresh and interrupt the action(s).
+  bool notifyOnAuthChange = true;
+
+  bool get loading => user == null || showSplashImage;
+  bool get loggedIn => user?.loggedIn ?? false;
+  bool get initiallyLoggedIn => initialUser?.loggedIn ?? false;
+  bool get shouldRedirect => loggedIn && _redirectLocation != null;
+
+  String getRedirectLocation() => _redirectLocation!;
+  bool hasRedirect() => _redirectLocation != null;
+  void setRedirectLocationIfUnset(String loc) => _redirectLocation ??= loc;
+  void clearRedirectLocation() => _redirectLocation = null;
+
+  /// Mark as not needing to notify on a sign in / out when we intend
+  /// to perform subsequent actions (such as navigation) afterwards.
+  void updateNotifyOnAuthChange(bool notify) => notifyOnAuthChange = notify;
+
+  void update(BaseAuthUser newUser) {
+    final shouldUpdate =
+        user?.uid == null || newUser.uid == null || user?.uid != newUser.uid;
+    initialUser ??= newUser;
+    user = newUser;
+    // Refresh the app on auth change unless explicitly marked otherwise.
+    // No need to update unless the user has changed.
+    if (notifyOnAuthChange && shouldUpdate) {
+      notifyListeners();
+    }
+    // Once again mark the notifier as needing to update on auth change
+    // (in order to catch sign in / out events).
+    updateNotifyOnAuthChange(true);
+  }
 
   void stopShowingSplashImage() {
     showSplashImage = false;
@@ -29,63 +76,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, _) => appStateNotifier.showSplashImage
-          ? Builder(
-              builder: (context) => Container(
-                color: Colors.transparent,
-                child: Image.asset(
-                  'assets/images/bg.svg',
-                  fit: BoxFit.cover,
-                ),
-              ),
-            )
-          : OnBoardingScreensWidget(),
+      errorBuilder: (context, state) =>
+          appStateNotifier.loggedIn ? HomepageWidget() : LoginWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => appStateNotifier.showSplashImage
-              ? Builder(
-                  builder: (context) => Container(
-                    color: Colors.transparent,
-                    child: Image.asset(
-                      'assets/images/bg.svg',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                )
-              : OnBoardingScreensWidget(),
+          builder: (context, _) =>
+              appStateNotifier.loggedIn ? HomepageWidget() : LoginWidget(),
           routes: [
-            FFRoute(
-              name: 'boardingPage',
-              path: 'boardingPage',
-              builder: (context, params) => BoardingPageWidget(),
-            ),
-            FFRoute(
-              name: 'screen2',
-              path: 'screen2',
-              builder: (context, params) => Screen2Widget(),
-            ),
-            FFRoute(
-              name: 'oneclick',
-              path: 'oneclick',
-              builder: (context, params) => OneclickWidget(),
-            ),
-            FFRoute(
-              name: 'screen3',
-              path: 'screen3',
-              builder: (context, params) => Screen3Widget(),
-            ),
-            FFRoute(
-              name: 'screen4',
-              path: 'screen4',
-              builder: (context, params) => Screen4Widget(),
-            ),
-            FFRoute(
-              name: 'screen5',
-              path: 'screen5',
-              builder: (context, params) => Screen5Widget(),
-            ),
             FFRoute(
               name: 'OnBoardingScreens',
               path: 'onBoardingScreens',
@@ -95,11 +94,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'Choosingrole',
               path: 'choosingrole',
               builder: (context, params) => ChoosingroleWidget(),
-            ),
-            FFRoute(
-              name: 'screen6',
-              path: 'screen6',
-              builder: (context, params) => Screen6Widget(),
             ),
             FFRoute(
               name: 'login',
@@ -127,34 +121,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => AccessPermisionWidget(),
             ),
             FFRoute(
-              name: 'permissionalert',
-              path: 'permissionalert',
-              builder: (context, params) => PermissionalertWidget(),
-            ),
-            FFRoute(
-              name: 'Personalinfo1',
-              path: 'personalinfo1',
-              builder: (context, params) => Personalinfo1Widget(),
-            ),
-            FFRoute(
-              name: 'personalinfo2',
-              path: 'personalinfo2',
-              builder: (context, params) => Personalinfo2Widget(),
-            ),
-            FFRoute(
-              name: 'Personalinfo3',
-              path: 'personalinfo3',
-              builder: (context, params) => Personalinfo3Widget(),
-            ),
-            FFRoute(
-              name: 'uploadingId',
-              path: 'uploadingId',
-              builder: (context, params) => UploadingIdWidget(),
+              name: 'personalinfo',
+              path: 'personalinfo',
+              builder: (context, params) => PersonalinfoWidget(),
             ),
             FFRoute(
               name: 'Medicalinfo',
               path: 'medicalinfo',
               builder: (context, params) => MedicalinfoWidget(),
+            ),
+            FFRoute(
+              name: 'MedicalInsuranceCard',
+              path: 'medicalInsuranceCard',
+              builder: (context, params) => MedicalInsuranceCardWidget(),
+            ),
+            FFRoute(
+              name: 'uploadingId',
+              path: 'uploadingId',
+              builder: (context, params) => UploadingIdWidget(),
             ),
             FFRoute(
               name: 'uploadingidentification',
@@ -177,80 +161,29 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => AddnewWidget(),
             ),
             FFRoute(
+              name: 'Homepage',
+              path: 'homepage',
+              builder: (context, params) => HomepageWidget(),
+            ),
+            FFRoute(
               name: 'Addingnew',
               path: 'addingnew',
               builder: (context, params) => AddingnewWidget(),
             ),
             FFRoute(
-              name: 'Homepage',
-              path: 'homepage',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Homepage')
-                  : HomepageWidget(),
-            ),
-            FFRoute(
               name: 'Ambulancescreen',
               path: 'ambulancescreen',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: AmbulancescreenWidget(),
-              ),
+              builder: (context, params) => AmbulancescreenWidget(),
             ),
             FFRoute(
               name: 'Reportfirealert',
               path: 'reportfirealert',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: ReportfirealertWidget(),
-              ),
+              builder: (context, params) => ReportfirealertWidget(),
             ),
             FFRoute(
-              name: 'Police',
-              path: 'police',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: PoliceWidget(),
-              ),
-            ),
-            FFRoute(
-              name: 'emergencycall1',
-              path: 'emergencycall1',
-              builder: (context, params) => Emergencycall1Widget(),
-            ),
-            FFRoute(
-              name: 'emergencycallcancel1',
-              path: 'emergencycallcancel1',
-              builder: (context, params) => Emergencycallcancel1Widget(),
-            ),
-            FFRoute(
-              name: 'emergencycall2',
-              path: 'emergencycall2',
-              builder: (context, params) => Emergencycall2Widget(),
-            ),
-            FFRoute(
-              name: 'emergencycallcancel2',
-              path: 'emergencycallcancel2',
-              builder: (context, params) => Emergencycallcancel2Widget(),
-            ),
-            FFRoute(
-              name: 'emergency3',
-              path: 'emergency3',
-              builder: (context, params) => Emergency3Widget(),
-            ),
-            FFRoute(
-              name: 'emergencycallcancel3',
-              path: 'emergencycallcancel3',
-              builder: (context, params) => Emergencycallcancel3Widget(),
-            ),
-            FFRoute(
-              name: 'emergency4',
-              path: 'emergency4',
-              builder: (context, params) => Emergency4Widget(),
-            ),
-            FFRoute(
-              name: 'emergencycallcancel4',
-              path: 'emergencycallcancel4',
-              builder: (context, params) => Emergencycallcancel4Widget(),
+              name: 'EmergencyCall',
+              path: 'emergencyCall',
+              builder: (context, params) => EmergencyCallWidget(),
             ),
             FFRoute(
               name: 'Accident',
@@ -268,9 +201,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => HarassmentWidget(),
             ),
             FFRoute(
-              name: 'Armedperson',
-              path: 'armedperson',
-              builder: (context, params) => ArmedpersonWidget(),
+              name: 'others',
+              path: 'others',
+              builder: (context, params) => OthersWidget(),
             ),
             FFRoute(
               name: 'HostileSituation',
@@ -278,22 +211,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => HostileSituationWidget(),
             ),
             FFRoute(
-              name: 'others',
-              path: 'others',
-              builder: (context, params) => OthersWidget(),
-            ),
-            FFRoute(
-              name: 'Homesettings',
-              path: 'homesettings',
-              builder: (context, params) => HomesettingsWidget(),
+              name: 'Armedperson',
+              path: 'armedperson',
+              builder: (context, params) => ArmedpersonWidget(),
             ),
             FFRoute(
               name: 'panic',
               path: 'panic',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: PanicWidget(),
-              ),
+              builder: (context, params) => PanicWidget(),
             ),
             FFRoute(
               name: 'Subscription',
@@ -301,7 +226,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => SubscriptionWidget(),
             ),
             FFRoute(
-              name: 'profilesettings',
+              name: 'Profilesettings',
               path: 'profilesettings',
               builder: (context, params) => ProfilesettingsWidget(),
             ),
@@ -318,9 +243,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'livetrack',
               path: 'livetrack',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'livetrack')
-                  : LivetrackWidget(),
+              builder: (context, params) => LivetrackWidget(),
             ),
             FFRoute(
               name: 'unlocklivetracking',
@@ -373,40 +296,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => EditalertmessageWidget(),
             ),
             FFRoute(
-              name: 'AppSettings',
-              path: 'appSettings',
-              builder: (context, params) => AppSettingsWidget(),
-            ),
-            FFRoute(
               name: 'AlertDelay',
               path: 'alertDelay',
               builder: (context, params) => AlertDelayWidget(),
             ),
             FFRoute(
-              name: 'voiceativationphrase',
-              path: 'voiceativationphrase',
-              builder: (context, params) => VoiceativationphraseWidget(),
+              name: 'AppSettings',
+              path: 'appSettings',
+              builder: (context, params) => AppSettingsWidget(),
             ),
             FFRoute(
-              name: 'SampleVoiceactivationoptions1',
-              path: 'sampleVoiceactivationoptions1',
-              builder: (context, params) =>
-                  SampleVoiceactivationoptions1Widget(),
-            ),
-            FFRoute(
-              name: 'SampleVoiceactivation2',
-              path: 'sampleVoiceactivation2',
-              builder: (context, params) => SampleVoiceactivation2Widget(),
-            ),
-            FFRoute(
-              name: 'security',
+              name: 'Security',
               path: 'security',
               builder: (context, params) => SecurityWidget(),
-            ),
-            FFRoute(
-              name: 'securityverification',
-              path: 'securityverification',
-              builder: (context, params) => SecurityverificationWidget(),
             ),
             FFRoute(
               name: 'Disableverification',
@@ -414,14 +316,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => DisableverificationWidget(),
             ),
             FFRoute(
-              name: 'passcode',
-              path: 'passcode',
-              builder: (context, params) => PasscodeWidget(),
-            ),
-            FFRoute(
-              name: 'phraseactivate',
-              path: 'phraseactivate',
-              builder: (context, params) => PhraseactivateWidget(),
+              name: 'securityverification',
+              path: 'securityverification',
+              builder: (context, params) => SecurityverificationWidget(),
             ),
             FFRoute(
               name: 'Backupmail',
@@ -429,14 +326,19 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => BackupmailWidget(),
             ),
             FFRoute(
-              name: 'passwordentering',
-              path: 'passwordentering',
-              builder: (context, params) => PasswordenteringWidget(),
+              name: 'passcode',
+              path: 'passcode',
+              builder: (context, params) => PasscodeWidget(),
             ),
             FFRoute(
               name: 'Resetpasscode',
               path: 'resetpasscode',
               builder: (context, params) => ResetpasscodeWidget(),
+            ),
+            FFRoute(
+              name: 'Passwordentering',
+              path: 'passwordentering',
+              builder: (context, params) => PasswordenteringWidget(),
             ),
             FFRoute(
               name: 'resendingcode',
@@ -449,7 +351,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ConfirmingcodeWidget(),
             ),
             FFRoute(
-              name: 'enteringcode',
+              name: 'Enteringcode',
               path: 'enteringcode',
               builder: (context, params) => EnteringcodeWidget(),
             ),
@@ -464,11 +366,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => DialdelayWidget(),
             ),
             FFRoute(
-              name: 'SetTimer',
-              path: 'setTimer',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'SetTimer')
-                  : SetTimerWidget(),
+              name: 'Timer',
+              path: 'timer',
+              builder: (context, params) => TimerWidget(),
             ),
             FFRoute(
               name: 'Triggerbutton',
@@ -476,24 +376,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => TriggerbuttonWidget(),
             ),
             FFRoute(
-              name: 'Triggeroptionselection',
-              path: 'triggeroptionselection',
-              builder: (context, params) => TriggeroptionselectionWidget(),
-            ),
-            FFRoute(
               name: 'Gesturetriggersettings',
               path: 'gesturetriggersettings',
               builder: (context, params) => GesturetriggersettingsWidget(),
             ),
             FFRoute(
-              name: 'Horizontalshake',
-              path: 'horizontalshake',
-              builder: (context, params) => HorizontalshakeWidget(),
-            ),
-            FFRoute(
-              name: 'Verticalshake',
-              path: 'verticalshake',
-              builder: (context, params) => VerticalshakeWidget(),
+              name: 'Triggeroptionselection',
+              path: 'triggeroptionselection',
+              builder: (context, params) => TriggeroptionselectionWidget(),
             ),
             FFRoute(
               name: 'Nosignal',
@@ -506,14 +396,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => VoiceactivationWidget(),
             ),
             FFRoute(
-              name: 'Voiceactivationoptions',
-              path: 'voiceactivationoptions',
-              builder: (context, params) => VoiceactivationoptionsWidget(),
-            ),
-            FFRoute(
               name: 'VoiceActivation1',
               path: 'voiceActivation1',
               builder: (context, params) => VoiceActivation1Widget(),
+            ),
+            FFRoute(
+              name: 'CustomVoiceActivation',
+              path: 'customVoiceActivation',
+              builder: (context, params) => CustomVoiceActivationWidget(),
             ),
             FFRoute(
               name: 'VoiceActivation2',
@@ -526,19 +416,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => VoiceActivation3Widget(),
             ),
             FFRoute(
-              name: 'CustomVoiceActivation',
-              path: 'customVoiceActivation',
-              builder: (context, params) => CustomVoiceActivationWidget(),
-            ),
-            FFRoute(
               name: 'parentalcontrolsettings',
               path: 'parentalcontrolsettings',
               builder: (context, params) => ParentalcontrolsettingsWidget(),
-            ),
-            FFRoute(
-              name: 'parentcontrolsubscription',
-              path: 'parentcontrolsubscription',
-              builder: (context, params) => ParentcontrolsubscriptionWidget(),
             ),
             FFRoute(
               name: 'parentalplansubscribed',
@@ -561,11 +441,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ParentalPinRecieveWidget(),
             ),
             FFRoute(
-              name: 'ParentalSettings',
-              path: 'parentalSettings',
-              builder: (context, params) => ParentalSettingsWidget(),
-            ),
-            FFRoute(
               name: 'RestrictedSettings',
               path: 'restrictedSettings',
               builder: (context, params) => RestrictedSettingsWidget(),
@@ -576,11 +451,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => AlertsWidget(),
             ),
             FFRoute(
-              name: 'AlertDetail',
-              path: 'alertDetail',
-              builder: (context, params) => AlertDetailWidget(),
-            ),
-            FFRoute(
               name: 'PrivacyControl',
               path: 'privacyControl',
               builder: (context, params) => PrivacyControlWidget(),
@@ -589,6 +459,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'privacyoptions',
               path: 'privacyoptions',
               builder: (context, params) => PrivacyoptionsWidget(),
+            ),
+            FFRoute(
+              name: 'AlertDetail',
+              path: 'alertDetail',
+              builder: (context, params) => AlertDetailWidget(),
             ),
             FFRoute(
               name: 'Chooselanguage',
@@ -606,24 +481,24 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => PostWidget(),
             ),
             FFRoute(
-              name: 'profileEdit',
-              path: 'profileEdit',
-              builder: (context, params) => ProfileEditWidget(),
-            ),
-            FFRoute(
               name: 'PublicprofileVisibility',
               path: 'publicprofileVisibility',
               builder: (context, params) => PublicprofileVisibilityWidget(),
             ),
             FFRoute(
-              name: 'SavedItems',
-              path: 'savedItems',
-              builder: (context, params) => SavedItemsWidget(),
+              name: 'profileEdit',
+              path: 'profileEdit',
+              builder: (context, params) => ProfileEditWidget(),
             ),
             FFRoute(
               name: 'Chatsettings',
               path: 'chatsettings',
               builder: (context, params) => ChatsettingsWidget(),
+            ),
+            FFRoute(
+              name: 'SavedItems',
+              path: 'savedItems',
+              builder: (context, params) => SavedItemsWidget(),
             ),
             FFRoute(
               name: 'Notifications',
@@ -641,9 +516,9 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => PrivacyAndControlWidget(),
             ),
             FFRoute(
-              name: 'Chats',
-              path: 'chats',
-              builder: (context, params) => ChatsWidget(),
+              name: 'ChatsInChatSettings',
+              path: 'chatsInChatSettings',
+              builder: (context, params) => ChatsInChatSettingsWidget(),
             ),
             FFRoute(
               name: 'Lastseen',
@@ -651,31 +526,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => LastseenWidget(),
             ),
             FFRoute(
-              name: 'Media',
-              path: 'media',
-              builder: (context, params) => MediaWidget(),
-            ),
-            FFRoute(
               name: 'StorageAnalyticsScreen',
               path: 'storageAnalyticsScreen',
               builder: (context, params) => StorageAnalyticsScreenWidget(),
             ),
             FFRoute(
-              name: 'Social',
-              path: 'social',
-              builder: (context, params) => params.isEmpty
-                  ? NavBarPage(initialPage: 'Social')
-                  : SocialWidget(),
-            ),
-            FFRoute(
-              name: 'DataUsage',
-              path: 'dataUsage',
-              builder: (context, params) => DataUsageWidget(),
-            ),
-            FFRoute(
-              name: 'VolunteeringProfile',
-              path: 'volunteeringProfile',
-              builder: (context, params) => VolunteeringProfileWidget(),
+              name: 'Media',
+              path: 'media',
+              builder: (context, params) => MediaWidget(),
             ),
             FFRoute(
               name: 'Volunteeringprofile1',
@@ -686,6 +544,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               name: 'VolunteerIDproof1',
               path: 'volunteerIDproof1',
               builder: (context, params) => VolunteerIDproof1Widget(),
+            ),
+            FFRoute(
+              name: 'DataUsage',
+              path: 'dataUsage',
+              builder: (context, params) => DataUsageWidget(),
             ),
             FFRoute(
               name: 'VolunteerIDproof2',
@@ -718,26 +581,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => ScriptbeesWidget(),
             ),
             FFRoute(
-              name: 'Sample',
-              path: 'sample',
-              builder: (context, params) => SampleWidget(),
-            ),
-            FFRoute(
-              name: 'Channel',
-              path: 'channel',
-              builder: (context, params) => ChannelWidget(),
-            ),
-            FFRoute(
-              name: 'ScriptbeesCopy',
-              path: 'scriptbeesCopy',
-              builder: (context, params) => ScriptbeesCopyWidget(),
-            ),
-            FFRoute(
-              name: 'PersonalinfoResponder',
-              path: 'personalinfoResponder',
-              builder: (context, params) => PersonalinfoResponderWidget(),
-            ),
-            FFRoute(
               name: 'FirstResponderCredentials',
               path: 'firstResponderCredentials',
               builder: (context, params) => FirstResponderCredentialsWidget(),
@@ -750,10 +593,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             FFRoute(
               name: 'ResponderMainpage',
               path: 'responderMainpage',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: ResponderMainpageWidget(),
-              ),
+              builder: (context, params) => ResponderMainpageWidget(),
+            ),
+            FFRoute(
+              name: 'PersonalinfoResponder',
+              path: 'personalinfoResponder',
+              builder: (context, params) => PersonalinfoResponderWidget(),
             ),
             FFRoute(
               name: 'IncomingCases',
@@ -771,57 +616,34 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => RejectReasonWidget(),
             ),
             FFRoute(
-              name: 'OtherReason',
-              path: 'otherReason',
-              builder: (context, params) => OtherReasonWidget(),
-            ),
-            FFRoute(
               name: 'Direction',
               path: 'direction',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: DirectionWidget(),
-              ),
-            ),
-            FFRoute(
-              name: 'GetDirection',
-              path: 'getDirection',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: GetDirectionWidget(),
-              ),
+              builder: (context, params) => DirectionWidget(),
             ),
             FFRoute(
               name: 'Arrival',
               path: 'arrival',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: ArrivalWidget(),
-              ),
+              builder: (context, params) => ArrivalWidget(),
+            ),
+            FFRoute(
+              name: 'GetDirection',
+              path: 'getDirection',
+              builder: (context, params) => GetDirectionWidget(),
             ),
             FFRoute(
               name: 'CloseIncident',
               path: 'closeIncident',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: CloseIncidentWidget(),
-              ),
+              builder: (context, params) => CloseIncidentWidget(),
             ),
             FFRoute(
               name: 'IncidentReport',
               path: 'incidentReport',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: IncidentReportWidget(),
-              ),
+              builder: (context, params) => IncidentReportWidget(),
             ),
             FFRoute(
               name: 'NearestFacilities',
               path: 'nearestFacilities',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: NearestFacilitiesWidget(),
-              ),
+              builder: (context, params) => NearestFacilitiesWidget(),
             ),
             FFRoute(
               name: 'AmbulanceConfirmed',
@@ -829,40 +651,243 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context, params) => AmbulanceConfirmedWidget(),
             ),
             FFRoute(
+              name: 'NearestFacilitespolice',
+              path: 'nearestFacilitespolice',
+              builder: (context, params) => NearestFacilitespoliceWidget(),
+            ),
+            FFRoute(
               name: 'FirehelpConfirmed',
               path: 'firehelpConfirmed',
               builder: (context, params) => FirehelpConfirmedWidget(),
             ),
             FFRoute(
-              name: 'peerchat',
-              path: 'peerchat',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: PeerchatWidget(),
-              ),
+              name: 'Responderpeerchat',
+              path: 'responderpeerchat',
+              builder: (context, params) => ResponderpeerchatWidget(),
             ),
             FFRoute(
-              name: 'NearestFacilitespolice',
-              path: 'nearestFacilitespolice',
-              builder: (context, params) => NavBarPage(
-                initialPage: '',
-                page: NearestFacilitespoliceWidget(),
-              ),
+              name: 'ChannelPublic',
+              path: 'channelPublic',
+              builder: (context, params) => ChannelPublicWidget(),
             ),
             FFRoute(
-              name: 'EditProfile',
-              path: 'editProfile',
-              builder: (context, params) => EditProfileWidget(),
+              name: 'ResponderEditProfile',
+              path: 'responderEditProfile',
+              builder: (context, params) => ResponderEditProfileWidget(),
             ),
             FFRoute(
-              name: 'ambulance',
-              path: 'ambulance',
-              builder: (context, params) => AmbulanceWidget(),
+              name: 'AlertHistory',
+              path: 'alertHistory',
+              builder: (context, params) => AlertHistoryWidget(),
+            ),
+            FFRoute(
+              name: 'Dashboard',
+              path: 'dashboard',
+              builder: (context, params) => DashboardWidget(),
+            ),
+            FFRoute(
+              name: 'ResponderSettings',
+              path: 'responderSettings',
+              builder: (context, params) => ResponderSettingsWidget(),
+            ),
+            FFRoute(
+              name: 'ResponderDetailAlert',
+              path: 'responderDetailAlert',
+              builder: (context, params) => ResponderDetailAlertWidget(),
+            ),
+            FFRoute(
+              name: 'ResponderWorkinghours',
+              path: 'responderWorkinghours',
+              builder: (context, params) => ResponderWorkinghoursWidget(),
+            ),
+            FFRoute(
+              name: 'ShowMore',
+              path: 'showMore',
+              builder: (context, params) => ShowMoreWidget(),
+            ),
+            FFRoute(
+              name: 'SocialChat',
+              path: 'socialChat',
+              builder: (context, params) => SocialChatWidget(),
+            ),
+            FFRoute(
+              name: 'CreateChannel',
+              path: 'createChannel',
+              builder: (context, params) => CreateChannelWidget(),
+            ),
+            FFRoute(
+              name: 'SocialChatOptions',
+              path: 'socialChatOptions',
+              builder: (context, params) => SocialChatOptionsWidget(),
+            ),
+            FFRoute(
+              name: 'GroupChat',
+              path: 'groupChat',
+              builder: (context, params) => GroupChatWidget(),
+            ),
+            FFRoute(
+              name: 'NewChat',
+              path: 'newChat',
+              builder: (context, params) => NewChatWidget(),
+            ),
+            FFRoute(
+              name: 'NewGroup',
+              path: 'newGroup',
+              builder: (context, params) => NewGroupWidget(),
+            ),
+            FFRoute(
+              name: 'AddingParticipant',
+              path: 'addingParticipant',
+              builder: (context, params) => AddingParticipantWidget(),
+            ),
+            FFRoute(
+              name: 'AddingNewAdmin',
+              path: 'addingNewAdmin',
+              builder: (context, params) => AddingNewAdminWidget(),
+            ),
+            FFRoute(
+              name: 'GroupAdded',
+              path: 'groupAdded',
+              builder: (context, params) => GroupAddedWidget(),
+            ),
+            FFRoute(
+              name: 'DevOpsGroup',
+              path: 'devOpsGroup',
+              builder: (context, params) => DevOpsGroupWidget(),
+            ),
+            FFRoute(
+              name: 'InviteLink',
+              path: 'inviteLink',
+              builder: (context, params) => InviteLinkWidget(),
+            ),
+            FFRoute(
+              name: 'DirectMessage',
+              path: 'directMessage',
+              builder: (context, params) => DirectMessageWidget(),
+            ),
+            FFRoute(
+              name: 'ChatInfo',
+              path: 'chatInfo',
+              builder: (context, params) => ChatInfoWidget(),
+            ),
+            FFRoute(
+              name: 'CreatePoll',
+              path: 'createPoll',
+              builder: (context, params) => CreatePollWidget(),
+            ),
+            FFRoute(
+              name: 'Createmockelection',
+              path: 'createmockelection',
+              builder: (context, params) => CreatemockelectionWidget(),
+            ),
+            FFRoute(
+              name: 'sharemockelectionLink',
+              path: 'sharemockelectionLink',
+              builder: (context, params) => SharemockelectionLinkWidget(),
+            ),
+            FFRoute(
+              name: 'postingpoll',
+              path: 'postingpoll',
+              builder: (context, params) => PostingpollWidget(),
+            ),
+            FFRoute(
+              name: 'ShareorpostPoll',
+              path: 'shareorpostPoll',
+              builder: (context, params) => ShareorpostPollWidget(),
+            ),
+            FFRoute(
+              name: 'NewMeetingInvite',
+              path: 'newMeetingInvite',
+              builder: (context, params) => NewMeetingInviteWidget(),
+            ),
+            FFRoute(
+              name: 'ChatbatSupport',
+              path: 'chatbatSupport',
+              builder: (context, params) => ChatbatSupportWidget(),
+            ),
+            FFRoute(
+              name: 'CallsandHistory',
+              path: 'callsandHistory',
+              builder: (context, params) => CallsandHistoryWidget(),
+            ),
+            FFRoute(
+              name: 'SplashScreen',
+              path: 'splashScreen',
+              builder: (context, params) => SplashScreenWidget(),
+            ),
+            FFRoute(
+              name: 'ElectionOTPverification',
+              path: 'electionOTPverification',
+              builder: (context, params) => ElectionOTPverificationWidget(),
+            ),
+            FFRoute(
+              name: 'NomineeList',
+              path: 'nomineeList',
+              builder: (context, params) => NomineeListWidget(),
+            ),
+            FFRoute(
+              name: 'CandidateDetailView',
+              path: 'candidateDetailView',
+              builder: (context, params) => CandidateDetailViewWidget(),
+            ),
+            FFRoute(
+              name: 'JoiningMeeting',
+              path: 'joiningMeeting',
+              builder: (context, params) => JoiningMeetingWidget(),
+            ),
+            FFRoute(
+              name: 'Voted',
+              path: 'voted',
+              builder: (context, params) => VotedWidget(),
+            ),
+            FFRoute(
+              name: 'MeetingMain',
+              path: 'meetingMain',
+              builder: (context, params) => MeetingMainWidget(),
+            ),
+            FFRoute(
+              name: 'MeetingType',
+              path: 'meetingType',
+              builder: (context, params) => MeetingTypeWidget(),
+            ),
+            FFRoute(
+              name: 'MeetingDetails',
+              path: 'meetingDetails',
+              builder: (context, params) => MeetingDetailsWidget(),
+            ),
+            FFRoute(
+              name: 'MeetingLink',
+              path: 'meetingLink',
+              builder: (context, params) => MeetingLinkWidget(),
+            ),
+            FFRoute(
+              name: 'MeetingInvitation',
+              path: 'meetingInvitation',
+              builder: (context, params) => MeetingInvitationWidget(),
+            ),
+            FFRoute(
+              name: 'CommonSearch',
+              path: 'commonSearch',
+              builder: (context, params) => CommonSearchWidget(),
+            ),
+            FFRoute(
+              name: 'ResponderEdit',
+              path: 'responderEdit',
+              builder: (context, params) => ResponderEditWidget(),
+            ),
+            FFRoute(
+              name: 'sample',
+              path: 'sample',
+              builder: (context, params) => SampleWidget(),
+            ),
+            FFRoute(
+              name: 'postingpollCopy',
+              path: 'postingpollCopy',
+              builder: (context, params) => PostingpollCopyWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
-        ).toRoute(appStateNotifier),
-      ],
-      urlPathStrategy: UrlPathStrategy.path,
+        ),
+      ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
 
 extension NavParamExtensions on Map<String, String?> {
@@ -873,12 +898,71 @@ extension NavParamExtensions on Map<String, String?> {
       );
 }
 
+extension NavigationExtensions on BuildContext {
+  void goNamedAuth(
+    String name,
+    bool mounted, {
+    Map<String, String> pathParameters = const <String, String>{},
+    Map<String, String> queryParameters = const <String, String>{},
+    Object? extra,
+    bool ignoreRedirect = false,
+  }) =>
+      !mounted || GoRouter.of(this).shouldRedirect(ignoreRedirect)
+          ? null
+          : goNamed(
+              name,
+              pathParameters: pathParameters,
+              queryParameters: queryParameters,
+              extra: extra,
+            );
+
+  void pushNamedAuth(
+    String name,
+    bool mounted, {
+    Map<String, String> pathParameters = const <String, String>{},
+    Map<String, String> queryParameters = const <String, String>{},
+    Object? extra,
+    bool ignoreRedirect = false,
+  }) =>
+      !mounted || GoRouter.of(this).shouldRedirect(ignoreRedirect)
+          ? null
+          : pushNamed(
+              name,
+              pathParameters: pathParameters,
+              queryParameters: queryParameters,
+              extra: extra,
+            );
+
+  void safePop() {
+    // If there is only one route on the stack, navigate to the initial
+    // page instead of popping.
+    if (canPop()) {
+      pop();
+    } else {
+      go('/');
+    }
+  }
+}
+
+extension GoRouterExtensions on GoRouter {
+  AppStateNotifier get appState => AppStateNotifier.instance;
+  void prepareAuthEvent([bool ignoreRedirect = false]) =>
+      appState.hasRedirect() && !ignoreRedirect
+          ? null
+          : appState.updateNotifyOnAuthChange(false);
+  bool shouldRedirect(bool ignoreRedirect) =>
+      !ignoreRedirect && appState.hasRedirect();
+  void clearRedirectLocation() => appState.clearRedirectLocation();
+  void setRedirectLocationIfUnset(String location) =>
+      appState.updateNotifyOnAuthChange(false);
+}
+
 extension _GoRouterStateExtensions on GoRouterState {
   Map<String, dynamic> get extraMap =>
       extra != null ? extra as Map<String, dynamic> : {};
   Map<String, dynamic> get allParams => <String, dynamic>{}
-    ..addAll(params)
-    ..addAll(queryParams)
+    ..addAll(pathParameters)
+    ..addAll(queryParameters)
     ..addAll(extraMap);
   TransitionInfo get transitionInfo => extraMap.containsKey(kTransitionInfoKey)
       ? extraMap[kTransitionInfoKey] as TransitionInfo
@@ -920,6 +1004,7 @@ class FFParameters {
     String paramName,
     ParamType type, [
     bool isList = false,
+    List<String>? collectionNamePath,
   ]) {
     if (futureParamValues.containsKey(paramName)) {
       return futureParamValues[paramName];
@@ -933,11 +1018,8 @@ class FFParameters {
       return param;
     }
     // Return serialized value.
-    return deserializeParam<T>(
-      param,
-      type,
-      isList,
-    );
+    return deserializeParam<T>(param, type, isList,
+        collectionNamePath: collectionNamePath);
   }
 }
 
@@ -961,6 +1043,19 @@ class FFRoute {
   GoRoute toRoute(AppStateNotifier appStateNotifier) => GoRoute(
         name: name,
         path: path,
+        redirect: (context, state) {
+          if (appStateNotifier.shouldRedirect) {
+            final redirectLocation = appStateNotifier.getRedirectLocation();
+            appStateNotifier.clearRedirectLocation();
+            return redirectLocation;
+          }
+
+          if (requireAuth && !appStateNotifier.loggedIn) {
+            appStateNotifier.setRedirectLocationIfUnset(state.location);
+            return '/login';
+          }
+          return null;
+        },
         pageBuilder: (context, state) {
           final ffParams = FFParameters(state, asyncParams);
           final page = ffParams.hasFutures
@@ -969,7 +1064,15 @@ class FFRoute {
                   builder: (context, _) => builder(context, ffParams),
                 )
               : builder(context, ffParams);
-          final child = page;
+          final child = appStateNotifier.loading
+              ? Container(
+                  color: Colors.transparent,
+                  child: Image.asset(
+                    'assets/images/bg.svg',
+                    fit: BoxFit.cover,
+                  ),
+                )
+              : page;
 
           final transitionInfo = state.transitionInfo;
           return transitionInfo.hasTransition

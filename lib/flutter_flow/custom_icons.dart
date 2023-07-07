@@ -279,6 +279,14 @@ class FFIcons {
       IconData(0xe800, fontFamily: _myFlutterAppFamily);
   static const IconData kmaskGroup225 =
       IconData(0xe801, fontFamily: _myFlutterAppFamily);
-  static const IconData kmaskGroup226 =
-      IconData(0xe802, fontFamily: _myFlutterAppFamily);
+  static const IconData kgroup4000 =
+      IconData(0xe803, fontFamily: _myFlutterAppFamily);
+  static const IconData kmaskGroup182 =
+      IconData(0xe804, fontFamily: _myFlutterAppFamily);
+  static const IconData kattachment =
+      IconData(0xe805, fontFamily: _myFlutterAppFamily);
+  static const IconData kmaskGroup281 =
+      IconData(0xe806, fontFamily: _myFlutterAppFamily);
+  static const IconData kgroup4299 =
+      IconData(0xe807, fontFamily: _myFlutterAppFamily);
 }
