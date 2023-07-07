@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="360" height="441.182" viewBox="0 0 360 441.182">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Surface" d="M580-997.818H940V-1439H580Z" transform="translate(-580 1181.953)" fill="#3b3b3b"/>
+    </clipPath>
+  </defs>
+  <g id="Mask_Group_280" data-name="Mask Group 280" transform="translate(0 257.047)" clip-path="url(#clip-path)">
+    <g id="vote-svgrepo-com" transform="translate(-50.871 -245.821)">
+      <g id="Group_4024" data-name="Group 4024" transform="translate(50.871 144.004)">
+        <path id="Path_6081" data-name="Path 6081" d="M410.871,124.84h0l-45,31.9h-270l-45-31.9,45-63.8h270Z" transform="translate(-50.871 -61.045)" fill="#3f4040"/>
+      </g>
+      <g id="Group_4025" data-name="Group 4025" transform="translate(168.531 167.191)">
+        <rect id="Rectangle_1282" data-name="Rectangle 1282" width="113.777" height="9.666" fill="#3b3b3b"/>
+      </g>
+      <g id="Group_4026" data-name="Group 4026" transform="translate(168.531 29.958)">
+        <path id="Path_6082" data-name="Path 6082" d="M68.076,104.347l56.844,55.078L204.49,77.269,147.647,22.191Z" transform="translate(-68.076 -22.191)" fill="rgba(250,250,250,0.87)"/>
+      </g>
+      <g id="Group_4027" data-name="Group 4027" transform="translate(50.871 207.8)">
+        <path id="Path_6083" data-name="Path 6083" d="M78.143,304.678H383.6c15.063,0,27.273-8.655,27.273-19.332V81.393h-360V285.346C50.871,296.023,63.081,304.678,78.143,304.678Z" transform="translate(-50.871 -81.393)" fill="#3b3b3b"/>
+      </g>
+    </g>
+  </g>
+</svg>
