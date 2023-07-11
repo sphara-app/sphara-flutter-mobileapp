@@ -134,6 +134,13 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
     super.initState();
     _model = createModel(context, () => OnBoardingScreensModel());
 
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (FFAppState().isonboarded) {
+        context.goNamed('login');
+      }
+    });
+
     setupAnimations(
       animationsMap.values.where((anim) =>
           anim.trigger == AnimationTrigger.onActionTrigger ||

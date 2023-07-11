@@ -76,14 +76,16 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) =>
-          appStateNotifier.loggedIn ? HomepageWidget() : LoginWidget(),
+      errorBuilder: (context, state) => appStateNotifier.loggedIn
+          ? HomepageWidget()
+          : OnBoardingScreensWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) =>
-              appStateNotifier.loggedIn ? HomepageWidget() : LoginWidget(),
+          builder: (context, _) => appStateNotifier.loggedIn
+              ? HomepageWidget()
+              : OnBoardingScreensWidget(),
           routes: [
             FFRoute(
               name: 'OnBoardingScreens',
@@ -1052,7 +1054,7 @@ class FFRoute {
 
           if (requireAuth && !appStateNotifier.loggedIn) {
             appStateNotifier.setRedirectLocationIfUnset(state.location);
-            return '/login';
+            return '/onBoardingScreens';
           }
           return null;
         },

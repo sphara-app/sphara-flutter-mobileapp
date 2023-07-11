@@ -125,6 +125,7 @@ class _ChoosingroleWidgetState extends State<ChoosingroleWidget> {
 
                             FFAppState().update(() {
                               FFAppState().responderMode = true;
+                              FFAppState().isonboarded = true;
                             });
                           },
                           text: 'First Responder',
@@ -170,6 +171,10 @@ class _ChoosingroleWidgetState extends State<ChoosingroleWidget> {
                                 ),
                               },
                             );
+
+                            FFAppState().update(() {
+                              FFAppState().isonboarded = true;
+                            });
                           },
                           text: 'Civilian',
                           options: FFButtonOptions(

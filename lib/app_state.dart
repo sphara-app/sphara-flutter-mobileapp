@@ -55,6 +55,9 @@ class FFAppState extends ChangeNotifier {
     _safeInit(() {
       _socialMode = prefs.getBool('ff_socialMode') ?? _socialMode;
     });
+    _safeInit(() {
+      _isonboarded = prefs.getBool('ff_isonboarded') ?? _isonboarded;
+    });
   }
 
   void update(VoidCallback callback) {
@@ -379,6 +382,13 @@ class FFAppState extends ChangeNotifier {
     String Function(String) updateFn,
   ) {
     _chatAttach[_index] = updateFn(_chatAttach[_index]);
+  }
+
+  bool _isonboarded = false;
+  bool get isonboarded => _isonboarded;
+  set isonboarded(bool _value) {
+    _isonboarded = _value;
+    prefs.setBool('ff_isonboarded', _value);
   }
 }
 
