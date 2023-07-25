@@ -11,6 +11,7 @@ class AppImage {
   static const String onboarding_4 = '${path}onboarding_4.png';
   static const String onboarding_5 = '${path}onboarding_5.png';
   static const String onboarding_6 = '${path}onboarding_6.png';
+  static const String check = '${path}check.png';
 
   // #------------------------ SVG ------------------------#
   static const String bg_svg = '${path}bg.svg';
