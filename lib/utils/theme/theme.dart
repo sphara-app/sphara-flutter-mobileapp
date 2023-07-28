@@ -40,6 +40,25 @@ abstract class FFTheme {
         : LightModeTheme();
   }
 
+  static ThemeData themeData(BuildContext context) {
+    bool isDrak = Theme.of(context).brightness == Brightness.dark;
+    var ffTheme = FFTheme.of(context);
+    return ThemeData(
+      brightness: Theme.of(context).brightness,
+      useMaterial3: true,
+      outlinedButtonTheme: OutlinedButtonThemeData(
+        style: OutlinedButton.styleFrom(
+          backgroundColor: isDrak ? ffTheme.primary : ffTheme.alternate,
+          padding: const EdgeInsets.symmetric(vertical: 16.0),
+          side: BorderSide(
+            color: isDrak ? ffTheme.primary : ffTheme.primary,
+            width: 2.0,
+          ),
+        ),
+      ),
+    );
+  }
+
   @Deprecated('Use primary instead')
   Color get primaryColor => primary;
   @Deprecated('Use secondary instead')

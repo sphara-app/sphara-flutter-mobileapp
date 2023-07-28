@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:sphara/utils/router/routes.dart';
 import 'package:sphara/utils/string_extension.dart';
 
+import '../../feature/choose_role/view/choose_role.dart';
 import '../../feature/onboarding/view/onboarding_screen.dart';
 
 class AppStateNotifier extends ChangeNotifier {
@@ -44,6 +45,14 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
             return const OnboardingScreen();
           },
         ),
+        GoRoute(
+          name: Routes.chooseRole,
+          path: Routes.chooseRole.addPath(),
+          builder: (context, state) {
+            return const ChooseRole();
+          },
+        ),
+
         // FFRoute(
         //   name: '_initialize',
         //   path: '/',

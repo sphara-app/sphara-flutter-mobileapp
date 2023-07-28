@@ -3,7 +3,7 @@ class AppImage {
   static const String path = 'assets/images/';
 
   // #------------------------ Images ------------------------#
-  static const String logo = '${path}assets/images/app_launcher_icon.png.png';
+  static const String logo = '${path}app_launcher_icon.png';
   static const String sheld = '${path}sheld.png';
   static const String onboarding_1 = '${path}onboarding_1.png';
   static const String onboarding_2 = '${path}onboarding_2.png';
@@ -15,5 +15,6 @@ class AppImage {
 
   // #------------------------ SVG ------------------------#
   static const String bg_svg = '${path}bg.svg';
+  static const String logo_dark_svg = '${path}logo_dark.svg';
   static const String sheld_svg = '${path}sheld.svg';
 }
