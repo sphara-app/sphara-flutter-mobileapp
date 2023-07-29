@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:sphara/utils/router/routes.dart';
 import 'package:sphara/utils/string_extension.dart';
 
+import '../../constant/app_shared_pref.dart';
 import '../../feature/choose_role/view/choose_role.dart';
+import '../../feature/login/view/login_screen.dart';
 import '../../feature/onboarding/view/onboarding_screen.dart';
 
 class AppStateNotifier extends ChangeNotifier {
@@ -31,13 +34,32 @@ class AppStateNotifier extends ChangeNotifier {
 }
 
 GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
-      initialLocation: Routes.onBoardingScreen.addPath(),
+      initialLocation: "/",
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       // errorBuilder: (context, state) => appStateNotifier.loggedIn
       //     ? HomepageWidget()
       //     : OnBoardingScreensWidget(),
       routes: [
+        GoRoute(
+          name: Routes.splashScreen,
+          path: '/',
+          builder: (context, state) {
+            // return const SplashScreen();
+            return const ChooseRole();
+          },
+          redirect: (context, state) async {
+            final SharedPreferences pref =
+                await SharedPreferences.getInstance();
+            final isOnBoarded = pref.getBool(SPref.isOnBoarded) ?? false;
+            // print(isOnBoarded);
+            if (isOnBoarded) {
+              return null;
+            } else {
+              return Routes.onBoardingScreen.addPath();
+            }
+          },
+        ),
         GoRoute(
           name: Routes.onBoardingScreen,
           path: Routes.onBoardingScreen.addPath(),
@@ -50,6 +72,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           path: Routes.chooseRole.addPath(),
           builder: (context, state) {
             return const ChooseRole();
+          },
+        ),
+        GoRoute(
+          name: Routes.login,
+          path: Routes.login.addPath(),
+          builder: (context, state) {
+            return const LoginScreen();
           },
         ),
 

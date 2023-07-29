@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sphara/utils/theme/theme.dart';
 
 import '../../../constant/app_image.dart';
 import '../../../constant/size.dart';
+import '../../../utils/router/routes.dart';
+import '../../common/background_image.dart';
+import '../../common/button_widget.dart';
 
 class ChooseRole extends StatelessWidget {
   const ChooseRole({super.key});
@@ -31,25 +35,25 @@ class ChooseRole extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 80),
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "First Responder",
-                    style: FFTheme.of(context).titleMedium,
-                  ),
+              CustomOutlinedButton(
+                onPressed: () {
+                  context.pushNamed(Routes.login);
+                },
+                isExpanded: true,
+                child: Text(
+                  "First Responder",
+                  style: FFTheme.of(context).titleMedium,
                 ),
               ),
               const SizedBox(height: 20),
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Civilian",
-                    style: FFTheme.of(context).titleMedium,
-                  ),
+              CustomOutlinedButton(
+                onPressed: () {
+                  context.pushNamed(Routes.login);
+                },
+                isExpanded: true,
+                child: Text(
+                  "Civilian",
+                  style: FFTheme.of(context).titleMedium,
                 ),
               ),
               const SizedBox(height: 40),
@@ -57,32 +61,6 @@ class ChooseRole extends StatelessWidget {
           ),
         ),
       ),
-    );
-  }
-}
-
-class BGImage extends StatelessWidget {
-  const BGImage({
-    super.key,
-    required this.child,
-    this.fit,
-    this.safeArea = true,
-  });
-  final Widget child;
-  final StackFit? fit;
-  final bool safeArea;
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      fit: fit ?? StackFit.expand,
-      children: [
-        SvgPicture.asset(
-          AppImage.bg_svg,
-          fit: BoxFit.cover,
-        ),
-        safeArea ? SafeArea(child: child) : child,
-      ],
     );
   }
 }

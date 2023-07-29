@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:go_router/go_router.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:sphara/feature/choose_role/view/choose_role.dart';
 import 'package:sphara/utils/theme/theme.dart';
-
 import '../../../constant/app_image.dart';
+import '../../../constant/app_shared_pref.dart';
 import '../../../utils/router/routes.dart';
+import '../../common/background_image.dart';
 import '../model/onboarding_model.dart';
 import 'widget/pageviewbody.dart';
 
@@ -151,7 +152,10 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               children: [
                 currentPage == onboardingModel.length - 1
                     ? TextButton(
-                        onPressed: () {
+                        onPressed: () async {
+                          final SharedPreferences preferences =
+                              await SharedPreferences.getInstance();
+                          await preferences.setBool(SPref.isOnBoarded, true);
                           context.goNamed(Routes.chooseRole);
                         },
                         child: Text(

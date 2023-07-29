@@ -10,6 +10,7 @@ class Routes {
   static const String profile = 'profile';
   static const String settings = 'settings';
   static const String editProfile = 'editProfile';
+  static const String splashScreen = 'splashScreen';
   static const String changePassword = 'changePassword';
   static const String changeLanguage = 'changeLanguage';
 }
