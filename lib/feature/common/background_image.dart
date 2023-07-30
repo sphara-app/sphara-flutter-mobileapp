@@ -9,22 +9,27 @@ class BGImage extends StatelessWidget {
     required this.child,
     this.fit,
     this.safeArea = true,
+    this.node,
   });
   final Widget child;
   final StackFit? fit;
   final bool safeArea;
+  final FocusNode? node;
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      fit: fit ?? StackFit.expand,
-      children: [
-        SvgPicture.asset(
-          AppImage.bg_svg,
-          fit: BoxFit.cover,
-        ),
-        safeArea ? SafeArea(child: child) : child,
-      ],
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).requestFocus(node),
+      child: Stack(
+        fit: fit ?? StackFit.expand,
+        children: [
+          SvgPicture.asset(
+            AppImage.bg_svg,
+            fit: BoxFit.cover,
+          ),
+          safeArea ? SafeArea(child: child) : child,
+        ],
+      ),
     );
   }
 }

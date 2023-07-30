@@ -8,6 +8,7 @@ import '../../constant/app_shared_pref.dart';
 import '../../feature/choose_role/view/choose_role.dart';
 import '../../feature/login/view/login_screen.dart';
 import '../../feature/onboarding/view/onboarding_screen.dart';
+import '../../feature/signup/view/signup_screen.dart';
 
 class AppStateNotifier extends ChangeNotifier {
   AppStateNotifier._();
@@ -78,7 +79,20 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: Routes.login,
           path: Routes.login.addPath(),
           builder: (context, state) {
-            return const LoginScreen();
+            bool isCivilian = state.uri.queryParameters["isCivilian"] == "true"
+                ? true
+                : false;
+            return LoginScreen(isFromCivilian: isCivilian);
+          },
+        ),
+        GoRoute(
+          name: Routes.signUp,
+          path: Routes.signUp.addPath(),
+          builder: (context, state) {
+            bool isCivilian = state.uri.queryParameters["isCivilian"] == "true"
+                ? true
+                : false;
+            return SignUpScreen(isFromCivilian: isCivilian);
           },
         ),
 

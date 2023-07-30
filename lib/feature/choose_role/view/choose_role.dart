@@ -37,7 +37,10 @@ class ChooseRole extends StatelessWidget {
               const SizedBox(height: 80),
               CustomOutlinedButton(
                 onPressed: () {
-                  context.pushNamed(Routes.login);
+                  context.pushNamed(
+                    Routes.login,
+                    queryParameters: {"isCivilian": "false"},
+                  );
                 },
                 isExpanded: true,
                 child: Text(
@@ -48,7 +51,10 @@ class ChooseRole extends StatelessWidget {
               const SizedBox(height: 20),
               CustomOutlinedButton(
                 onPressed: () {
-                  context.pushNamed(Routes.login);
+                  context.pushNamed(
+                    Routes.login,
+                    queryParameters: {"isCivilian": "true"},
+                  );
                 },
                 isExpanded: true,
                 child: Text(

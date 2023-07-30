@@ -19,6 +19,7 @@ class OnboardingScreen extends StatefulWidget {
 }
 
 class _OnboardingScreenState extends State<OnboardingScreen> {
+  final unfocusNode = FocusNode();
   int currentPage = 0;
   final PageController controller = PageController(initialPage: 0);
 
@@ -26,6 +27,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         body: BGImage(
+      node: unfocusNode,
       child: _build(context),
     ));
   }

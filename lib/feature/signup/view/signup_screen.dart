@@ -1,4 +1,5 @@
 import 'package:country_picker/country_picker.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -13,15 +14,15 @@ import '../../../constant/size.dart';
 import '../../../utils/router/routes.dart';
 import '../../common/button_widget.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key, required this.isFromCivilian});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key, required this.isFromCivilian});
   final bool isFromCivilian;
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   TextEditingController phoneNumberController = TextEditingController();
   final formKey = GlobalKey<FormState>();
   final unfocusNode = FocusNode();
@@ -86,11 +87,26 @@ class _LoginScreenState extends State<LoginScreen> {
                 Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: Text(
-                    "Login to continue",
+                    widget.isFromCivilian ? "Sign Up" : "Welcome to Sphara",
                     style: FFTheme.of(context).titleMedium,
                   ),
                 ),
                 // const Spacer(flex: 1),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Text(
+                    widget.isFromCivilian
+                        ? 'Provide your phone number. So we can be\nable to send your confirmation code.'
+                        : 'Provide your work phone number which you were enrolled at your work. so we can be able to send you confirmation as well as authentication code',
+                    textAlign: TextAlign.center,
+                    style: FFTheme.of(context).bodyMedium.copyWith(
+                          fontFamily: 'Roboto',
+                          color: FFTheme.of(context).tertiary,
+                          fontSize: 14.0,
+                          fontWeight: FontWeight.normal,
+                        ),
+                  ),
+                ),
                 const SizedBox(height: 20.0),
                 Container(
                   // width: 335.0,
@@ -183,13 +199,67 @@ class _LoginScreenState extends State<LoginScreen> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 10.0),
+
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 20.0, 0.0, 40.0),
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      text:
+                          'By continuing, you are indicating that you agree to \nthe ',
+                      style: FFTheme.of(context).bodySmall.copyWith(
+                            fontFamily: FFTheme.of(context).bodySmallFamily,
+                            color: FFTheme.of(context).tertiary,
+                            fontSize: 14.0,
+                          ),
+                      children: [
+                        TextSpan(
+                          text: 'Privacy Policies',
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              // context.pushNamed(Routes.privacyPolicy);
+                              print("Privacy Policies");
+                            },
+                          style: FFTheme.of(context).bodySmall.copyWith(
+                                fontFamily: FFTheme.of(context).bodySmallFamily,
+                                color: Colors.white,
+                                fontSize: 14.0,
+                                decoration: TextDecoration.underline,
+                              ),
+                        ),
+                        TextSpan(
+                          text: ' and ',
+                          style: FFTheme.of(context).bodySmall.copyWith(
+                                fontFamily: FFTheme.of(context).bodySmallFamily,
+                                color: FFTheme.of(context).tertiary,
+                                fontSize: 14.0,
+                              ),
+                        ),
+                        TextSpan(
+                          text: 'Terms',
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              // context.pushNamed(Routes.terms);
+                              print("Terms");
+                            },
+                          style: FFTheme.of(context).bodySmall.copyWith(
+                                fontFamily: FFTheme.of(context).bodySmallFamily,
+                                color: Colors.white,
+                                fontSize: 14.0,
+                                decoration: TextDecoration.underline,
+                              ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
                 Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Don\'t have an account?',
+                      'Already have an account?',
                       style: FFTheme.of(context).bodyMedium.copyWith(
                             color: FFTheme.of(context).tertiary,
                             fontSize: 14.0,
@@ -201,13 +271,13 @@ class _LoginScreenState extends State<LoginScreen> {
                       hoverColor: Colors.transparent,
                       highlightColor: Colors.transparent,
                       onTap: () async {
-                        context.pushReplacementNamed(Routes.signUp,
+                        context.pushReplacementNamed(Routes.login,
                             queryParameters: {
-                              "isCivilian": widget.isFromCivilian.toString()
+                              "isCivilian": widget.isFromCivilian.toString(),
                             });
                       },
                       child: Text(
-                        ' Sign up',
+                        ' Log in',
                         style: FFTheme.of(context).bodyMedium.copyWith(
                               color: FFTheme.of(context).primary,
                               fontSize: 16,
