@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:sphara/feature/verification/view/verification_screen.dart';
 import 'package:sphara/utils/router/routes.dart';
 import 'package:sphara/utils/string_extension.dart';
 
@@ -93,6 +94,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ? true
                 : false;
             return SignUpScreen(isFromCivilian: isCivilian);
+          },
+        ),
+        GoRoute(
+          name: Routes.verificationCode,
+          path: Routes.verificationCode.addPath(),
+          builder: (context, state) {
+            return const VerificationScreen();
           },
         ),
 

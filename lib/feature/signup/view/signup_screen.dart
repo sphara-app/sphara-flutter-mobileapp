@@ -254,43 +254,76 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                   ),
                 ),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Already have an account?',
+                Padding(
+                  padding: const EdgeInsetsDirectional.fromSTEB(
+                      0.0, 20.0, 0.0, 40.0),
+                  child: RichText(
+                    textAlign: TextAlign.center,
+                    text: TextSpan(
+                      text: 'Already have an account? ',
                       style: FFTheme.of(context).bodyMedium.copyWith(
                             color: FFTheme.of(context).tertiary,
                             fontSize: 14.0,
                           ),
+                      children: [
+                        TextSpan(
+                          text: 'Log in',
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              context.pushReplacementNamed(Routes.login,
+                                  queryParameters: {
+                                    "isCivilian":
+                                        widget.isFromCivilian.toString(),
+                                  });
+                            },
+                          style: FFTheme.of(context).bodyMedium.copyWith(
+                                color: FFTheme.of(context).primary,
+                                fontSize: 16,
+                              ),
+                        ),
+                      ],
                     ),
-                    InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () async {
-                        context.pushReplacementNamed(Routes.login,
-                            queryParameters: {
-                              "isCivilian": widget.isFromCivilian.toString(),
-                            });
-                      },
-                      child: Text(
-                        ' Log in',
-                        style: FFTheme.of(context).bodyMedium.copyWith(
-                              color: FFTheme.of(context).primary,
-                              fontSize: 16,
-                            ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
+                // Row(
+                //   mainAxisSize: MainAxisSize.max,
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Text(
+                //       'Already have an account?',
+                //       style: FFTheme.of(context).bodyMedium.copyWith(
+                //             color: FFTheme.of(context).tertiary,
+                //             fontSize: 14.0,
+                //           ),
+                //     ),
+                //     InkWell(
+                //       splashColor: Colors.transparent,
+                //       focusColor: Colors.transparent,
+                //       hoverColor: Colors.transparent,
+                //       highlightColor: Colors.transparent,
+                //       onTap: () async {
+                //         context.pushReplacementNamed(Routes.login,
+                //             queryParameters: {
+                //               "isCivilian": widget.isFromCivilian.toString(),
+                //             });
+                //       },
+                //       child: Text(
+                //         ' Log in',
+                //         style: FFTheme.of(context).bodyMedium.copyWith(
+                //               color: FFTheme.of(context).primary,
+                //               fontSize: 16,
+                //             ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 // const SizedBox(height: 20),
                 const Spacer(flex: 1),
 
                 CustomOutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.verificationCode);
+                  },
                   isExpanded: true,
                   backgroundColor: FFTheme.of(context).primary,
                   child: Text(

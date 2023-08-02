@@ -1,4 +1,5 @@
 import 'package:country_picker/country_picker.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -184,38 +185,64 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
                 const SizedBox(height: 10.0),
-                Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Don\'t have an account?',
-                      style: FFTheme.of(context).bodyMedium.copyWith(
-                            color: FFTheme.of(context).tertiary,
-                            fontSize: 14.0,
-                          ),
-                    ),
-                    InkWell(
-                      splashColor: Colors.transparent,
-                      focusColor: Colors.transparent,
-                      hoverColor: Colors.transparent,
-                      highlightColor: Colors.transparent,
-                      onTap: () async {
-                        context.pushReplacementNamed(Routes.signUp,
-                            queryParameters: {
-                              "isCivilian": widget.isFromCivilian.toString()
-                            });
-                      },
-                      child: Text(
-                        ' Sign up',
+                RichText(
+                  textAlign: TextAlign.center,
+                  text: TextSpan(
+                    text: 'Don\'t have an account? ',
+                    style: FFTheme.of(context).bodyMedium.copyWith(
+                          color: FFTheme.of(context).tertiary,
+                          fontSize: 14.0,
+                        ),
+                    children: [
+                      TextSpan(
+                        text: 'Sign up',
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            context.pushReplacementNamed(Routes.signUp,
+                                queryParameters: {
+                                  "isCivilian": widget.isFromCivilian.toString()
+                                });
+                          },
                         style: FFTheme.of(context).bodyMedium.copyWith(
                               color: FFTheme.of(context).primary,
                               fontSize: 16,
                             ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
+                // Row(
+                //   mainAxisSize: MainAxisSize.max,
+                //   mainAxisAlignment: MainAxisAlignment.center,
+                //   children: [
+                //     Text(
+                //       'Don\'t have an account?',
+                //       style: FFTheme.of(context).bodyMedium.copyWith(
+                //             color: FFTheme.of(context).tertiary,
+                //             fontSize: 14.0,
+                //           ),
+                //     ),
+                //     InkWell(
+                //       splashColor: Colors.transparent,
+                //       focusColor: Colors.transparent,
+                //       hoverColor: Colors.transparent,
+                //       highlightColor: Colors.transparent,
+                //       onTap: () async {
+                //         context.pushReplacementNamed(Routes.signUp,
+                //             queryParameters: {
+                //               "isCivilian": widget.isFromCivilian.toString()
+                //             });
+                //       },
+                //       child: Text(
+                //         ' Sign up',
+                //         style: FFTheme.of(context).bodyMedium.copyWith(
+                //               color: FFTheme.of(context).primary,
+                //               fontSize: 16,
+                //             ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
                 // const SizedBox(height: 20),
                 const Spacer(flex: 1),
 
