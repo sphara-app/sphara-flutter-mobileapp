@@ -6,6 +6,7 @@ class Routes {
   static const String login = 'login';
   static const String signUp = 'signUp';
   static const String verificationCode = 'verificationCode';
+  static const String verificationDone = 'verificationDone';
   static const String homepage = 'homepage';
   static const String profile = 'profile';
   static const String settings = 'settings';

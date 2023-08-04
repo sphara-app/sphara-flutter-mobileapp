@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../constant/app_image.dart';
 import '../../../constant/size.dart';
+import '../../../utils/router/routes.dart';
 import '../../../utils/theme/theme.dart';
 import '../../common/background_image.dart';
 import '../../common/button_widget.dart';
@@ -169,7 +170,9 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 const Spacer(flex: 1),
 
                 CustomOutlinedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.goNamed(Routes.verificationDone);
+                  },
                   isExpanded: true,
                   backgroundColor: FFTheme.of(context).primary,
                   child: Text(

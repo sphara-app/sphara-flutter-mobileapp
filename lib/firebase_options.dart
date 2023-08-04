@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyCxXMiFPaCcSVFXQN0ho8gwZ2khCfRBmyY',
-    appId: '1:1083035074953:android:3ec44a8a843f4e1b7d2158',
+    appId: '1:1083035074953:android:4d7b70ff2059f1d97d2158',
     messagingSenderId: '1083035074953',
     projectId: 'sphara-flutter-firebase',
     storageBucket: 'sphara-flutter-firebase.appspot.com',
@@ -59,12 +59,12 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDwZK0i4KrKt_kQs2BxZTGo2tqMkKu5yE8',
-    appId: '1:1083035074953:ios:6ff7981bc44cb5cb7d2158',
+    appId: '1:1083035074953:ios:16a1921aeb7327ba7d2158',
     messagingSenderId: '1083035074953',
     projectId: 'sphara-flutter-firebase',
     storageBucket: 'sphara-flutter-firebase.appspot.com',
-    androidClientId: '1083035074953-cicjtggaf7hrg5238pcuuqfpkb4rjldu.apps.googleusercontent.com',
-    iosClientId: '1083035074953-j304gejh2ftb30il0hgrkha10p9kes7h.apps.googleusercontent.com',
-    iosBundleId: 'app.sphara.sphara.sphara',
+    androidClientId: '1083035074953-386deogprduoi00d65i8a9rb7kr5010e.apps.googleusercontent.com',
+    iosClientId: '1083035074953-4ki76f243vt43bcog49aai77do9o4o0c.apps.googleusercontent.com',
+    iosBundleId: 'app.sphara.sphara',
   );
 }
