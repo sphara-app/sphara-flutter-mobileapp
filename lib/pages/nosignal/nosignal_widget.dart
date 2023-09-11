@@ -87,7 +87,7 @@ class _NosignalWidgetState extends State<NosignalWidget> {
                   )),
                   Expanded(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: AlignmentDirectional(0.00, 1.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 0.0, 0.0, 100.0),

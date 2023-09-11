@@ -57,7 +57,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
@@ -70,7 +70,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
@@ -108,7 +108,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),
@@ -138,7 +138,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.00, -1.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 0.0, 0.0),
@@ -171,7 +171,7 @@ class _DonationWidgetState extends State<DonationWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 72.0,

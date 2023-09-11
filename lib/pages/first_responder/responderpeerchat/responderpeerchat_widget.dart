@@ -2,6 +2,7 @@ import '/components/channel_menu/channel_menu_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -66,7 +67,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
               },
             ),
             title: Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Container(
                 width: 200.0,
                 height: 40.0,
@@ -74,7 +75,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
                   color: Color(0x4EC6C2C2),
                   borderRadius: BorderRadius.circular(40.0),
                 ),
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
@@ -89,7 +90,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
                             borderRadius: BorderRadius.circular(40.0),
                             shape: BoxShape.rectangle,
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Text(
                             'Chats',
                             style: FlutterFlowTheme.of(context)
@@ -118,7 +119,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(40.0),
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Text(
                             'Groups',
                             style: FlutterFlowTheme.of(context)
@@ -143,7 +144,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
             ),
             actions: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                   child: SvgPicture.asset(
@@ -176,7 +177,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
                   fit: BoxFit.cover,
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -190,7 +191,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
                           children: [
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: TextFormField(
                                   controller: _model.textController,
                                   autofocus: true,
@@ -419,7 +420,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Text(
                                           '3',
                                           style: FlutterFlowTheme.of(context)
@@ -524,7 +525,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-1.0, 0.0),
+                                alignment: AlignmentDirectional(-1.00, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       165.0, 0.0, 20.0, 0.0),
@@ -755,7 +756,7 @@ class _ResponderpeerchatWidgetState extends State<ResponderpeerchatWidget> {
                                           shape: BoxShape.circle,
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Text(
                                           '3',
                                           style: FlutterFlowTheme.of(context)

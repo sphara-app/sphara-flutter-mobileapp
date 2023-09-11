@@ -2,6 +2,7 @@ import '/components/social_more/social_more_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -203,7 +204,7 @@ class _WorkStationMenuWidgetState extends State<WorkStationMenuWidget> {
                                           .secondary,
                                     ),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Text(
                                     'S',
                                     style: FlutterFlowTheme.of(context)
@@ -295,7 +296,7 @@ class _WorkStationMenuWidgetState extends State<WorkStationMenuWidget> {
                                         FlutterFlowTheme.of(context).tertiary,
                                   ),
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Text(
                                   'S',
                                   style: FlutterFlowTheme.of(context)
@@ -424,7 +425,7 @@ class _WorkStationMenuWidgetState extends State<WorkStationMenuWidget> {
                 ),
                 Expanded(
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: AlignmentDirectional(0.00, 1.00),
                     child: Container(
                       width: double.infinity,
                       height: 74.0,

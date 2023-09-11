@@ -46,14 +46,14 @@ class _PersonalInformartionStartWidgetState
       width: double.infinity,
       height: MediaQuery.sizeOf(context).height * 1.0,
       decoration: BoxDecoration(),
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.00, 0.00),
       child: Container(
         width: MediaQuery.sizeOf(context).width * 0.85,
         height: 410.0,
         decoration: BoxDecoration(
           color: FlutterFlowTheme.of(context).secondary,
         ),
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.00, 0.00),
         child: Padding(
           padding: EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 0.0),
           child: Column(
@@ -61,7 +61,7 @@ class _PersonalInformartionStartWidgetState
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: SvgPicture.asset(
@@ -87,7 +87,7 @@ class _PersonalInformartionStartWidgetState
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(10.0, 20.0, 10.0, 0.0),
@@ -125,7 +125,7 @@ class _PersonalInformartionStartWidgetState
                     decoration: BoxDecoration(
                       color: FlutterFlowTheme.of(context).secondaryBackground,
                     ),
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: InkWell(
                       splashColor: Colors.transparent,
                       focusColor: Colors.transparent,

@@ -83,7 +83,7 @@ class _StorageAnalyticsScreenWidgetState
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -415,7 +415,7 @@ class _StorageAnalyticsScreenWidgetState
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(0.9, 0.0),
+                                alignment: AlignmentDirectional(0.90, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       40.0, 0.0, 20.0, 0.0),

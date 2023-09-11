@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
@@ -77,7 +78,7 @@ class _CallsandHistoryWidgetState extends State<CallsandHistoryWidget> {
                         : FlutterFlowTheme.of(context).alternate,
                     borderRadius: BorderRadius.circular(40.0),
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
                     'Call',
                     style: FlutterFlowTheme.of(context).titleSmall,
@@ -92,7 +93,7 @@ class _CallsandHistoryWidgetState extends State<CallsandHistoryWidget> {
                         : FlutterFlowTheme.of(context).alternate,
                     borderRadius: BorderRadius.circular(40.0),
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
                     'History',
                     style: FlutterFlowTheme.of(context).titleSmall,

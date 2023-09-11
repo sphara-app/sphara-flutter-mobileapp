@@ -75,7 +75,7 @@ class _ResponderNavBarWidgetState extends State<ResponderNavBarWidget> {
                     children: [
                       Stack(
                         children: [
-                          if (navBarItem == widget.navItem?[0])
+                          if (navBarItem == (widget.navItem?[0]))
                             Icon(
                               Icons.home,
                               color:
@@ -84,7 +84,7 @@ class _ResponderNavBarWidgetState extends State<ResponderNavBarWidget> {
                                       : FlutterFlowTheme.of(context).tertiary,
                               size: 24.0,
                             ),
-                          if (navBarItem == widget.navItem?[1])
+                          if (navBarItem == (widget.navItem?[1]))
                             Icon(
                               FFIcons.kimHereOrange,
                               color:
@@ -93,7 +93,7 @@ class _ResponderNavBarWidgetState extends State<ResponderNavBarWidget> {
                                       : FlutterFlowTheme.of(context).tertiary,
                               size: 24.0,
                             ),
-                          if (navBarItem == widget.navItem?[2])
+                          if (navBarItem == (widget.navItem?[2]))
                             Icon(
                               FFIcons.ktimerOrange,
                               color:
@@ -102,7 +102,7 @@ class _ResponderNavBarWidgetState extends State<ResponderNavBarWidget> {
                                       : FlutterFlowTheme.of(context).tertiary,
                               size: 24.0,
                             ),
-                          if (navBarItem == widget.navItem?[3])
+                          if (navBarItem == (widget.navItem?[3]))
                             Icon(
                               FFIcons.ksocialMedia,
                               color:

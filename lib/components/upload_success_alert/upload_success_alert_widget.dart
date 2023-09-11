@@ -53,7 +53,7 @@ class _UploadSuccessAlertWidgetState extends State<UploadSuccessAlertWidget> {
       decoration: BoxDecoration(
         color: Color(0xD1333232),
       ),
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.00, 0.00),
       child: Container(
         width: 280.0,
         height: 150.0,
@@ -66,7 +66,7 @@ class _UploadSuccessAlertWidgetState extends State<UploadSuccessAlertWidget> {
           children: [
             Expanded(
               child: Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Padding(
                   padding:
                       EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 0.0),

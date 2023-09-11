@@ -128,7 +128,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                           ),
                           Expanded(
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 1.0),
+                              alignment: AlignmentDirectional(0.00, 1.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 15.0),
@@ -149,7 +149,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                     Stack(
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
@@ -162,7 +162,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 118.0, 0.0, 0.0),
@@ -335,7 +335,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.46),
+                alignment: AlignmentDirectional(0.00, 0.46),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Row(
@@ -352,7 +352,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.65),
+                alignment: AlignmentDirectional(0.00, 0.65),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: FFButtonWidget(
@@ -380,7 +380,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-1.0, 1.0),
+                alignment: AlignmentDirectional(-1.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 80.0,
@@ -420,7 +420,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                   children: [
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, -0.35),
+                        alignment: AlignmentDirectional(0.00, -0.35),
                         child: Container(
                           width: 335.0,
                           height: 320.0,
@@ -437,7 +437,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                                 decoration: BoxDecoration(
                                   color: Color(0xFFEEEDED),
                                 ),
-                                alignment: AlignmentDirectional(-0.8, 0.0),
+                                alignment: AlignmentDirectional(-0.80, 0.00),
                                 child: SelectionArea(
                                     child: Text(
                                   'Enter Code',
@@ -464,7 +464,7 @@ class _EnteringcodeWidgetState extends State<EnteringcodeWidget> {
                                     color: Color(0xFFEEEDED),
                                     borderRadius: BorderRadius.circular(12.0),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:

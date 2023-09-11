@@ -213,7 +213,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -241,7 +241,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                         decoration: BoxDecoration(
                           color: Color(0xFF3F4040),
                         ),
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.00, 0.00),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -288,7 +288,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -316,7 +316,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                         decoration: BoxDecoration(
                           color: Color(0xFF3F4040),
                         ),
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 0.0),
@@ -337,7 +337,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -372,7 +372,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                             )
                           ],
                         ),
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.00, 0.00),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -519,7 +519,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -558,7 +558,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -597,7 +597,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -630,7 +630,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -669,7 +669,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -702,7 +702,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -741,7 +741,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -774,7 +774,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -813,7 +813,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -850,7 +850,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -889,7 +889,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -928,7 +928,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -961,7 +961,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -1000,7 +1000,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -1033,7 +1033,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -1072,7 +1072,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -1105,7 +1105,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -1144,7 +1144,7 @@ class _DevOpsGroupWidgetState extends State<DevOpsGroupWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(

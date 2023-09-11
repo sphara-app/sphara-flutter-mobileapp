@@ -88,7 +88,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
         Stack(
           children: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, -0.00),
               child: Image.asset(
                 'assets/images/Bitmap.png',
                 width: double.infinity,
@@ -97,7 +97,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 0.42),
+              alignment: AlignmentDirectional(0.00, 0.41),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 250.0, 0.0, 0.0),
                 child: Container(
@@ -133,7 +133,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
                         ),
                         Expanded(
                           child: Align(
-                            alignment: AlignmentDirectional(1.0, 0.0),
+                            alignment: AlignmentDirectional(1.00, 0.00),
                             child: Text(
                               '0.7 km',
                               style: FlutterFlowTheme.of(context)
@@ -159,7 +159,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(1.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 5.0, 0.0),
@@ -195,7 +195,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(1.00, 0.00),
                           child: Text(
                             'Min',
                             style: FlutterFlowTheme.of(context)
@@ -234,7 +234,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(1.0, 0.0),
+                      alignment: AlignmentDirectional(1.00, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
@@ -261,7 +261,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(1.0, 0.0),
+                      alignment: AlignmentDirectional(1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             60.0, 0.0, 20.0, 0.0),
@@ -337,7 +337,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(1.0, 0.0),
+                              alignment: AlignmentDirectional(1.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     90.0, 0.0, 0.0, 0.0),
@@ -358,7 +358,7 @@ class _PreviewDistanceWidgetState extends State<PreviewDistanceWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(1.0, 0.0),
+                              alignment: AlignmentDirectional(1.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     5.0, 0.0, 0.0, 0.0),

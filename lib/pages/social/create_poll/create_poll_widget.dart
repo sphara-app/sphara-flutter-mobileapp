@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -72,7 +73,7 @@ class _CreatePollWidgetState extends State<CreatePollWidget> {
           ),
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: Text(
@@ -122,6 +123,8 @@ class _CreatePollWidgetState extends State<CreatePollWidget> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           RichText(
+                            textScaleFactor:
+                                MediaQuery.of(context).textScaleFactor,
                             text: TextSpan(
                               children: [
                                 TextSpan(
@@ -721,6 +724,9 @@ class _CreatePollWidgetState extends State<CreatePollWidget> {
                                       mainAxisSize: MainAxisSize.max,
                                       children: [
                                         RichText(
+                                          textScaleFactor:
+                                              MediaQuery.of(context)
+                                                  .textScaleFactor,
                                           text: TextSpan(
                                             children: [
                                               TextSpan(
@@ -841,6 +847,7 @@ class _CreatePollWidgetState extends State<CreatePollWidget> {
                                     12.0, 4.0, 12.0, 4.0),
                                 hidesUnderline: true,
                                 isSearchable: false,
+                                isMultiSelect: false,
                               ),
                             ],
                           ),

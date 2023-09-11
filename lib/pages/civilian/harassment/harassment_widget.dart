@@ -59,12 +59,12 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             10.0, 35.0, 0.0, 0.0),
@@ -85,7 +85,7 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -96,7 +96,7 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 5.0, 20.0, 0.0),
@@ -107,7 +107,7 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 30.0, 0.0, 0.0),
@@ -127,7 +127,7 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 18.0, 20.0, 8.0),
@@ -183,11 +183,12 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                               FormFieldController<List<String>>(
                             [],
                           ),
+                          wrapped: true,
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -207,7 +208,7 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 18.0, 20.0, 8.0),
@@ -261,6 +262,7 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                               FormFieldController<List<String>>(
                             [],
                           ),
+                          wrapped: true,
                         ),
                       ),
                     ),
@@ -314,7 +316,7 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.00, 1.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 100.0),
@@ -348,7 +350,7 @@ class _HarassmentWidgetState extends State<HarassmentWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 72.0,

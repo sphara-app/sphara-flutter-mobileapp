@@ -2,6 +2,7 @@ import '/components/menu_new/menu_new_widget.dart';
 import '/components/responder_nav_bar/responder_nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -50,7 +51,9 @@ class _ResponderMainpageWidgetState extends State<ResponderMainpageWidget> {
             width: 50.0,
             height: 50.0,
             child: CircularProgressIndicator(
-              color: FlutterFlowTheme.of(context).primary,
+              valueColor: AlwaysStoppedAnimation<Color>(
+                FlutterFlowTheme.of(context).primary,
+              ),
             ),
           ),
         ),
@@ -140,7 +143,7 @@ class _ResponderMainpageWidgetState extends State<ResponderMainpageWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 1.0),
+                            alignment: AlignmentDirectional(0.00, 1.00),
                             child: Container(
                               width: double.infinity,
                               height: 60.0,
@@ -153,8 +156,7 @@ class _ResponderMainpageWidgetState extends State<ResponderMainpageWidget> {
                                   topRight: Radius.circular(40.0),
                                 ),
                               ),
-                              alignment: AlignmentDirectional(
-                                  0.0, -0.050000000000000044),
+                              alignment: AlignmentDirectional(0.00, -0.05),
                               child: Text(
                                 'There are currently no emergencies close to you',
                                 style: FlutterFlowTheme.of(context).titleSmall,
@@ -168,7 +170,7 @@ class _ResponderMainpageWidgetState extends State<ResponderMainpageWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: wrapWithModel(
                   model: _model.responderNavBarModel,
                   updateCallback: () => setState(() {}),

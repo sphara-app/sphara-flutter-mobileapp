@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart'
     as smooth_page_indicator;
 import 'package:flutter/material.dart';
@@ -134,6 +135,13 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
     super.initState();
     _model = createModel(context, () => OnBoardingScreensModel());
 
+    // On page load action.
+    SchedulerBinding.instance.addPostFrameCallback((_) async {
+      if (FFAppState().isonboarded) {
+        context.goNamed('login');
+      }
+    });
+
     setupAnimations(
       animationsMap.values.where((anim) =>
           anim.trigger == AnimationTrigger.onActionTrigger ||
@@ -179,7 +187,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                       scrollDirection: Axis.horizontal,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -193,7 +201,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.1, 0.15),
+                                            AlignmentDirectional(0.10, 0.15),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -217,7 +225,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.05),
+                                alignment: AlignmentDirectional(0.00, 0.05),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 120.0, 0.0, 0.0),
@@ -227,7 +235,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                     children: [
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Text(
                                           'Often feel vulnerable when you\n                are alone?',
                                           textAlign: TextAlign.start,
@@ -255,7 +263,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment: AlignmentDirectional(0.00, 1.00),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 100.0),
@@ -320,12 +328,12 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                   Expanded(
                                     child: Align(
                                       alignment:
-                                          AlignmentDirectional(0.1, 0.15),
+                                          AlignmentDirectional(0.10, 0.15),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             0.0, 0.0, 20.0, 0.0),
                                         child: Image.asset(
-                                          'assets/images/mmfwi_2.png',
+                                          'assets/images/49svh_2.png',
                                           width: 200.0,
                                           height: 200.0,
                                           fit: BoxFit.cover,
@@ -338,7 +346,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.05),
+                              alignment: AlignmentDirectional(0.00, 0.05),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 120.0, 0.0, 0.0),
@@ -347,7 +355,8 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
                                       child: Text(
                                         'Ensure your safety in unsafe\ncircumstances by ON-HAND\nemergency Button at all times',
                                         textAlign: TextAlign.center,
@@ -375,7 +384,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: AlignmentDirectional(0.00, 1.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 100.0),
@@ -431,7 +440,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                           ],
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -445,13 +454,13 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.1, 0.15),
+                                            AlignmentDirectional(0.10, 0.15),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 20.0, 0.0),
                                           child: Image.asset(
-                                            'assets/images/i51w6_3.png',
+                                            'assets/images/3a9k2_3.png',
                                             width: 180.0,
                                             height: 200.0,
                                             fit: BoxFit.contain,
@@ -464,7 +473,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.05),
+                                alignment: AlignmentDirectional(0.00, 0.05),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 130.0, 0.0, 0.0),
@@ -474,7 +483,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                     children: [
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Text(
                                           'SHAKE  IT gesture to save you\nfrom the hassle of unlocking',
                                           textAlign: TextAlign.center,
@@ -502,7 +511,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment: AlignmentDirectional(0.00, 1.00),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 100.0),
@@ -568,7 +577,8 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                 children: [
                                   Expanded(
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
                                       child: Image.asset(
                                         'assets/images/Mask_Group_218.png',
                                         width: 200.0,
@@ -582,7 +592,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.05),
+                              alignment: AlignmentDirectional(0.00, 0.05),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 110.0, 0.0, 0.0),
@@ -591,7 +601,8 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
                                       child: Text(
                                         'Can integrate with the social\nmedia applications to broaden\nyour security network',
                                         textAlign: TextAlign.center,
@@ -619,7 +630,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: AlignmentDirectional(0.00, 1.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 100.0),
@@ -670,7 +681,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                           ],
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -684,13 +695,13 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.1, 0.15),
+                                            AlignmentDirectional(0.10, 0.15),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
                                                   0.0, 0.0, 5.0, 0.0),
                                           child: Image.asset(
-                                            'assets/images/5repw_5.png',
+                                            'assets/images/2emqy_5.png',
                                             width: 300.0,
                                             height: 200.0,
                                             fit: BoxFit.cover,
@@ -703,7 +714,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.05),
+                                alignment: AlignmentDirectional(0.00, 0.05),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 120.0, 0.0, 0.0),
@@ -713,7 +724,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                     children: [
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Text(
                                           'Use voice recognition to contact\nhelp even when you can\'t reach\nyour phone',
                                           textAlign: TextAlign.center,
@@ -741,7 +752,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment: AlignmentDirectional(0.00, 1.00),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 100.0),
@@ -810,7 +821,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     Image.asset(
-                                      'assets/images/8jz5a_6.png',
+                                      'assets/images/dfjsb_6.png',
                                       width: 190.0,
                                       height: 200.0,
                                       fit: BoxFit.cover,
@@ -1137,7 +1148,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment: AlignmentDirectional(0.00, 1.00),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 100.0),
@@ -1198,7 +1209,7 @@ class _OnBoardingScreensWidgetState extends State<OnBoardingScreensWidget>
                       ],
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, -1.0),
+                      alignment: AlignmentDirectional(0.00, -1.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 80.0, 0.0, 0.0),

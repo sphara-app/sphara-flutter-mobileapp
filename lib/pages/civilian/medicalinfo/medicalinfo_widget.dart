@@ -65,7 +65,7 @@ class _MedicalinfoWidgetState extends State<MedicalinfoWidget> {
           ),
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: InkWell(
@@ -110,7 +110,7 @@ class _MedicalinfoWidgetState extends State<MedicalinfoWidget> {
                   fit: BoxFit.cover,
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -211,7 +211,7 @@ class _MedicalinfoWidgetState extends State<MedicalinfoWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 40.0, 20.0, 0.0),
@@ -266,7 +266,7 @@ class _MedicalinfoWidgetState extends State<MedicalinfoWidget> {
                                 ),
                               ),
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -309,7 +309,7 @@ class _MedicalinfoWidgetState extends State<MedicalinfoWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 0.0),
@@ -364,7 +364,7 @@ class _MedicalinfoWidgetState extends State<MedicalinfoWidget> {
                                 ),
                               ),
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment: MainAxisAlignment.center,
@@ -408,7 +408,7 @@ class _MedicalinfoWidgetState extends State<MedicalinfoWidget> {
                       ),
                       Expanded(
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: AlignmentDirectional(0.00, 1.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 100.0),

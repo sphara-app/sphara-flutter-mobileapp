@@ -77,7 +77,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
             alignment: AlignmentDirectional(0.0, 0.0),
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: SvgPicture.asset(
                   'assets/images/bg.svg',
                   width: double.infinity,
@@ -86,7 +86,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 0.0),
                   child: Column(
@@ -132,6 +132,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                               20.0, 4.0, 20.0, 4.0),
                           hidesUnderline: true,
                           isSearchable: false,
+                          isMultiSelect: false,
                         ),
                       ),
                       Padding(
@@ -213,7 +214,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                           color: FlutterFlowTheme.of(context).alternate,
                           borderRadius: BorderRadius.circular(40.0),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               15.0, 0.0, 15.0, 0.0),
@@ -259,7 +260,7 @@ class _SubscriptionWidgetState extends State<SubscriptionWidget> {
                       ),
                       Expanded(
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: AlignmentDirectional(0.00, 1.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 100.0),

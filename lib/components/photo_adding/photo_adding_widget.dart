@@ -92,7 +92,7 @@ class _PhotoAddingWidgetState extends State<PhotoAddingWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -0.05),
+                            alignment: AlignmentDirectional(0.00, -0.05),
                             child: Icon(
                               Icons.videocam_outlined,
                               color: FlutterFlowTheme.of(context).secondary,
@@ -169,7 +169,7 @@ class _PhotoAddingWidgetState extends State<PhotoAddingWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -0.05),
+                            alignment: AlignmentDirectional(0.00, -0.05),
                             child: Icon(
                               Icons.videocam_outlined,
                               color: FlutterFlowTheme.of(context).secondary,

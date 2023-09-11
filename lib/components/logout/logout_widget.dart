@@ -45,7 +45,7 @@ class _LogoutWidgetState extends State<LogoutWidget> {
       height: MediaQuery.sizeOf(context).height * 1.0,
       decoration: BoxDecoration(),
       child: Align(
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.00, 0.00),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -64,7 +64,7 @@ class _LogoutWidgetState extends State<LogoutWidget> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(0.05, 0.0),
+                      alignment: AlignmentDirectional(0.05, 0.00),
                       child: SelectionArea(
                           child: Text(
                         'Are you sure you want to Log Out?',
@@ -117,7 +117,7 @@ class _LogoutWidgetState extends State<LogoutWidget> {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: AlignmentDirectional(0.00, 1.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 110.0, 0.0, 0.0),
                 child: FFButtonWidget(
@@ -152,7 +152,7 @@ class _LogoutWidgetState extends State<LogoutWidget> {
               ),
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: AlignmentDirectional(0.00, 1.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                 child: FFButtonWidget(

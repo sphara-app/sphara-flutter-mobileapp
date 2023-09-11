@@ -675,6 +675,9 @@ class _CreatemockelectionWidgetState extends State<CreatemockelectionWidget> {
                                             MainAxisAlignment.end,
                                         children: [
                                           RichText(
+                                            textScaleFactor:
+                                                MediaQuery.of(context)
+                                                    .textScaleFactor,
                                             text: TextSpan(
                                               children: [
                                                 TextSpan(

@@ -53,7 +53,7 @@ class _HorizontalShakeWidgetState extends State<HorizontalShakeWidget> {
               color: FlutterFlowTheme.of(context).secondaryBackground,
             ),
             child: Align(
-              alignment: AlignmentDirectional(0.0, -0.3),
+              alignment: AlignmentDirectional(0.00, -0.30),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -68,7 +68,7 @@ class _HorizontalShakeWidgetState extends State<HorizontalShakeWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: AlignmentDirectional(-1.00, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
@@ -89,7 +89,7 @@ class _HorizontalShakeWidgetState extends State<HorizontalShakeWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: AlignmentDirectional(-1.00, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 10.0, 0.0, 0.0),
@@ -108,7 +108,7 @@ class _HorizontalShakeWidgetState extends State<HorizontalShakeWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(1.0, 0.0),
+                    alignment: AlignmentDirectional(1.00, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 30.0, 20.0, 0.0),

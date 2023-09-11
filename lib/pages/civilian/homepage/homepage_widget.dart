@@ -153,7 +153,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                     child: Stack(
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Image.asset(
                             'assets/images/img2.png',
                             width: 330.0,
@@ -170,7 +170,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Row(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
@@ -746,7 +746,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                         color: Colors.transparent,
                       ),
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Container(
                           width: 40.0,
                           height: 6.0,
@@ -764,7 +764,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
               animationsMap['containerOnActionTriggerAnimation']!,
             ),
             Align(
-              alignment: AlignmentDirectional(0.0, 0.8),
+              alignment: AlignmentDirectional(0.00, 0.80),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                 child: Container(
@@ -823,7 +823,7 @@ class _HomepageWidgetState extends State<HomepageWidget>
                 child: HomepagesettingsWidget(),
               ),
             Align(
-              alignment: AlignmentDirectional(0.0, 1.0),
+              alignment: AlignmentDirectional(0.00, 1.00),
               child: wrapWithModel(
                 model: _model.civilianNavBarModel,
                 updateCallback: () => setState(() {}),

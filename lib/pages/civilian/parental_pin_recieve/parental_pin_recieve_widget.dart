@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -76,7 +77,7 @@ class _ParentalPinRecieveWidgetState extends State<ParentalPinRecieveWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-0.05, 0.0),
+                    alignment: AlignmentDirectional(-0.05, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
@@ -93,7 +94,7 @@ class _ParentalPinRecieveWidgetState extends State<ParentalPinRecieveWidget> {
                           ),
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -140,7 +141,7 @@ class _ParentalPinRecieveWidgetState extends State<ParentalPinRecieveWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: Container(
                       width: 335.0,
                       height: 340.0,
@@ -176,7 +177,7 @@ class _ParentalPinRecieveWidgetState extends State<ParentalPinRecieveWidget> {
                   color: Color(0xAD3A3A3A),
                 ),
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Container(
                     width: 300.0,
                     height: 180.0,

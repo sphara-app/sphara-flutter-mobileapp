@@ -40,7 +40,7 @@ class _HomepagesettingsWidgetState extends State<HomepagesettingsWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.77, -1.0),
+      alignment: AlignmentDirectional(0.77, -1.00),
       child: Container(
         width: 200.0,
         height: 160.0,

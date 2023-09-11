@@ -868,7 +868,7 @@ class _MenuNewWidgetState extends State<MenuNewWidget> {
                 color: Color(0x4EC6C2C2),
                 borderRadius: BorderRadius.circular(40.0),
               ),
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -909,7 +909,7 @@ class _MenuNewWidgetState extends State<MenuNewWidget> {
                             borderRadius: BorderRadius.circular(40.0),
                             shape: BoxShape.rectangle,
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Text(
                             'Civilian',
                             style: FlutterFlowTheme.of(context)
@@ -956,7 +956,7 @@ class _MenuNewWidgetState extends State<MenuNewWidget> {
                                 : Color(0x00000000),
                             borderRadius: BorderRadius.circular(40.0),
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Text(
                             'First Responder',
                             style: FlutterFlowTheme.of(context)

@@ -2,6 +2,7 @@ import '/components/chatinfo_threedots/chatinfo_threedots_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -106,6 +107,8 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                                       ),
                                 ),
                                 RichText(
+                                  textScaleFactor:
+                                      MediaQuery.of(context).textScaleFactor,
                                   text: TextSpan(
                                     children: [
                                       TextSpan(
@@ -254,7 +257,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -289,7 +292,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                             )
                           ],
                         ),
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.00, 0.00),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -466,7 +469,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -505,7 +508,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                           mainAxisSize: MainAxisSize.max,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -544,7 +547,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -577,7 +580,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -616,7 +619,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -649,7 +652,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -688,7 +691,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -721,7 +724,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     20.0, 0.0, 0.0, 0.0),
@@ -760,7 +763,7 @@ class _ChatInfoWidgetState extends State<ChatInfoWidget> {
                                       ),
                                       Align(
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(

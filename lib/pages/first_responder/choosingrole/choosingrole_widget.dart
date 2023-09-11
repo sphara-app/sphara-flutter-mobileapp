@@ -59,7 +59,7 @@ class _ChoosingroleWidgetState extends State<ChoosingroleWidget> {
                   fit: BoxFit.cover,
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.05, 0.0),
+                  alignment: AlignmentDirectional(0.05, 0.00),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,
@@ -125,6 +125,7 @@ class _ChoosingroleWidgetState extends State<ChoosingroleWidget> {
 
                             FFAppState().update(() {
                               FFAppState().responderMode = true;
+                              FFAppState().isonboarded = true;
                             });
                           },
                           text: 'First Responder',
@@ -170,6 +171,10 @@ class _ChoosingroleWidgetState extends State<ChoosingroleWidget> {
                                 ),
                               },
                             );
+
+                            FFAppState().update(() {
+                              FFAppState().isonboarded = true;
+                            });
                           },
                           text: 'Civilian',
                           options: FFButtonOptions(

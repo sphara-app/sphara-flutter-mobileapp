@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_drop_down.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/flutter_flow/form_field_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -72,7 +73,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
             },
           ),
           title: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.00, 0.00),
             child: Text(
               'Edit Profile',
               style: FlutterFlowTheme.of(context).displaySmall.override(
@@ -85,7 +86,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
           ),
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: Text(
@@ -115,14 +116,14 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 15.0, 0.0, 0.0),
@@ -188,7 +189,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Text(
                                 'Set New Photo & Video',
                                 style: FlutterFlowTheme.of(context)
@@ -839,6 +840,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                                       0.0, 2.0, 0.0, 20.0),
                                   hidesUnderline: true,
                                   isSearchable: false,
+                                  isMultiSelect: false,
                                 ),
                               ),
                             ],
@@ -918,6 +920,7 @@ class _ProfileEditWidgetState extends State<ProfileEditWidget> {
                                       0.0, 2.0, 0.0, 20.0),
                                   hidesUnderline: true,
                                   isSearchable: false,
+                                  isMultiSelect: false,
                                 ),
                               ),
                             ],

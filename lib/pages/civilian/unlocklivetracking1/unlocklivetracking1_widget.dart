@@ -100,7 +100,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
               Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: AlignmentDirectional(0.00, 1.00),
                     child: Container(
                       width: double.infinity,
                       height: 72.0,
@@ -133,7 +133,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                       Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, -1.0),
+                            alignment: AlignmentDirectional(0.00, -1.00),
                             child: SvgPicture.asset(
                               'assets/images/Bitmap.svg',
                               width: double.infinity,
@@ -142,7 +142,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 80.0, 0.0, 0.0),
@@ -153,12 +153,12 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                                   color: Color(0x274285F4),
                                   shape: BoxShape.circle,
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                               ),
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(-0.25, -0.3),
+                            alignment: AlignmentDirectional(-0.25, -0.30),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 240.0, 0.0, 0.0),
@@ -177,7 +177,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(-0.2, -0.05),
+                            alignment: AlignmentDirectional(-0.20, -0.05),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 210.0, 0.0, 0.0),
@@ -188,7 +188,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                                   color: Color(0xFFF99546),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Text(
                                   'You',
                                   style: FlutterFlowTheme.of(context)
@@ -208,7 +208,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 340.0, 0.0, 0.0),
@@ -339,7 +339,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.9, 0.0),
+                                            AlignmentDirectional(0.90, 0.00),
                                         child: Padding(
                                           padding:
                                               EdgeInsetsDirectional.fromSTEB(
@@ -389,7 +389,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.85, 0.0),
+                                            AlignmentDirectional(0.85, 0.00),
                                         child: Switch(
                                           value: _model.switchValue2 ??= false,
                                           onChanged: (newValue) async {
@@ -433,7 +433,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                                     Expanded(
                                       child: Align(
                                         alignment:
-                                            AlignmentDirectional(0.91, 0.0),
+                                            AlignmentDirectional(0.91, 0.00),
                                         child: Switch(
                                           value: _model.switchValue3 ??= false,
                                           onChanged: (newValue) async {
@@ -463,7 +463,7 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -0.5),
+                alignment: AlignmentDirectional(0.00, -0.50),
                 child: Container(
                   width: 300.0,
                   height: 620.0,
@@ -713,7 +713,8 @@ class _Unlocklivetracking1WidgetState extends State<Unlocklivetracking1Widget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             6.0, 0.0, 0.0, 0.0),

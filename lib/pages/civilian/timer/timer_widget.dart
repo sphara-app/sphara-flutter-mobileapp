@@ -2,6 +2,7 @@ import '/components/civilian_nav_bar/civilian_nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +87,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                           child: Stack(
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: CircularPercentIndicator(
                                   percent: _model.timerMilliseconds /
                                       FFAppState().timerValue,
@@ -100,7 +101,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Container(
                                   width: 200.0,
                                   height: 200.0,
@@ -237,7 +238,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                   color: Color(0xFF707070),
                                   shape: BoxShape.circle,
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: SelectionArea(
                                     child: Text(
                                   'Cancel',
@@ -267,7 +268,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                   color: Color(0x75548E42),
                                   shape: BoxShape.circle,
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: SelectionArea(
                                     child: Text(
                                   'Play',
@@ -306,7 +307,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                   color: Color(0x6EF99546),
                                   shape: BoxShape.circle,
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: SelectionArea(
                                     child: Text(
                                   'Pause',
@@ -366,7 +367,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                                   color: Color(0x75548E42),
                                   shape: BoxShape.circle,
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: SelectionArea(
                                     child: Text(
                                   'Start',
@@ -403,7 +404,7 @@ class _TimerWidgetState extends State<TimerWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: wrapWithModel(
                   model: _model.civilianNavBarModel,
                   updateCallback: () => setState(() {}),

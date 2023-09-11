@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -54,7 +55,7 @@ class _VoiceActivation2WidgetState extends State<VoiceActivation2Widget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: InkWell(
                   splashColor: Colors.transparent,
                   focusColor: Colors.transparent,
@@ -110,7 +111,7 @@ class _VoiceActivation2WidgetState extends State<VoiceActivation2Widget> {
                             ),
                             borderRadius: BorderRadius.circular(40.0),
                           ),
-                          alignment: AlignmentDirectional(-0.8, 0.0),
+                          alignment: AlignmentDirectional(-0.80, 0.00),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -145,7 +146,7 @@ class _VoiceActivation2WidgetState extends State<VoiceActivation2Widget> {
                           alignment: AlignmentDirectional(0.0, 0.0),
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Container(
                                 width: double.infinity,
                                 height: MediaQuery.sizeOf(context).height * 0.2,
@@ -159,7 +160,7 @@ class _VoiceActivation2WidgetState extends State<VoiceActivation2Widget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Container(
                                 width: MediaQuery.sizeOf(context).width * 0.25,
                                 height: MediaQuery.sizeOf(context).width * 0.25,
@@ -196,7 +197,7 @@ class _VoiceActivation2WidgetState extends State<VoiceActivation2Widget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 5.0, 0.0, 0.0),
