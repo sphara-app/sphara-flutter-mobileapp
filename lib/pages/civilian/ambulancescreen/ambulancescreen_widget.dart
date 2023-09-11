@@ -59,14 +59,14 @@ class _AmbulancescreenWidgetState extends State<AmbulancescreenWidget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             10.0, 35.0, 0.0, 0.0),
@@ -181,6 +181,7 @@ class _AmbulancescreenWidgetState extends State<AmbulancescreenWidget> {
                             FormFieldController<List<String>>(
                           [],
                         ),
+                        wrapped: true,
                       ),
                     ),
                     Padding(
@@ -221,7 +222,7 @@ class _AmbulancescreenWidgetState extends State<AmbulancescreenWidget> {
                           color: Color(0xFF505050),
                           borderRadius: BorderRadius.circular(40.0),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: TextFormField(
                           controller: _model.textController,
                           obscureText: false,
@@ -489,7 +490,7 @@ class _AmbulancescreenWidgetState extends State<AmbulancescreenWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 1.0),
+                      alignment: AlignmentDirectional(0.00, 1.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 20.0, 0.0, 20.0),

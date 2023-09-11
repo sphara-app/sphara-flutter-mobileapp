@@ -86,7 +86,7 @@ class _RejectReasonWidgetState extends State<RejectReasonWidget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,7 +108,7 @@ class _RejectReasonWidgetState extends State<RejectReasonWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 20.0, 0.0),
@@ -142,6 +142,7 @@ class _RejectReasonWidgetState extends State<RejectReasonWidget> {
                               20.0, 0.0, 12.0, 0.0),
                           hidesUnderline: true,
                           isSearchable: false,
+                          isMultiSelect: false,
                         ),
                       ),
                     ),
@@ -207,7 +208,7 @@ class _RejectReasonWidgetState extends State<RejectReasonWidget> {
                       ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.00, 1.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 0.0, 20.0, 100.0),

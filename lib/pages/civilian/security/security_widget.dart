@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -75,7 +76,7 @@ class _SecurityWidgetState extends State<SecurityWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: AlignmentDirectional(-1.00, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 20.0, 0.0, 0.0),
@@ -86,7 +87,7 @@ class _SecurityWidgetState extends State<SecurityWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: AlignmentDirectional(-1.00, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(20.0, 5.0, 20.0, 0.0),

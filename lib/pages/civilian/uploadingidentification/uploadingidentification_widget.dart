@@ -69,7 +69,7 @@ class _UploadingidentificationWidgetState
           ),
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: InkWell(
@@ -123,7 +123,7 @@ class _UploadingidentificationWidgetState
                   fit: BoxFit.cover,
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
@@ -193,10 +193,11 @@ class _UploadingidentificationWidgetState
                               20.0, 0.0, 20.0, 0.0),
                           hidesUnderline: true,
                           isSearchable: false,
+                          isMultiSelect: false,
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               20.0, 20.0, 20.0, 0.0),
@@ -341,7 +342,7 @@ class _UploadingidentificationWidgetState
                       ),
                       Expanded(
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 1.0),
+                          alignment: AlignmentDirectional(0.00, 1.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 0.0, 0.0, 100.0),

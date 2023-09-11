@@ -52,7 +52,7 @@ class _ConversationSampleWidgetState extends State<ConversationSampleWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Align(
-            alignment: AlignmentDirectional(-1.0, 0.0),
+            alignment: AlignmentDirectional(-1.00, 0.00),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Container(
@@ -157,7 +157,7 @@ class _ConversationSampleWidgetState extends State<ConversationSampleWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(1.0, 0.0),
+            alignment: AlignmentDirectional(1.00, 0.00),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 10.0),
               child: Container(
@@ -168,7 +168,7 @@ class _ConversationSampleWidgetState extends State<ConversationSampleWidget> {
                   borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Align(
-                  alignment: AlignmentDirectional(0.05, 0.0),
+                  alignment: AlignmentDirectional(0.05, 0.00),
                   child: Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(10.0, 10.0, 10.0, 10.0),
@@ -251,7 +251,7 @@ class _ConversationSampleWidgetState extends State<ConversationSampleWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(-1.0, 0.0),
+            alignment: AlignmentDirectional(-1.00, 0.00),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Container(
@@ -347,7 +347,7 @@ class _ConversationSampleWidgetState extends State<ConversationSampleWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.95, 0.0),
+            alignment: AlignmentDirectional(0.95, 0.00),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Container(
@@ -486,7 +486,7 @@ class _ConversationSampleWidgetState extends State<ConversationSampleWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.95, 0.0),
+            alignment: AlignmentDirectional(0.95, 0.00),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Container(
@@ -625,7 +625,7 @@ class _ConversationSampleWidgetState extends State<ConversationSampleWidget> {
             ),
           ),
           Align(
-            alignment: AlignmentDirectional(0.95, 0.0),
+            alignment: AlignmentDirectional(0.95, 0.00),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
               child: Container(

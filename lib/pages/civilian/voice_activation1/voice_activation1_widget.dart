@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -53,7 +54,7 @@ class _VoiceActivation1WidgetState extends State<VoiceActivation1Widget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -108,7 +109,7 @@ class _VoiceActivation1WidgetState extends State<VoiceActivation1Widget> {
                             ),
                             borderRadius: BorderRadius.circular(40.0),
                           ),
-                          alignment: AlignmentDirectional(-0.8, 0.0),
+                          alignment: AlignmentDirectional(-0.80, 0.00),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -138,7 +139,7 @@ class _VoiceActivation1WidgetState extends State<VoiceActivation1Widget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 150.0, 0.0, 0.0),
@@ -158,7 +159,7 @@ class _VoiceActivation1WidgetState extends State<VoiceActivation1Widget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -171,7 +172,7 @@ class _VoiceActivation1WidgetState extends State<VoiceActivation1Widget> {
                             shape: BoxShape.circle,
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: FlutterFlowIconButton(
                               borderColor: Colors.transparent,
                               borderRadius: 30.0,
@@ -200,7 +201,7 @@ class _VoiceActivation1WidgetState extends State<VoiceActivation1Widget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),

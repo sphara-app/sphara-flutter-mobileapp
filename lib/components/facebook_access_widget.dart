@@ -280,6 +280,8 @@ class _FacebookAccessWidgetState extends State<FacebookAccessWidget> {
                                     padding: EdgeInsetsDirectional.fromSTEB(
                                         0.0, 10.0, 0.0, 0.0),
                                     child: RichText(
+                                      textScaleFactor: MediaQuery.of(context)
+                                          .textScaleFactor,
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
@@ -318,6 +320,8 @@ class _FacebookAccessWidgetState extends State<FacebookAccessWidget> {
                                     ),
                                   ),
                                   RichText(
+                                    textScaleFactor:
+                                        MediaQuery.of(context).textScaleFactor,
                                     text: TextSpan(
                                       children: [
                                         TextSpan(
@@ -353,6 +357,8 @@ class _FacebookAccessWidgetState extends State<FacebookAccessWidget> {
                                     ),
                                   ),
                                   RichText(
+                                    textScaleFactor:
+                                        MediaQuery.of(context).textScaleFactor,
                                     text: TextSpan(
                                       children: [
                                         TextSpan(

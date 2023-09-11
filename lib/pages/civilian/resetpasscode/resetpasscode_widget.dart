@@ -129,7 +129,7 @@ class _ResetpasscodeWidgetState extends State<ResetpasscodeWidget> {
                           ),
                           Expanded(
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 1.0),
+                              alignment: AlignmentDirectional(0.00, 1.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 15.0),
@@ -150,7 +150,7 @@ class _ResetpasscodeWidgetState extends State<ResetpasscodeWidget> {
                     Stack(
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
@@ -163,7 +163,7 @@ class _ResetpasscodeWidgetState extends State<ResetpasscodeWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 118.0, 0.0, 0.0),
@@ -336,7 +336,7 @@ class _ResetpasscodeWidgetState extends State<ResetpasscodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.46),
+                alignment: AlignmentDirectional(0.00, 0.46),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Row(
@@ -353,7 +353,7 @@ class _ResetpasscodeWidgetState extends State<ResetpasscodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.65),
+                alignment: AlignmentDirectional(0.00, 0.65),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: FFButtonWidget(
@@ -381,7 +381,7 @@ class _ResetpasscodeWidgetState extends State<ResetpasscodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-1.0, 1.0),
+                alignment: AlignmentDirectional(-1.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 72.0,
@@ -421,7 +421,7 @@ class _ResetpasscodeWidgetState extends State<ResetpasscodeWidget> {
                   children: [
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, -0.35),
+                        alignment: AlignmentDirectional(0.00, -0.35),
                         child: Container(
                           width: 335.0,
                           height: 320.0,
@@ -438,7 +438,7 @@ class _ResetpasscodeWidgetState extends State<ResetpasscodeWidget> {
                                 decoration: BoxDecoration(
                                   color: Color(0xFFEEEDED),
                                 ),
-                                alignment: AlignmentDirectional(-0.8, 0.0),
+                                alignment: AlignmentDirectional(-0.80, 0.00),
                                 child: SelectionArea(
                                     child: Text(
                                   'Reset Passcode',

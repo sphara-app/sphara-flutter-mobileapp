@@ -324,7 +324,7 @@ class _JoiningMeetingWidgetState extends State<JoiningMeetingWidget> {
                   ),
                   Expanded(
                     child: Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: FFButtonWidget(
                         onPressed: () {
                           print('Button pressed ...');

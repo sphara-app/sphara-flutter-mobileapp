@@ -112,7 +112,7 @@ class _ArrivalWidgetState extends State<ArrivalWidget> {
                   child: Stack(
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, -15.62),
+                        alignment: AlignmentDirectional(0.00, -15.62),
                         child: SvgPicture.asset(
                           'assets/images/Bitmap.svg',
                           width: double.infinity,
@@ -121,7 +121,7 @@ class _ArrivalWidgetState extends State<ArrivalWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, -0.55),
+                        alignment: AlignmentDirectional(0.00, -0.55),
                         child: Container(
                           width: 320.0,
                           height: 320.0,
@@ -132,7 +132,7 @@ class _ArrivalWidgetState extends State<ArrivalWidget> {
                           child: Stack(
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.15, 0.0),
+                                alignment: AlignmentDirectional(0.15, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
@@ -151,7 +151,7 @@ class _ArrivalWidgetState extends State<ArrivalWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-0.3, -0.2),
+                                alignment: AlignmentDirectional(-0.30, -0.20),
                                 child: Container(
                                   width: 20.0,
                                   height: 20.0,
@@ -183,7 +183,7 @@ class _ArrivalWidgetState extends State<ArrivalWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.00, 1.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 140.0),
@@ -235,7 +235,7 @@ class _ArrivalWidgetState extends State<ArrivalWidget> {
                                           children: [
                                             Align(
                                               alignment: AlignmentDirectional(
-                                                  1.0, 0.0),
+                                                  1.00, 0.00),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
@@ -276,7 +276,7 @@ class _ArrivalWidgetState extends State<ArrivalWidget> {
                                             ),
                                             Align(
                                               alignment: AlignmentDirectional(
-                                                  1.0, 0.0),
+                                                  1.00, 0.00),
                                               child: Padding(
                                                 padding: EdgeInsetsDirectional
                                                     .fromSTEB(
@@ -294,7 +294,7 @@ class _ArrivalWidgetState extends State<ArrivalWidget> {
                                                   ),
                                                   alignment:
                                                       AlignmentDirectional(
-                                                          0.0, 0.0),
+                                                          0.00, 0.00),
                                                   child: Text(
                                                     '6678',
                                                     style: FlutterFlowTheme.of(

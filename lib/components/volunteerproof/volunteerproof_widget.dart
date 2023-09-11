@@ -40,7 +40,7 @@ class _VolunteerproofWidgetState extends State<VolunteerproofWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.0),
+      alignment: AlignmentDirectional(0.00, 0.00),
       child: Container(
         width: 335.0,
         height: 240.0,

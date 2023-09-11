@@ -43,7 +43,7 @@ class _AddingnewcontactWidgetState extends State<AddingnewcontactWidget> {
     context.watch<FFAppState>();
 
     return Align(
-      alignment: AlignmentDirectional(0.0, 0.35),
+      alignment: AlignmentDirectional(0.00, 0.35),
       child: Container(
         width: double.infinity,
         height: 300.0,
@@ -122,7 +122,7 @@ class _AddingnewcontactWidgetState extends State<AddingnewcontactWidget> {
                         ),
                       ),
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'Emergency Contact',
                           style: FlutterFlowTheme.of(context)
@@ -153,7 +153,7 @@ class _AddingnewcontactWidgetState extends State<AddingnewcontactWidget> {
                         ),
                       ),
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'Friends',
                           style: FlutterFlowTheme.of(context)
@@ -184,7 +184,7 @@ class _AddingnewcontactWidgetState extends State<AddingnewcontactWidget> {
                         ),
                       ),
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'Family',
                           style: FlutterFlowTheme.of(context)

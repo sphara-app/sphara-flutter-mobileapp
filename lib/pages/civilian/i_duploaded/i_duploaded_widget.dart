@@ -67,7 +67,7 @@ class _IDuploadedWidgetState extends State<IDuploadedWidget> {
           ),
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: Text(
@@ -101,7 +101,7 @@ class _IDuploadedWidgetState extends State<IDuploadedWidget> {
                   child: Stack(
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
                           children: [
@@ -174,6 +174,7 @@ class _IDuploadedWidgetState extends State<IDuploadedWidget> {
                                     20.0, 0.0, 12.0, 0.0),
                                 hidesUnderline: true,
                                 isSearchable: false,
+                                isMultiSelect: false,
                               ),
                             ),
                             Padding(
@@ -324,7 +325,7 @@ class _IDuploadedWidgetState extends State<IDuploadedWidget> {
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: AlignmentDirectional(0.00, 1.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 100.0),

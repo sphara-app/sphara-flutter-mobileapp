@@ -58,7 +58,7 @@ class _MeetingLinkWidgetState extends State<MeetingLinkWidget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -111,7 +111,7 @@ class _MeetingLinkWidgetState extends State<MeetingLinkWidget> {
                                 color: FlutterFlowTheme.of(context).alternate,
                                 borderRadius: BorderRadius.circular(40.0),
                               ),
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -275,7 +275,7 @@ class _MeetingLinkWidgetState extends State<MeetingLinkWidget> {
                             mainAxisSize: MainAxisSize.max,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: AlignmentDirectional(1.00, 0.00),
                                 child: FlutterFlowIconButton(
                                   borderColor: Colors.transparent,
                                   borderRadius: 30.0,
@@ -415,6 +415,8 @@ class _MeetingLinkWidgetState extends State<MeetingLinkWidget> {
                                     Expanded(
                                       flex: 2,
                                       child: RichText(
+                                        textScaleFactor: MediaQuery.of(context)
+                                            .textScaleFactor,
                                         text: TextSpan(
                                           children: [
                                             TextSpan(

@@ -123,7 +123,7 @@ class _IncidentReportWidgetState extends State<IncidentReportWidget> {
                             children: [
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1.00, 0.00),
                                   child: Text(
                                     'Incident Number : ',
                                     style: FlutterFlowTheme.of(context)
@@ -175,7 +175,8 @@ class _IncidentReportWidgetState extends State<IncidentReportWidget> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        AlignmentDirectional(-1.00, 0.00),
                                     child: Text(
                                       'Responded at : ',
                                       style: FlutterFlowTheme.of(context)
@@ -228,7 +229,8 @@ class _IncidentReportWidgetState extends State<IncidentReportWidget> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        AlignmentDirectional(-1.00, 0.00),
                                     child: Text(
                                       'Arrival at \nincident : ',
                                       style: FlutterFlowTheme.of(context)
@@ -281,7 +283,8 @@ class _IncidentReportWidgetState extends State<IncidentReportWidget> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        AlignmentDirectional(-1.00, 0.00),
                                     child: Text(
                                       'On scene timing : ',
                                       style: FlutterFlowTheme.of(context)
@@ -335,7 +338,8 @@ class _IncidentReportWidgetState extends State<IncidentReportWidget> {
                               children: [
                                 Expanded(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, 0.0),
+                                    alignment:
+                                        AlignmentDirectional(-1.00, 0.00),
                                     child: Text(
                                       'Location : ',
                                       style: FlutterFlowTheme.of(context)
@@ -597,7 +601,7 @@ class _IncidentReportWidgetState extends State<IncidentReportWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 30.0),

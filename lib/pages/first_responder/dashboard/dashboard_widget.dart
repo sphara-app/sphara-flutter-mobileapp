@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -124,7 +125,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                   ),
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Padding(
                     padding:
                         EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
@@ -170,7 +171,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                       ),
                       Expanded(
                         child: Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(1.00, 0.00),
                           child: Text(
                             '2hr',
                             style: FlutterFlowTheme.of(context)
@@ -219,7 +220,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                       ),
                       Expanded(
                         child: Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(1.00, 0.00),
                           child: Text(
                             '15hr',
                             style: FlutterFlowTheme.of(context)
@@ -268,7 +269,7 @@ class _DashboardWidgetState extends State<DashboardWidget> {
                       ),
                       Expanded(
                         child: Align(
-                          alignment: AlignmentDirectional(1.0, 0.0),
+                          alignment: AlignmentDirectional(1.00, 0.00),
                           child: Text(
                             '78hr',
                             style: FlutterFlowTheme.of(context)

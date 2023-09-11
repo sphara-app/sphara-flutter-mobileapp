@@ -128,6 +128,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                         EdgeInsetsDirectional.fromSTEB(12.0, 4.0, 12.0, 4.0),
                     hidesUnderline: true,
                     isSearchable: false,
+                    isMultiSelect: false,
                   ),
                 ),
                 Padding(
@@ -287,6 +288,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                             12.0, 4.0, 12.0, 4.0),
                         hidesUnderline: true,
                         isSearchable: false,
+                        isMultiSelect: false,
                       ),
                     ],
                   ),
@@ -308,7 +310,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                             color: FlutterFlowTheme.of(context).tertiary,
                           ),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'S',
                           style: FlutterFlowTheme.of(context).bodyMedium,
@@ -324,7 +326,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                             color: FlutterFlowTheme.of(context).tertiary,
                           ),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'M',
                           style: FlutterFlowTheme.of(context).bodyMedium,
@@ -340,7 +342,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                             color: FlutterFlowTheme.of(context).tertiary,
                           ),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'T',
                           style: FlutterFlowTheme.of(context).bodyMedium,
@@ -356,7 +358,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                             color: FlutterFlowTheme.of(context).tertiary,
                           ),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'W',
                           style: FlutterFlowTheme.of(context).bodyMedium,
@@ -372,7 +374,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                             color: FlutterFlowTheme.of(context).tertiary,
                           ),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'TH',
                           style: FlutterFlowTheme.of(context).bodyMedium,
@@ -388,7 +390,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                             color: FlutterFlowTheme.of(context).tertiary,
                           ),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'F',
                           style: FlutterFlowTheme.of(context).bodyMedium,
@@ -404,7 +406,7 @@ class _SpharaReminderWidgetState extends State<SpharaReminderWidget> {
                             color: FlutterFlowTheme.of(context).tertiary,
                           ),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Text(
                           'S',
                           style: FlutterFlowTheme.of(context).bodyMedium,

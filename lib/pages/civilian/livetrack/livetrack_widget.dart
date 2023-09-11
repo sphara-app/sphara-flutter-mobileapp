@@ -2,6 +2,7 @@ import '/components/civilian_nav_bar/civilian_nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import '/custom_code/widgets/index.dart' as custom_widgets;
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,7 +50,9 @@ class _LivetrackWidgetState extends State<LivetrackWidget> {
             width: 50.0,
             height: 50.0,
             child: CircularProgressIndicator(
-              color: FlutterFlowTheme.of(context).primary,
+              valueColor: AlwaysStoppedAnimation<Color>(
+                FlutterFlowTheme.of(context).primary,
+              ),
             ),
           ),
         ),
@@ -101,7 +104,7 @@ class _LivetrackWidgetState extends State<LivetrackWidget> {
                       child: Stack(
                         children: [
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Container(
                               width: double.infinity,
                               height: double.infinity,
@@ -114,7 +117,7 @@ class _LivetrackWidgetState extends State<LivetrackWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, -0.6),
+                            alignment: AlignmentDirectional(0.00, -0.60),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 210.0, 0.0, 0.0),
@@ -125,7 +128,7 @@ class _LivetrackWidgetState extends State<LivetrackWidget> {
                                   color: Color(0xFFF99546),
                                   borderRadius: BorderRadius.circular(20.0),
                                 ),
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Text(
                                   'You',
                                   style: FlutterFlowTheme.of(context)
@@ -145,7 +148,7 @@ class _LivetrackWidgetState extends State<LivetrackWidget> {
                             ),
                           ),
                           Align(
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 340.0, 0.0, 0.0),
@@ -298,7 +301,7 @@ class _LivetrackWidgetState extends State<LivetrackWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: wrapWithModel(
                   model: _model.civilianNavBarModel,
                   updateCallback: () => setState(() {}),

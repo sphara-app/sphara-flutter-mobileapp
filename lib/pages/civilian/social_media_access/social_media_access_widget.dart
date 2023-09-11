@@ -2,6 +2,7 @@ import '/components/whatsapp_access/whatsapp_access_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -56,13 +57,13 @@ class _SocialMediaAccessWidgetState extends State<SocialMediaAccessWidget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             10.0, 35.0, 0.0, 0.0),

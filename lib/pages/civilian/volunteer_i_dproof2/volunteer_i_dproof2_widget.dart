@@ -1,5 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -49,7 +50,7 @@ class _VolunteerIDproof2WidgetState extends State<VolunteerIDproof2Widget> {
           automaticallyImplyLeading: false,
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: Text(
@@ -85,7 +86,7 @@ class _VolunteerIDproof2WidgetState extends State<VolunteerIDproof2Widget> {
                   fit: BoxFit.cover,
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [

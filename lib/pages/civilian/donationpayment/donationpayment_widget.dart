@@ -2,6 +2,7 @@ import '/components/navbar/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -82,7 +83,7 @@ class _DonationpaymentWidgetState extends State<DonationpaymentWidget> {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: SvgPicture.asset(
                   'assets/images/bg.svg',
                   width: double.infinity,
@@ -91,7 +92,7 @@ class _DonationpaymentWidgetState extends State<DonationpaymentWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, -0.9),
+                alignment: AlignmentDirectional(0.00, -0.90),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -122,7 +123,7 @@ class _DonationpaymentWidgetState extends State<DonationpaymentWidget> {
                             ],
                             borderRadius: BorderRadius.circular(40.0),
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -201,7 +202,7 @@ class _DonationpaymentWidgetState extends State<DonationpaymentWidget> {
                             ],
                             borderRadius: BorderRadius.circular(40.0),
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.center,
@@ -269,7 +270,7 @@ class _DonationpaymentWidgetState extends State<DonationpaymentWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 72.0,

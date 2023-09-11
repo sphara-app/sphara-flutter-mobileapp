@@ -59,7 +59,7 @@ class _NavbarWidgetState extends State<NavbarWidget> {
         color: FlutterFlowTheme.of(context).primaryBackground,
       ),
       child: Align(
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.00, 0.00),
         child: Stack(
           alignment: AlignmentDirectional(0.0, 0.0),
           children: [

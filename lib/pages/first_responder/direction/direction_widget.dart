@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -118,7 +119,7 @@ class _DirectionWidgetState extends State<DirectionWidget> {
                         fit: BoxFit.cover,
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.7),
+                        alignment: AlignmentDirectional(0.00, 0.70),
                         child: Container(
                           width: double.infinity,
                           height: 40.0,
@@ -126,8 +127,7 @@ class _DirectionWidgetState extends State<DirectionWidget> {
                             color: FlutterFlowTheme.of(context).secondary,
                             borderRadius: BorderRadius.circular(0.0),
                           ),
-                          alignment:
-                              AlignmentDirectional(0.0, -0.050000000000000044),
+                          alignment: AlignmentDirectional(0.00, -0.05),
                           child: Text(
                             'GET DIRECTION',
                             style: FlutterFlowTheme.of(context)
@@ -173,7 +173,7 @@ class _DirectionWidgetState extends State<DirectionWidget> {
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(1.0, 0.0),
+                                alignment: AlignmentDirectional(1.00, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 20.0, 0.0),
@@ -199,7 +199,7 @@ class _DirectionWidgetState extends State<DirectionWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(1.0, 0.3),
+                        alignment: AlignmentDirectional(1.00, 0.30),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 20.0, 0.0),
@@ -284,7 +284,7 @@ class _DirectionWidgetState extends State<DirectionWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, -0.55),
+                        alignment: AlignmentDirectional(0.00, -0.55),
                         child: Container(
                           width: 320.0,
                           height: 320.0,
@@ -295,7 +295,7 @@ class _DirectionWidgetState extends State<DirectionWidget> {
                           child: Stack(
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.15, 0.0),
+                                alignment: AlignmentDirectional(0.15, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
@@ -314,7 +314,7 @@ class _DirectionWidgetState extends State<DirectionWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-0.3, -0.2),
+                                alignment: AlignmentDirectional(-0.30, -0.20),
                                 child: Container(
                                   width: 20.0,
                                   height: 20.0,

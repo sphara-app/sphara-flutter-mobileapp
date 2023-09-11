@@ -56,7 +56,7 @@ class _ParentalplansubscribedWidgetState
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -80,7 +80,7 @@ class _ParentalplansubscribedWidgetState
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 30.0, 0.0, 0.0),
@@ -500,7 +500,7 @@ class _ParentalplansubscribedWidgetState
                             color: Color(0xFF3A3939),
                           ),
                           child: Align(
-                            alignment: AlignmentDirectional(0.0, -0.9),
+                            alignment: AlignmentDirectional(0.00, -0.90),
                             child: Padding(
                               padding: EdgeInsetsDirectional.fromSTEB(
                                   0.0, 20.0, 0.0, 0.0),
@@ -541,7 +541,7 @@ class _ParentalplansubscribedWidgetState
                                               BorderRadius.circular(40.0),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:
@@ -633,7 +633,7 @@ class _ParentalplansubscribedWidgetState
                                               BorderRadius.circular(40.0),
                                         ),
                                         alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                            AlignmentDirectional(0.00, 0.00),
                                         child: Row(
                                           mainAxisSize: MainAxisSize.max,
                                           crossAxisAlignment:

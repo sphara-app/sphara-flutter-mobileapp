@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -103,7 +104,7 @@ class _PrivacyoptionsWidgetState extends State<PrivacyoptionsWidget> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-0.95, 0.0),
+                      alignment: AlignmentDirectional(-0.95, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 40.0, 0.0, 0.0),

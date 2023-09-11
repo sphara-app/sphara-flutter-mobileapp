@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -111,7 +112,7 @@ class _AlertHistoryWidgetState extends State<AlertHistoryWidget> {
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(-0.2, 0.0),
+                                alignment: AlignmentDirectional(-0.20, 0.00),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:
@@ -171,7 +172,7 @@ class _AlertHistoryWidgetState extends State<AlertHistoryWidget> {
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(-0.7, 0.0),
+                                alignment: AlignmentDirectional(-0.70, 0.00),
                                 child: Column(
                                   mainAxisSize: MainAxisSize.max,
                                   mainAxisAlignment:

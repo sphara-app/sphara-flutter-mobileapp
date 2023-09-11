@@ -89,9 +89,9 @@ class _CivilianNavBarWidgetState extends State<CivilianNavBarWidget> {
                         hoverColor: Colors.transparent,
                         highlightColor: Colors.transparent,
                         onTap: () async {
-                          if ((menuItem == widget.menuItem?[0]) &&
+                          if ((menuItem == (widget.menuItem?[0])) &&
                               (FFAppState().civilianActiveItem !=
-                                  widget.menuItem?[0])) {
+                                  (widget.menuItem?[0]))) {
                             context.goNamed(
                               'Homepage',
                               extra: <String, dynamic>{
@@ -103,9 +103,9 @@ class _CivilianNavBarWidgetState extends State<CivilianNavBarWidget> {
                               },
                             );
                           } else {
-                            if ((menuItem == widget.menuItem?[1]) &&
+                            if ((menuItem == (widget.menuItem?[1])) &&
                                 (FFAppState().civilianActiveItem !=
-                                    widget.menuItem?[1])) {
+                                    (widget.menuItem?[1]))) {
                               context.goNamed(
                                 'livetrack',
                                 extra: <String, dynamic>{
@@ -117,9 +117,9 @@ class _CivilianNavBarWidgetState extends State<CivilianNavBarWidget> {
                                 },
                               );
                             } else {
-                              if ((menuItem == widget.menuItem?[2]) &&
+                              if ((menuItem == (widget.menuItem?[2])) &&
                                   (FFAppState().civilianActiveItem !=
-                                      widget.menuItem?[2])) {
+                                      (widget.menuItem?[2]))) {
                                 context.goNamed(
                                   'Timer',
                                   extra: <String, dynamic>{
@@ -131,9 +131,9 @@ class _CivilianNavBarWidgetState extends State<CivilianNavBarWidget> {
                                   },
                                 );
                               } else {
-                                if ((menuItem == widget.menuItem?[3]) &&
+                                if ((menuItem == (widget.menuItem?[3])) &&
                                     (FFAppState().civilianActiveItem !=
-                                        widget.menuItem?[3])) {
+                                        (widget.menuItem?[3]))) {
                                   context.goNamed(
                                     'SocialChat',
                                     extra: <String, dynamic>{
@@ -164,7 +164,7 @@ class _CivilianNavBarWidgetState extends State<CivilianNavBarWidget> {
                           children: [
                             Stack(
                               children: [
-                                if (menuItem == widget.menuItem?[0])
+                                if (menuItem == (widget.menuItem?[0]))
                                   Icon(
                                     Icons.home,
                                     color: menuItem ==
@@ -173,7 +173,7 @@ class _CivilianNavBarWidgetState extends State<CivilianNavBarWidget> {
                                         : FlutterFlowTheme.of(context).tertiary,
                                     size: 24.0,
                                   ),
-                                if (menuItem == widget.menuItem?[1])
+                                if (menuItem == (widget.menuItem?[1]))
                                   Icon(
                                     FFIcons.kimHereOrange,
                                     color: menuItem ==
@@ -182,7 +182,7 @@ class _CivilianNavBarWidgetState extends State<CivilianNavBarWidget> {
                                         : FlutterFlowTheme.of(context).tertiary,
                                     size: 24.0,
                                   ),
-                                if (menuItem == widget.menuItem?[2])
+                                if (menuItem == (widget.menuItem?[2]))
                                   Icon(
                                     FFIcons.ktimerGrey,
                                     color: menuItem ==
@@ -191,7 +191,7 @@ class _CivilianNavBarWidgetState extends State<CivilianNavBarWidget> {
                                         : FlutterFlowTheme.of(context).tertiary,
                                     size: 24.0,
                                   ),
-                                if (menuItem == widget.menuItem?[3])
+                                if (menuItem == (widget.menuItem?[3]))
                                   Image.asset(
                                     'assets/images/Social.png',
                                     fit: BoxFit.cover,

@@ -11,6 +11,11 @@ class SuggestionsModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for TabBar widget.
+  TabController? tabBarController;
+  int get tabBarCurrentIndex =>
+      tabBarController != null ? tabBarController!.index : 0;
+
   // State field(s) for TextField widget.
   TextEditingController? textController1;
   String? Function(BuildContext, String?)? textController1Validator;
@@ -27,6 +32,7 @@ class SuggestionsModel extends FlutterFlowModel {
 
   void dispose() {
     unfocusNode.dispose();
+    tabBarController?.dispose();
     textController1?.dispose();
     textController2?.dispose();
     textController3?.dispose();

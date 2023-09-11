@@ -57,7 +57,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: SingleChildScrollView(
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
@@ -173,7 +173,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                                 color: FlutterFlowTheme.of(context).tertiary,
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 10.0, 0.0, 0.0),
@@ -289,7 +289,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                           decoration: BoxDecoration(
                             color: Color(0xFF3F4040),
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: SwitchListTile(
                             value: _model.switchListTileValue2 ??= false,
                             onChanged: (newValue) async {
@@ -352,13 +352,13 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                               )
                             ],
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Row(
                             mainAxisSize: MainAxisSize.max,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 0.0, 0.0),
@@ -397,7 +397,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.00, 0.00),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
@@ -416,7 +416,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 0.0, 0.0),
@@ -456,7 +456,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.00, 0.00),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
@@ -475,7 +475,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 0.0, 0.0),
@@ -514,7 +514,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.00, 0.00),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
@@ -533,7 +533,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 0.0),
+                                alignment: AlignmentDirectional(0.00, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       20.0, 0.0, 0.0, 0.0),
@@ -564,7 +564,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                                       Expanded(
                                         child: Align(
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.00, 0.00),
                                           child: Padding(
                                             padding:
                                                 EdgeInsetsDirectional.fromSTEB(
@@ -587,7 +587,7 @@ class _RestrictedSettingsWidgetState extends State<RestrictedSettingsWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.00, 1.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 30.0, 0.0, 20.0),

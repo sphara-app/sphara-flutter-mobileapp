@@ -3,6 +3,7 @@ import '/flutter_flow/flutter_flow_animations.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_animate/flutter_animate.dart';
@@ -87,7 +88,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                   color: FlutterFlowTheme.of(context).secondary,
                 ),
               ),
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Text(
                 's',
                 style: FlutterFlowTheme.of(context).displaySmall.override(
@@ -101,7 +102,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
             ),
           ),
           title: Align(
-            alignment: AlignmentDirectional(0.0, 0.0),
+            alignment: AlignmentDirectional(0.00, 0.00),
             child: Container(
               width: 200.0,
               height: 40.0,
@@ -109,12 +110,12 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                 color: Color(0x4EC6C2C2),
                 borderRadius: BorderRadius.circular(40.0),
               ),
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Stack(
                 alignment: AlignmentDirectional(0.0, 0.0),
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(-1.0, 0.0),
+                    alignment: AlignmentDirectional(-1.00, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(6.0, 8.0, 6.0, 8.0),
@@ -145,7 +146,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                               borderRadius: BorderRadius.circular(40.0),
                               shape: BoxShape.rectangle,
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Text(
                               'Public',
                               style: FlutterFlowTheme.of(context)
@@ -175,7 +176,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40.0),
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Text(
                               'Private',
                               style: FlutterFlowTheme.of(context)
@@ -203,7 +204,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
           ),
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: SvgPicture.asset(
@@ -251,7 +252,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                                 color: FlutterFlowTheme.of(context).alternate,
                                 borderRadius: BorderRadius.circular(40.0),
                               ),
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -398,7 +399,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-0.05, 0.0),
+                      alignment: AlignmentDirectional(-0.05, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -431,7 +432,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                                           .secondary,
                                     ),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                 ),
                               ),
                               Padding(
@@ -475,7 +476,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.75, 0.0),
+                                  alignment: AlignmentDirectional(0.75, 0.00),
                                   child: Container(
                                     width: 30.0,
                                     height: 30.0,
@@ -488,7 +489,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                                             .secondary,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.00, 0.00),
                                     child: Text(
                                       '9+',
                                       style: FlutterFlowTheme.of(context)
@@ -514,7 +515,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-0.05, 0.0),
+                      alignment: AlignmentDirectional(-0.05, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -547,7 +548,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                                           .secondary,
                                     ),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                 ),
                               ),
                               Padding(
@@ -591,7 +592,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.8, 0.0),
+                                  alignment: AlignmentDirectional(0.80, 0.00),
                                   child: Container(
                                     width: 30.0,
                                     height: 30.0,
@@ -604,7 +605,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                                             .secondary,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.00, 0.00),
                                     child: Text(
                                       '2+',
                                       style: FlutterFlowTheme.of(context)
@@ -630,7 +631,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-0.05, 0.0),
+                      alignment: AlignmentDirectional(-0.05, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -663,7 +664,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                                           .secondary,
                                     ),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                 ),
                               ),
                               Padding(
@@ -711,7 +712,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-0.05, 0.0),
+                      alignment: AlignmentDirectional(-0.05, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -744,7 +745,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                                           .secondary,
                                     ),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                 ),
                               ),
                               Padding(
@@ -793,7 +794,7 @@ class _ChannelPublicWidgetState extends State<ChannelPublicWidget>
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.00, 1.00),
                         child: Material(
                           color: Colors.transparent,
                           elevation: 2.0,

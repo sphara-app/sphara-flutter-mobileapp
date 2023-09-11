@@ -2,6 +2,7 @@ import '/components/navbar/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -106,7 +107,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 0.0, 0.0, 0.0),
@@ -145,7 +146,8 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                                       ),
                                     ),
                                     Align(
-                                      alignment: AlignmentDirectional(0.7, 0.9),
+                                      alignment:
+                                          AlignmentDirectional(0.70, 0.90),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             48.0, 28.0, 0.0, 0.0),
@@ -157,7 +159,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                                             shape: BoxShape.circle,
                                           ),
                                           alignment:
-                                              AlignmentDirectional(0.0, 0.0),
+                                              AlignmentDirectional(0.00, 0.00),
                                         ),
                                       ),
                                     ),
@@ -178,7 +180,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                         ),
                         Expanded(
                           child: Align(
-                            alignment: AlignmentDirectional(0.1, 0.0),
+                            alignment: AlignmentDirectional(0.10, 0.00),
                             child: Container(
                               width: 230.0,
                               height: 100.0,
@@ -209,7 +211,8 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                                   ),
                                   Expanded(
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
                                       child: Text(
                                         'View Profile',
                                         style: FlutterFlowTheme.of(context)
@@ -240,7 +243,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                   Stack(
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, -0.01),
+                        alignment: AlignmentDirectional(0.00, -0.01),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 0.0, 100.0),
@@ -253,7 +256,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.05, 0.0),
+                        alignment: AlignmentDirectional(0.05, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 100.0, 0.0, 0.0),
@@ -268,7 +271,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(-0.2, 0.0),
+                        alignment: AlignmentDirectional(-0.20, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 250.0, 0.0, 0.0),
@@ -287,7 +290,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(-0.55, 0.0),
+                        alignment: AlignmentDirectional(-0.55, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 220.0, 0.0, 0.0),
@@ -319,7 +322,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(-0.5, 0.0),
+                        alignment: AlignmentDirectional(-0.50, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 195.0, 0.0, 0.0),
@@ -330,7 +333,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                               color: Color(0xFF454545),
                               borderRadius: BorderRadius.circular(20.0),
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Text(
                               'R.Krishna',
                               style: FlutterFlowTheme.of(context)
@@ -349,7 +352,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 450.0, 0.0, 0.0),
@@ -360,16 +363,17 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                               color: Color(0xFFFED89E),
                               borderRadius: BorderRadius.circular(50.0),
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
                                   Expanded(
                                     child: Align(
-                                      alignment: AlignmentDirectional(0.0, 0.0),
+                                      alignment:
+                                          AlignmentDirectional(0.00, 0.00),
                                       child: Text(
                                         'R.Krishna accepted your Help request.\nHe is 118 meters away, will contact you soon.',
                                         textAlign: TextAlign.center,
@@ -397,7 +401,7 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(1.0, 0.0),
+                        alignment: AlignmentDirectional(1.00, 0.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 260.0, 20.0, 0.0),
@@ -486,16 +490,16 @@ class _Alarmraise2WidgetState extends State<Alarmraise2Widget> {
                 ],
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 72.0,
                   decoration: BoxDecoration(
                     color: FlutterFlowTheme.of(context).primaryBackground,
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: AlignmentDirectional(0.00, 1.00),
                     child: wrapWithModel(
                       model: _model.navbarModel,
                       updateCallback: () => setState(() {}),

@@ -5,13 +5,17 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'flutter_flow/flutter_flow_util.dart';
 
 class FFAppState extends ChangeNotifier {
-  static final FFAppState _instance = FFAppState._internal();
+  static FFAppState _instance = FFAppState._internal();
 
   factory FFAppState() {
     return _instance;
   }
 
   FFAppState._internal();
+
+  static void reset() {
+    _instance = FFAppState._internal();
+  }
 
   Future initializePersistedState() async {
     prefs = await SharedPreferences.getInstance();
@@ -226,6 +230,10 @@ class FFAppState extends ChangeNotifier {
     _countryNameListAppSate[_index] = updateFn(_countryNameListAppSate[_index]);
   }
 
+  void insertAtIndexInCountryNameListAppSate(int _index, String _value) {
+    _countryNameListAppSate.insert(_index, _value);
+  }
+
   bool _channelSwitch = false;
   bool get channelSwitch => _channelSwitch;
   set channelSwitch(bool _value) {
@@ -262,6 +270,10 @@ class FFAppState extends ChangeNotifier {
     String Function(String) updateFn,
   ) {
     _civilianMenu[_index] = updateFn(_civilianMenu[_index]);
+  }
+
+  void insertAtIndexInCivilianMenu(int _index, String _value) {
+    _civilianMenu.insert(_index, _value);
   }
 
   String _civilianActiveItem = 'Home';
@@ -309,6 +321,10 @@ class FFAppState extends ChangeNotifier {
     _socialMenu[_index] = updateFn(_socialMenu[_index]);
   }
 
+  void insertAtIndexInSocialMenu(int _index, String _value) {
+    _socialMenu.insert(_index, _value);
+  }
+
   String _SocialActiveItem = 'Channels';
   String get SocialActiveItem => _SocialActiveItem;
   set SocialActiveItem(String _value) {
@@ -338,6 +354,10 @@ class FFAppState extends ChangeNotifier {
     String Function(String) updateFn,
   ) {
     _responderMenu[_index] = updateFn(_responderMenu[_index]);
+  }
+
+  void insertAtIndexInResponderMenu(int _index, String _value) {
+    _responderMenu.insert(_index, _value);
   }
 
   String _responderActiveItem = 'Home';
@@ -382,6 +402,10 @@ class FFAppState extends ChangeNotifier {
     String Function(String) updateFn,
   ) {
     _chatAttach[_index] = updateFn(_chatAttach[_index]);
+  }
+
+  void insertAtIndexInChatAttach(int _index, String _value) {
+    _chatAttach.insert(_index, _value);
   }
 
   bool _isonboarded = false;

@@ -47,7 +47,7 @@ class _ShowIdWhenCompleteWidgetState extends State<ShowIdWhenCompleteWidget> {
         color: Color(0xC6333232),
       ),
       child: Align(
-        alignment: AlignmentDirectional(0.0, 0.0),
+        alignment: AlignmentDirectional(0.00, 0.00),
         child: Container(
           width: 320.0,
           height: 250.0,
@@ -153,7 +153,7 @@ class _ShowIdWhenCompleteWidgetState extends State<ShowIdWhenCompleteWidget> {
                     color: FlutterFlowTheme.of(context).secondaryBackground,
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Text(
                     'CONTINUE',
                     style: FlutterFlowTheme.of(context).bodyMedium.override(

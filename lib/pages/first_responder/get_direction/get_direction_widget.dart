@@ -2,6 +2,7 @@ import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_timer.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:stop_watch_timer/stop_watch_timer.dart';
 import 'package:styled_divider/styled_divider.dart';
 import 'package:flutter/material.dart';
@@ -170,7 +171,7 @@ class _GetDirectionWidgetState extends State<GetDirectionWidget> {
                   child: Stack(
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.00, 1.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 500.0, 0.0, 0.0),
@@ -186,8 +187,7 @@ class _GetDirectionWidgetState extends State<GetDirectionWidget> {
                                 topRight: Radius.circular(40.0),
                               ),
                             ),
-                            alignment: AlignmentDirectional(
-                                0.0, -0.050000000000000044),
+                            alignment: AlignmentDirectional(0.00, -0.05),
                             child: Text(
                               'There are currently no emergencies close to you',
                               style: FlutterFlowTheme.of(context).titleSmall,
@@ -211,7 +211,7 @@ class _GetDirectionWidgetState extends State<GetDirectionWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: AlignmentDirectional(0.00, 1.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 640.0, 0.0, 20.0),
@@ -228,7 +228,7 @@ class _GetDirectionWidgetState extends State<GetDirectionWidget> {
                                         topRight: Radius.circular(40.0),
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.00, 0.00),
                                     child: Row(
                                       mainAxisSize: MainAxisSize.max,
                                       mainAxisAlignment:
@@ -284,7 +284,7 @@ class _GetDirectionWidgetState extends State<GetDirectionWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(1.0, 0.5),
+                                alignment: AlignmentDirectional(1.00, 0.50),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 380.0, 20.0, 0.0),

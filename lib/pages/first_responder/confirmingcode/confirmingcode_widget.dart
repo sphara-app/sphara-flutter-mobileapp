@@ -126,7 +126,7 @@ class _ConfirmingcodeWidgetState extends State<ConfirmingcodeWidget> {
                           ),
                           Expanded(
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 1.0),
+                              alignment: AlignmentDirectional(0.00, 1.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 0.0, 0.0, 15.0),
@@ -147,7 +147,7 @@ class _ConfirmingcodeWidgetState extends State<ConfirmingcodeWidget> {
                     Stack(
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 20.0, 0.0, 0.0),
@@ -160,7 +160,7 @@ class _ConfirmingcodeWidgetState extends State<ConfirmingcodeWidget> {
                           ),
                         ),
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 0.0, 118.0, 0.0, 0.0),
@@ -333,7 +333,7 @@ class _ConfirmingcodeWidgetState extends State<ConfirmingcodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.46),
+                alignment: AlignmentDirectional(0.00, 0.46),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
                   child: Row(
@@ -350,7 +350,7 @@ class _ConfirmingcodeWidgetState extends State<ConfirmingcodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.65),
+                alignment: AlignmentDirectional(0.00, 0.65),
                 child: Padding(
                   padding: EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
                   child: FFButtonWidget(
@@ -378,7 +378,7 @@ class _ConfirmingcodeWidgetState extends State<ConfirmingcodeWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(-1.0, 1.0),
+                alignment: AlignmentDirectional(-1.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 80.0,
@@ -413,13 +413,13 @@ class _ConfirmingcodeWidgetState extends State<ConfirmingcodeWidget> {
                   color: Color(0xAD3A3A3A),
                 ),
                 child: Align(
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.0),
+                        alignment: AlignmentDirectional(0.00, 0.00),
                         child: Container(
                           width: 300.0,
                           height: 160.0,

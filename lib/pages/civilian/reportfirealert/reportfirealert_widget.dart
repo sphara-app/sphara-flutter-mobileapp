@@ -64,7 +64,7 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             10.0, 35.0, 0.0, 0.0),
@@ -85,7 +85,7 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -96,7 +96,7 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 5.0, 20.0, 0.0),
@@ -183,7 +183,7 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -205,7 +205,7 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 18.0, 0.0, 8.0),
@@ -258,11 +258,12 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                               FormFieldController<List<String>>(
                             [],
                           ),
+                          wrapped: true,
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -283,7 +284,7 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 18.0, 0.0, 8.0),
@@ -337,11 +338,12 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                               FormFieldController<List<String>>(
                             [],
                           ),
+                          wrapped: true,
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -362,7 +364,7 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 18.0, 0.0, 8.0),
@@ -415,11 +417,12 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                               FormFieldController<List<String>>(
                             [],
                           ),
+                          wrapped: true,
                         ),
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -649,7 +652,7 @@ class _ReportfirealertWidgetState extends State<ReportfirealertWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 20.0, 0.0, 20.0),

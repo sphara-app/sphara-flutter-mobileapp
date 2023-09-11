@@ -2,6 +2,7 @@ import '/components/invite_through/invite_through_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -113,7 +114,7 @@ class _InviteLinkWidgetState extends State<InviteLinkWidget> {
                         decoration: BoxDecoration(
                           color: Color(0xFF3F4040),
                         ),
-                        alignment: AlignmentDirectional(-1.0, 0.0),
+                        alignment: AlignmentDirectional(-1.00, 0.00),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,

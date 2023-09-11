@@ -59,7 +59,7 @@ class _ChoosingroleWidgetState extends State<ChoosingroleWidget> {
                   fit: BoxFit.cover,
                 ),
                 Align(
-                  alignment: AlignmentDirectional(0.05, 0.0),
+                  alignment: AlignmentDirectional(0.05, 0.00),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.start,

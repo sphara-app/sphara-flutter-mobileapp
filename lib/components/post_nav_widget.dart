@@ -63,7 +63,7 @@ class _PostNavWidgetState extends State<PostNavWidget> {
                     color: Color(0x5F101213),
                     shape: BoxShape.circle,
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: FaIcon(
                     FontAwesomeIcons.link,
                     color: FlutterFlowTheme.of(context).tertiary,
@@ -89,7 +89,7 @@ class _PostNavWidgetState extends State<PostNavWidget> {
                     color: Color(0x5F101213),
                     shape: BoxShape.circle,
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Icon(
                     Icons.camera_alt_outlined,
                     color: FlutterFlowTheme.of(context).tertiary,
@@ -115,7 +115,7 @@ class _PostNavWidgetState extends State<PostNavWidget> {
                     color: Color(0x5F101213),
                     shape: BoxShape.circle,
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Icon(
                     Icons.videocam_outlined,
                     color: FlutterFlowTheme.of(context).tertiary,
@@ -141,7 +141,7 @@ class _PostNavWidgetState extends State<PostNavWidget> {
                     color: Color(0x5F101213),
                     shape: BoxShape.circle,
                   ),
-                  alignment: AlignmentDirectional(0.0, 0.0),
+                  alignment: AlignmentDirectional(0.00, 0.00),
                   child: Icon(
                     Icons.emoji_emotions_outlined,
                     color: FlutterFlowTheme.of(context).tertiary,
@@ -190,7 +190,7 @@ class _PostNavWidgetState extends State<PostNavWidget> {
                       color: Color(0x5F101213),
                       shape: BoxShape.circle,
                     ),
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: Icon(
                       Icons.keyboard_control,
                       color: FlutterFlowTheme.of(context).tertiary,

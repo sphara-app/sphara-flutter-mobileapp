@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -16,7 +17,8 @@ class NearestFacilitiesWidget extends StatefulWidget {
       _NearestFacilitiesWidgetState();
 }
 
-class _NearestFacilitiesWidgetState extends State<NearestFacilitiesWidget> {
+class _NearestFacilitiesWidgetState extends State<NearestFacilitiesWidget>
+    with TickerProviderStateMixin {
   late NearestFacilitiesModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
@@ -25,6 +27,12 @@ class _NearestFacilitiesWidgetState extends State<NearestFacilitiesWidget> {
   void initState() {
     super.initState();
     _model = createModel(context, () => NearestFacilitiesModel());
+
+    _model.tabBarController = TabController(
+      vsync: this,
+      length: 3,
+      initialIndex: 0,
+    )..addListener(() => setState(() {}));
   }
 
   @override
@@ -128,176 +136,166 @@ class _NearestFacilitiesWidgetState extends State<NearestFacilitiesWidget> {
         ),
         body: SafeArea(
           top: true,
-          child: DefaultTabController(
-            length: 3,
-            initialIndex: 0,
-            child: Column(
-              children: [
-                Align(
-                  alignment: Alignment(0.0, 0),
-                  child: TabBar(
-                    labelColor: FlutterFlowTheme.of(context).primary,
-                    unselectedLabelColor: FlutterFlowTheme.of(context).tertiary,
-                    labelStyle: FlutterFlowTheme.of(context).titleSmall,
-                    indicatorColor: FlutterFlowTheme.of(context).primary,
-                    indicatorWeight: 3.0,
-                    tabs: [
-                      Tab(
-                        text: 'Police',
-                        icon: Icon(
-                          FFIcons.kmaskGroup225,
-                          color: FlutterFlowTheme.of(context).primary,
-                          size: 16.0,
-                        ),
+          child: Column(
+            children: [
+              Align(
+                alignment: Alignment(0.0, 0),
+                child: TabBar(
+                  labelColor: FlutterFlowTheme.of(context).primary,
+                  unselectedLabelColor: FlutterFlowTheme.of(context).tertiary,
+                  labelStyle: FlutterFlowTheme.of(context).titleSmall,
+                  unselectedLabelStyle: TextStyle(),
+                  indicatorColor: FlutterFlowTheme.of(context).primary,
+                  indicatorWeight: 3.0,
+                  tabs: [
+                    Tab(
+                      text: 'Police',
+                      icon: Icon(
+                        FFIcons.kmaskGroup225,
+                        color: FlutterFlowTheme.of(context).primary,
+                        size: 16.0,
                       ),
-                      Tab(
-                        text: 'Medical',
-                        icon: Icon(
-                          FFIcons.kpolice,
-                          color: FlutterFlowTheme.of(context).primary,
-                          size: 16.0,
-                        ),
+                    ),
+                    Tab(
+                      text: 'Medical',
+                      icon: Icon(
+                        FFIcons.kpolice,
+                        color: FlutterFlowTheme.of(context).primary,
+                        size: 16.0,
                       ),
-                      Tab(
-                        text: 'Fire Stations',
-                        icon: Icon(
-                          FFIcons.kmaskGroup224,
-                          color: FlutterFlowTheme.of(context).primary,
-                          size: 16.0,
-                        ),
+                    ),
+                    Tab(
+                      text: 'Fire Stations',
+                      icon: Icon(
+                        FFIcons.kmaskGroup224,
+                        color: FlutterFlowTheme.of(context).primary,
+                        size: 16.0,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
+                  controller: _model.tabBarController,
                 ),
-                Expanded(
-                  child: TabBarView(
-                    children: [
-                      Stack(
-                        children: [
-                          SvgPicture.asset(
-                            'assets/images/bg.svg',
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 20.0, 20.0, 0.0),
-                                child: ListTile(
-                                  title: Text(
-                                    'Madhapur Police Station',
-                                    style:
-                                        FlutterFlowTheme.of(context).titleSmall,
-                                  ),
-                                  subtitle: Text(
-                                    'Traffic Junction, Near Kavuri Hills, Hitech City Rd,\nMadhapur, Hyderabad.',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodySmall,
-                                  ),
-                                  trailing: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color:
-                                        FlutterFlowTheme.of(context).tertiary,
-                                    size: 20.0,
-                                  ),
-                                  dense: false,
-                                  contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 0.0),
+              ),
+              Expanded(
+                child: TabBarView(
+                  controller: _model.tabBarController,
+                  children: [
+                    Stack(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/bg.svg',
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 20.0, 20.0, 0.0),
+                              child: ListTile(
+                                title: Text(
+                                  'Madhapur Police Station',
+                                  style:
+                                      FlutterFlowTheme.of(context).titleSmall,
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 20.0, 20.0, 0.0),
-                                child: ListTile(
-                                  title: Text(
-                                    'Madhapur Police Station',
-                                    style:
-                                        FlutterFlowTheme.of(context).titleSmall,
-                                  ),
-                                  subtitle: Text(
-                                    'Traffic Junction, Near Kavuri Hills, Hitech City Rd,\nMadhapur, Hyderabad.',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodySmall,
-                                  ),
-                                  trailing: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color:
-                                        FlutterFlowTheme.of(context).tertiary,
-                                    size: 20.0,
-                                  ),
-                                  dense: false,
-                                  contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 0.0),
+                                subtitle: Text(
+                                  'Traffic Junction, Near Kavuri Hills, Hitech City Rd,\nMadhapur, Hyderabad.',
+                                  style: FlutterFlowTheme.of(context).bodySmall,
                                 ),
-                              ),
-                              Padding(
-                                padding: EdgeInsetsDirectional.fromSTEB(
-                                    20.0, 20.0, 20.0, 0.0),
-                                child: ListTile(
-                                  title: Text(
-                                    'Madhapur Police Station',
-                                    style:
-                                        FlutterFlowTheme.of(context).titleSmall,
-                                  ),
-                                  subtitle: Text(
-                                    'Traffic Junction, Near Kavuri Hills, Hitech City Rd,\nMadhapur, Hyderabad.',
-                                    style:
-                                        FlutterFlowTheme.of(context).bodySmall,
-                                  ),
-                                  trailing: Icon(
-                                    Icons.arrow_forward_ios,
-                                    color:
-                                        FlutterFlowTheme.of(context).tertiary,
-                                    size: 20.0,
-                                  ),
-                                  dense: false,
-                                  contentPadding:
-                                      EdgeInsetsDirectional.fromSTEB(
-                                          0.0, 0.0, 0.0, 0.0),
+                                trailing: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  size: 20.0,
                                 ),
+                                dense: false,
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
                               ),
-                            ],
-                          ),
-                        ],
-                      ),
-                      Stack(
-                        children: [
-                          SvgPicture.asset(
-                            'assets/images/bg.svg',
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [],
-                          ),
-                        ],
-                      ),
-                      Stack(
-                        children: [
-                          SvgPicture.asset(
-                            'assets/images/bg.svg',
-                            width: double.infinity,
-                            height: double.infinity,
-                            fit: BoxFit.cover,
-                          ),
-                          Column(
-                            mainAxisSize: MainAxisSize.max,
-                            children: [],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 20.0, 20.0, 0.0),
+                              child: ListTile(
+                                title: Text(
+                                  'Madhapur Police Station',
+                                  style:
+                                      FlutterFlowTheme.of(context).titleSmall,
+                                ),
+                                subtitle: Text(
+                                  'Traffic Junction, Near Kavuri Hills, Hitech City Rd,\nMadhapur, Hyderabad.',
+                                  style: FlutterFlowTheme.of(context).bodySmall,
+                                ),
+                                trailing: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  size: 20.0,
+                                ),
+                                dense: false,
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  20.0, 20.0, 20.0, 0.0),
+                              child: ListTile(
+                                title: Text(
+                                  'Madhapur Police Station',
+                                  style:
+                                      FlutterFlowTheme.of(context).titleSmall,
+                                ),
+                                subtitle: Text(
+                                  'Traffic Junction, Near Kavuri Hills, Hitech City Rd,\nMadhapur, Hyderabad.',
+                                  style: FlutterFlowTheme.of(context).bodySmall,
+                                ),
+                                trailing: Icon(
+                                  Icons.arrow_forward_ios,
+                                  color: FlutterFlowTheme.of(context).tertiary,
+                                  size: 20.0,
+                                ),
+                                dense: false,
+                                contentPadding: EdgeInsetsDirectional.fromSTEB(
+                                    0.0, 0.0, 0.0, 0.0),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                    Stack(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/bg.svg',
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [],
+                        ),
+                      ],
+                    ),
+                    Stack(
+                      children: [
+                        SvgPicture.asset(
+                          'assets/images/bg.svg',
+                          width: double.infinity,
+                          height: double.infinity,
+                          fit: BoxFit.cover,
+                        ),
+                        Column(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [],
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

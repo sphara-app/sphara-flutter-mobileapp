@@ -62,7 +62,7 @@ class _AddnewWidgetState extends State<AddnewWidget> {
           ),
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: Text(
@@ -218,7 +218,7 @@ class _AddnewWidgetState extends State<AddnewWidget> {
                             ),
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(0.65, 0.0),
+                                alignment: AlignmentDirectional(0.65, 0.00),
                                 child: Icon(
                                   Icons.close,
                                   color: Color(0xFFB0B0B0),
@@ -244,7 +244,7 @@ class _AddnewWidgetState extends State<AddnewWidget> {
                           children: [
                             Expanded(
                               child: Align(
-                                alignment: AlignmentDirectional(0.0, 1.0),
+                                alignment: AlignmentDirectional(0.00, 1.00),
                                 child: FFButtonWidget(
                                   onPressed: () async {
                                     context.pushNamed(

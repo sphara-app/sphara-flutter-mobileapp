@@ -11,6 +11,11 @@ class MeetingMainModel extends FlutterFlowModel {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for TabBar widget.
+  TabController? tabBarController;
+  int get tabBarCurrentIndex =>
+      tabBarController != null ? tabBarController!.index : 0;
+
   // Model for userMeetingInvitations component.
   late UserMeetingInvitationsModel userMeetingInvitationsModel1;
   // Model for userMeetingInvitations component.
@@ -59,6 +64,7 @@ class MeetingMainModel extends FlutterFlowModel {
 
   void dispose() {
     unfocusNode.dispose();
+    tabBarController?.dispose();
     userMeetingInvitationsModel1.dispose();
     userMeetingInvitationsModel2.dispose();
     userMeetingInvitationsModel3.dispose();

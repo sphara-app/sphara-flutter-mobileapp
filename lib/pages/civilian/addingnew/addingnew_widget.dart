@@ -67,7 +67,7 @@ class _AddingnewWidgetState extends State<AddingnewWidget> {
           ),
           actions: [
             Align(
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
                 child: Text(
@@ -222,7 +222,7 @@ class _AddingnewWidgetState extends State<AddingnewWidget> {
                               ),
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.65, 0.0),
+                                  alignment: AlignmentDirectional(0.65, 0.00),
                                   child: Icon(
                                     FFIcons.kvector,
                                     color: Color(0xFFB0B0B0),
@@ -248,7 +248,7 @@ class _AddingnewWidgetState extends State<AddingnewWidget> {
                             children: [
                               Expanded(
                                 child: Align(
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: FFButtonWidget(
                                     onPressed: () async {
                                       context.pushNamed(
@@ -298,7 +298,7 @@ class _AddingnewWidgetState extends State<AddingnewWidget> {
                     color: Color(0xC6333232),
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 0.35),
+                    alignment: AlignmentDirectional(0.00, 0.35),
                     child: Container(
                       width: double.infinity,
                       height: 310.0,
@@ -371,6 +371,7 @@ class _AddingnewWidgetState extends State<AddingnewWidget> {
                                               FormFieldController<List<String>>(
                                         [],
                                       ),
+                                      wrapped: true,
                                     ),
                                   ),
                                 ),

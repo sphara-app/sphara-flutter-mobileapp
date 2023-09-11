@@ -68,7 +68,7 @@ class _EmergencyCallWidgetState extends State<EmergencyCallWidget> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 20.0, 0.0, 0.0),
@@ -124,7 +124,7 @@ class _EmergencyCallWidgetState extends State<EmergencyCallWidget> {
                           shape: BoxShape.circle,
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: FlutterFlowTimer(
                             initialTime: _model.timerMilliseconds,
                             getDisplayTime: (value) =>

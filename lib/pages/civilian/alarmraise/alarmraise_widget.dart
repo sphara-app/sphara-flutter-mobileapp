@@ -2,6 +2,7 @@ import '/components/navbar/navbar_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -269,7 +270,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                                         width: 1.0,
                                       ),
                                     ),
-                                    alignment: AlignmentDirectional(0.0, 0.0),
+                                    alignment: AlignmentDirectional(0.00, 0.00),
                                     child: Text(
                                       '+2',
                                       style: FlutterFlowTheme.of(context)
@@ -299,7 +300,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, 0.0),
+                      alignment: AlignmentDirectional(0.00, 0.00),
                       child: Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 10.0, 0.0, 0.0),
@@ -314,7 +315,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 20.0, 6.0, 20.0, 0.0),
@@ -338,14 +339,14 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                       ],
                     ),
                     Align(
-                      alignment: AlignmentDirectional(0.0, -0.05),
+                      alignment: AlignmentDirectional(0.00, -0.05),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             0.0, 0.0, 0.0, 100.0),
                         child: Stack(
                           children: [
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 10.0, 0.0, 0.0),
@@ -358,7 +359,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 90.0, 0.0, 0.0),
@@ -369,12 +370,12 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                                     color: Color(0x30446EB1),
                                     shape: BoxShape.circle,
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                 ),
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.45, 0.0),
+                              alignment: AlignmentDirectional(0.45, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 200.0, 0.0, 0.0),
@@ -393,7 +394,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.5, 0.0),
+                              alignment: AlignmentDirectional(-0.50, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 280.0, 0.0, 0.0),
@@ -412,7 +413,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.3, 0.0),
+                              alignment: AlignmentDirectional(0.30, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 300.0, 0.0, 0.0),
@@ -431,7 +432,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.25, 0.0),
+                              alignment: AlignmentDirectional(-0.25, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 170.0, 0.0, 0.0),
@@ -450,7 +451,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.1, 0.0),
+                              alignment: AlignmentDirectional(-0.10, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 90.0, 0.0, 0.0),
@@ -469,7 +470,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 180.0, 0.0, 0.0),
@@ -480,7 +481,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                                     color: Color(0xFFF99546),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Text(
                                     'Your location',
                                     style: FlutterFlowTheme.of(context)
@@ -500,7 +501,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.65, 0.0),
+                              alignment: AlignmentDirectional(0.65, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 180.0, 0.0, 0.0),
@@ -511,7 +512,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                                     color: Color(0xFF454545),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Text(
                                     'N.Prameela',
                                     style: FlutterFlowTheme.of(context)
@@ -531,7 +532,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.45, 0.0),
+                              alignment: AlignmentDirectional(-0.45, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 260.0, 0.0, 0.0),
@@ -542,7 +543,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                                     color: Color(0xFF454545),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Text(
                                     'P.Srinu',
                                     style: FlutterFlowTheme.of(context)
@@ -562,7 +563,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.15, 0.0),
+                              alignment: AlignmentDirectional(-0.15, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 150.0, 0.0, 0.0),
@@ -573,7 +574,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                                     color: Color(0xFF454545),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Text(
                                     'R.Krishna',
                                     style: FlutterFlowTheme.of(context)
@@ -593,7 +594,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.05, 0.0),
+                              alignment: AlignmentDirectional(0.05, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 70.0, 0.0, 0.0),
@@ -604,7 +605,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                                     color: Color(0xFF454545),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Text(
                                     'V.Ramu',
                                     style: FlutterFlowTheme.of(context)
@@ -624,7 +625,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(0.45, 0.0),
+                              alignment: AlignmentDirectional(0.45, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 280.0, 0.0, 0.0),
@@ -635,7 +636,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                                     color: Color(0xFF454545),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  alignment: AlignmentDirectional(0.0, 0.0),
+                                  alignment: AlignmentDirectional(0.00, 0.00),
                                   child: Text(
                                     'L.Naveen',
                                     style: FlutterFlowTheme.of(context)
@@ -655,7 +656,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                               ),
                             ),
                             Align(
-                              alignment: AlignmentDirectional(-0.1, 0.0),
+                              alignment: AlignmentDirectional(-0.10, 0.00),
                               child: Padding(
                                 padding: EdgeInsetsDirectional.fromSTEB(
                                     0.0, 200.0, 0.0, 0.0),
@@ -681,7 +682,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 72.0,
@@ -697,7 +698,7 @@ class _AlarmraiseWidgetState extends State<AlarmraiseWidget> {
                     ],
                   ),
                   child: Align(
-                    alignment: AlignmentDirectional(0.0, 1.0),
+                    alignment: AlignmentDirectional(0.00, 1.00),
                     child: wrapWithModel(
                       model: _model.navbarModel,
                       updateCallback: () => setState(() {}),

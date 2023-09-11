@@ -76,7 +76,7 @@ class _SocialNavBarWidgetState extends State<SocialNavBarWidget> {
                     children: [
                       Stack(
                         children: [
-                          if (navBarItem == widget.nav?[0])
+                          if (navBarItem == (widget.nav?[0]))
                             FaIcon(
                               FontAwesomeIcons.hashtag,
                               color: navBarItem == FFAppState().SocialActiveItem
@@ -84,7 +84,7 @@ class _SocialNavBarWidgetState extends State<SocialNavBarWidget> {
                                   : FlutterFlowTheme.of(context).tertiary,
                               size: 24.0,
                             ),
-                          if (navBarItem == widget.nav?[1])
+                          if (navBarItem == (widget.nav?[1]))
                             Icon(
                               FFIcons.kchatSettings,
                               color: navBarItem == FFAppState().SocialActiveItem
@@ -92,7 +92,7 @@ class _SocialNavBarWidgetState extends State<SocialNavBarWidget> {
                                   : FlutterFlowTheme.of(context).tertiary,
                               size: 24.0,
                             ),
-                          if (navBarItem == widget.nav?[2])
+                          if (navBarItem == (widget.nav?[2]))
                             FaIcon(
                               FontAwesomeIcons.calendarPlus,
                               color: navBarItem == FFAppState().SocialActiveItem
@@ -100,7 +100,7 @@ class _SocialNavBarWidgetState extends State<SocialNavBarWidget> {
                                   : FlutterFlowTheme.of(context).tertiary,
                               size: 24.0,
                             ),
-                          if (navBarItem == widget.nav?[3])
+                          if (navBarItem == (widget.nav?[3]))
                             Icon(
                               Icons.keyboard_control,
                               color: navBarItem == FFAppState().SocialActiveItem

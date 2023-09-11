@@ -64,7 +64,7 @@ class _LoginWidgetState extends State<LoginWidget> {
               child: Stack(
                 children: [
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: SvgPicture.asset(
                       'assets/images/bg.svg',
                       width: double.infinity,
@@ -78,7 +78,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Align(
-                          alignment: AlignmentDirectional(-1.0, 0.0),
+                          alignment: AlignmentDirectional(-1.00, 0.00),
                           child: Padding(
                             padding: EdgeInsetsDirectional.fromSTEB(
                                 10.0, 35.0, 0.0, 0.0),
@@ -153,7 +153,7 @@ class _LoginWidgetState extends State<LoginWidget> {
                               borderRadius: BorderRadius.circular(40.0),
                             ),
                             child: Align(
-                              alignment: AlignmentDirectional(0.0, 0.0),
+                              alignment: AlignmentDirectional(0.00, 0.00),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
                                 children: [

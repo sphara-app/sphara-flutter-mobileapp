@@ -59,12 +59,12 @@ class _OthersWidgetState extends State<OthersWidget> {
                 fit: BoxFit.cover,
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: Column(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             10.0, 35.0, 0.0, 0.0),
@@ -85,7 +85,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, -1.0),
+                      alignment: AlignmentDirectional(-1.00, -1.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 20.0, 0.0, 0.0),
@@ -96,7 +96,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 5.0, 20.0, 0.0),
@@ -107,7 +107,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 30.0, 0.0, 0.0),
@@ -128,7 +128,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 18.0, 20.0, 8.0),
@@ -186,6 +186,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                               FormFieldController<List<String>>(
                             ['Others'],
                           ),
+                          wrapped: true,
                         ),
                       ),
                     ),
@@ -255,7 +256,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                       ),
                     ),
                     Align(
-                      alignment: AlignmentDirectional(-1.0, 0.0),
+                      alignment: AlignmentDirectional(-1.00, 0.00),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(
                             20.0, 30.0, 0.0, 0.0),
@@ -343,7 +344,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                     ),
                     Expanded(
                       child: Align(
-                        alignment: AlignmentDirectional(0.0, 1.0),
+                        alignment: AlignmentDirectional(0.00, 1.00),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 40.0, 0.0, 100.0),
@@ -377,7 +378,7 @@ class _OthersWidgetState extends State<OthersWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: Container(
                   width: double.infinity,
                   height: 72.0,

@@ -164,7 +164,7 @@ class _CloseIncidentWidgetState extends State<CloseIncidentWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, -0.55),
+                        alignment: AlignmentDirectional(0.00, -0.55),
                         child: Container(
                           width: 320.0,
                           height: 320.0,
@@ -175,7 +175,7 @@ class _CloseIncidentWidgetState extends State<CloseIncidentWidget> {
                           child: Stack(
                             children: [
                               Align(
-                                alignment: AlignmentDirectional(0.15, 0.0),
+                                alignment: AlignmentDirectional(0.15, 0.00),
                                 child: Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 20.0, 0.0, 0.0),
@@ -194,7 +194,7 @@ class _CloseIncidentWidgetState extends State<CloseIncidentWidget> {
                                 ),
                               ),
                               Align(
-                                alignment: AlignmentDirectional(-0.3, -0.2),
+                                alignment: AlignmentDirectional(-0.30, -0.20),
                                 child: Container(
                                   width: 20.0,
                                   height: 20.0,
@@ -226,7 +226,7 @@ class _CloseIncidentWidgetState extends State<CloseIncidentWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(0.0, 0.55),
+                        alignment: AlignmentDirectional(0.00, 0.55),
                         child: Container(
                           width: double.infinity,
                           height: 200.0,
@@ -371,7 +371,7 @@ class _CloseIncidentWidgetState extends State<CloseIncidentWidget> {
                         ),
                       ),
                       Align(
-                        alignment: AlignmentDirectional(1.0, -0.2),
+                        alignment: AlignmentDirectional(1.00, -0.20),
                         child: Padding(
                           padding: EdgeInsetsDirectional.fromSTEB(
                               0.0, 0.0, 20.0, 0.0),

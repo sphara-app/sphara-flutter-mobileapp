@@ -1,6 +1,7 @@
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -47,7 +48,7 @@ class _AccountconnectWidgetState extends State<AccountconnectWidget> {
           child: Stack(
             children: [
               Align(
-                alignment: AlignmentDirectional(0.0, 0.0),
+                alignment: AlignmentDirectional(0.00, 0.00),
                 child: SvgPicture.asset(
                   'assets/images/bg.svg',
                   width: double.infinity,
@@ -78,7 +79,7 @@ class _AccountconnectWidgetState extends State<AccountconnectWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(-0.05, 0.0),
+                    alignment: AlignmentDirectional(-0.05, 0.00),
                     child: Padding(
                       padding:
                           EdgeInsetsDirectional.fromSTEB(0.0, 40.0, 0.0, 0.0),
@@ -95,7 +96,7 @@ class _AccountconnectWidgetState extends State<AccountconnectWidget> {
                           ),
                         ),
                         child: Align(
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Column(
                             mainAxisSize: MainAxisSize.max,
                             children: [
@@ -142,7 +143,7 @@ class _AccountconnectWidgetState extends State<AccountconnectWidget> {
                     ),
                   ),
                   Align(
-                    alignment: AlignmentDirectional(0.0, 0.0),
+                    alignment: AlignmentDirectional(0.00, 0.00),
                     child: Container(
                       width: 335.0,
                       height: 340.0,

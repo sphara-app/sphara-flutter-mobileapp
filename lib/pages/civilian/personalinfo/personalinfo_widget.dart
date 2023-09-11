@@ -345,7 +345,7 @@ class _PersonalinfoWidgetState extends State<PersonalinfoWidget> {
                                 color: FlutterFlowTheme.of(context).alternate,
                                 borderRadius: BorderRadius.circular(50.0),
                               ),
-                              alignment: AlignmentDirectional(-0.78, 0.0),
+                              alignment: AlignmentDirectional(-0.78, 0.00),
                               child: Text(
                                 valueOrDefault<String>(
                                   dateTimeFormat('d/M/y', _model.datePicked),
@@ -681,6 +681,7 @@ class _PersonalinfoWidgetState extends State<PersonalinfoWidget> {
                             hidesUnderline: true,
                             disabled: !(_model.apiResulth76?.succeeded ?? true),
                             isSearchable: false,
+                            isMultiSelect: false,
                           ),
                         ),
                         Padding(

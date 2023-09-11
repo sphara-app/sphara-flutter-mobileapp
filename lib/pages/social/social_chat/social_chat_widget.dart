@@ -3,6 +3,7 @@ import '/components/social_nav_bar/social_nav_bar_widget.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -58,7 +59,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                 color: Color(0x4EC6C2C2),
                 borderRadius: BorderRadius.circular(40.0),
               ),
-              alignment: AlignmentDirectional(0.0, 0.0),
+              alignment: AlignmentDirectional(0.00, 0.00),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -75,7 +76,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                             borderRadius: BorderRadius.circular(40.0),
                             shape: BoxShape.rectangle,
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Text(
                             'Chats',
                             style: FlutterFlowTheme.of(context)
@@ -115,7 +116,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40.0),
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Text(
                               'Chats',
                               style: FlutterFlowTheme.of(context)
@@ -157,7 +158,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(40.0),
                             ),
-                            alignment: AlignmentDirectional(0.0, 0.0),
+                            alignment: AlignmentDirectional(0.00, 0.00),
                             child: Text(
                               'Groups',
                               style: FlutterFlowTheme.of(context)
@@ -190,7 +191,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                             color: Color(0xFFF99546),
                             borderRadius: BorderRadius.circular(40.0),
                           ),
-                          alignment: AlignmentDirectional(0.0, 0.0),
+                          alignment: AlignmentDirectional(0.00, 0.00),
                           child: Text(
                             'Groups',
                             style: FlutterFlowTheme.of(context)
@@ -529,7 +530,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                                                 shape: BoxShape.circle,
                                               ),
                                               alignment: AlignmentDirectional(
-                                                  0.0, 0.0),
+                                                  0.00, 0.00),
                                               child: Text(
                                                 '3',
                                                 style:
@@ -643,7 +644,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                                     ),
                                     Align(
                                       alignment:
-                                          AlignmentDirectional(-1.0, 0.0),
+                                          AlignmentDirectional(-1.00, 0.00),
                                       child: Padding(
                                         padding: EdgeInsetsDirectional.fromSTEB(
                                             165.0, 0.0, 20.0, 0.0),
@@ -788,7 +789,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                                                 shape: BoxShape.circle,
                                               ),
                                               alignment: AlignmentDirectional(
-                                                  0.0, 0.0),
+                                                  0.00, 0.00),
                                               child: Text(
                                                 '3',
                                                 style:
@@ -827,7 +828,7 @@ class _SocialChatWidgetState extends State<SocialChatWidget> {
                 ),
               ),
               Align(
-                alignment: AlignmentDirectional(0.0, 1.0),
+                alignment: AlignmentDirectional(0.00, 1.00),
                 child: wrapWithModel(
                   model: _model.socialNavBarModel,
                   updateCallback: () => setState(() {}),

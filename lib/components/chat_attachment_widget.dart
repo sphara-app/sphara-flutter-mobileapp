@@ -122,7 +122,7 @@ class _ChatAttachmentWidgetState extends State<ChatAttachmentWidget> {
             ),
             Expanded(
               child: Align(
-                alignment: AlignmentDirectional(-1.0, 0.0),
+                alignment: AlignmentDirectional(-1.00, 0.00),
                 child: Container(
                   width: MediaQuery.sizeOf(context).width * 0.5 - 20,
                   height: double.infinity,
